@@ -12,6 +12,9 @@
 		897B6B1C212C310B00807269 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 897B6B1A212C310B00807269 /* Main.storyboard */; };
 		897B6B1E212C310C00807269 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 897B6B1D212C310C00807269 /* Assets.xcassets */; };
 		897B6B21212C310C00807269 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 897B6B1F212C310C00807269 /* LaunchScreen.storyboard */; };
+		899FDBF6212C3768003637CD /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 899FDBF4212C3739003637CD /* OpenSans-Bold.ttf */; };
+		899FDBF7212C376A003637CD /* RobotoSlab-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 899FDBF2212C371D003637CD /* RobotoSlab-Bold.ttf */; };
+		899FDBF8212C376D003637CD /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 899FDBF5212C373E003637CD /* OpenSans-Regular.ttf */; };
 		DC67753CC5BAFFA48011BA41 /* Pods_Student_Quiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5132426293EB64BB102FE8D5 /* Pods_Student_Quiz.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +28,9 @@
 		897B6B1D212C310C00807269 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		897B6B20212C310C00807269 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		897B6B22212C310C00807269 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		899FDBF2212C371D003637CD /* RobotoSlab-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Bold.ttf"; sourceTree = "<group>"; };
+		899FDBF4212C3739003637CD /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		899FDBF5212C373E003637CD /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		B71DE81AC91783B86D8E4D0A /* Pods-Student Quiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Student Quiz.release.xcconfig"; path = "Pods/Target Support Files/Pods-Student Quiz/Pods-Student Quiz.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,8 +81,19 @@
 				897B6B1D212C310C00807269 /* Assets.xcassets */,
 				897B6B1F212C310C00807269 /* LaunchScreen.storyboard */,
 				897B6B22212C310C00807269 /* Info.plist */,
+				899FDBF3212C3723003637CD /* Fonts */,
 			);
 			path = "Student Quiz";
+			sourceTree = "<group>";
+		};
+		899FDBF3212C3723003637CD /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				899FDBF5212C373E003637CD /* OpenSans-Regular.ttf */,
+				899FDBF2212C371D003637CD /* RobotoSlab-Bold.ttf */,
+				899FDBF4212C3739003637CD /* OpenSans-Bold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		E3C51C8769B672019001BE2E /* Pods */ = {
@@ -148,7 +165,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				897B6B21212C310C00807269 /* LaunchScreen.storyboard in Resources */,
+				899FDBF7212C376A003637CD /* RobotoSlab-Bold.ttf in Resources */,
 				897B6B1E212C310C00807269 /* Assets.xcassets in Resources */,
+				899FDBF6212C3768003637CD /* OpenSans-Bold.ttf in Resources */,
+				899FDBF8212C376D003637CD /* OpenSans-Regular.ttf in Resources */,
 				897B6B1C212C310B00807269 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,15 +181,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Student Quiz-checkManifestLockResult.txt",
 			);
@@ -338,10 +354,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.roigoujat.Student-Quiz";
+				PRODUCT_BUNDLE_IDENTIFIER = com.roigoujat.Dicee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -357,10 +373,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.roigoujat.Student-Quiz";
+				PRODUCT_BUNDLE_IDENTIFIER = com.roigoujat.Dicee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
