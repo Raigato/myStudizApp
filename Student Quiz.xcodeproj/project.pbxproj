@@ -76,10 +76,10 @@
 			isa = PBXGroup;
 			children = (
 				897B6B16212C310B00807269 /* AppDelegate.swift */,
-				897B6B18212C310B00807269 /* ViewController.swift */,
-				897B6B1A212C310B00807269 /* Main.storyboard */,
-				897B6B1D212C310C00807269 /* Assets.xcassets */,
-				897B6B1F212C310C00807269 /* LaunchScreen.storyboard */,
+				899FDBF9212C3D9D003637CD /* Controllers */,
+				899FDBFC212C3DD1003637CD /* Models */,
+				899FDBFB212C3DC0003637CD /* Views */,
+				899FDBFA212C3DB0003637CD /* Supporting Files */,
 				897B6B22212C310C00807269 /* Info.plist */,
 				899FDBF3212C3723003637CD /* Fonts */,
 			);
@@ -94,6 +94,38 @@
 				899FDBF4212C3739003637CD /* OpenSans-Bold.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		899FDBF9212C3D9D003637CD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				897B6B18212C310B00807269 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		899FDBFA212C3DB0003637CD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				897B6B1D212C310C00807269 /* Assets.xcassets */,
+				897B6B1F212C310C00807269 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		899FDBFB212C3DC0003637CD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				897B6B1A212C310B00807269 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		899FDBFC212C3DD1003637CD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		E3C51C8769B672019001BE2E /* Pods */ = {
