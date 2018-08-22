@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8959BF49212D5F270065066D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8959BF48212D5F270065066D /* Assets.xcassets */; };
+		8979161F212D8CDC008176EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8979161E212D8CDC008176EF /* GoogleService-Info.plist */; };
 		897B6B17212C310B00807269 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897B6B16212C310B00807269 /* AppDelegate.swift */; };
 		897B6B19212C310B00807269 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897B6B18212C310B00807269 /* ViewController.swift */; };
 		897B6B1C212C310B00807269 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 897B6B1A212C310B00807269 /* Main.storyboard */; };
-		897B6B1E212C310C00807269 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 897B6B1D212C310C00807269 /* Assets.xcassets */; };
 		897B6B21212C310C00807269 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 897B6B1F212C310C00807269 /* LaunchScreen.storyboard */; };
 		899FDBF6212C3768003637CD /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 899FDBF4212C3739003637CD /* OpenSans-Bold.ttf */; };
 		899FDBF7212C376A003637CD /* RobotoSlab-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 899FDBF2212C371D003637CD /* RobotoSlab-Bold.ttf */; };
@@ -21,11 +22,12 @@
 /* Begin PBXFileReference section */
 		5132426293EB64BB102FE8D5 /* Pods_Student_Quiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Student_Quiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70DA4B973A0F64CB9ED50A53 /* Pods-Student Quiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Student Quiz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Student Quiz/Pods-Student Quiz.debug.xcconfig"; sourceTree = "<group>"; };
+		8959BF48212D5F270065066D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8979161E212D8CDC008176EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		897B6B13212C310B00807269 /* Student Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Student Quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		897B6B16212C310B00807269 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		897B6B18212C310B00807269 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		897B6B1B212C310B00807269 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		897B6B1D212C310C00807269 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		897B6B20212C310C00807269 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		897B6B22212C310C00807269 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		899FDBF2212C371D003637CD /* RobotoSlab-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Bold.ttf"; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				899FDBFB212C3DC0003637CD /* Views */,
 				899FDBFA212C3DB0003637CD /* Supporting Files */,
 				897B6B22212C310C00807269 /* Info.plist */,
+				8979161E212D8CDC008176EF /* GoogleService-Info.plist */,
 				899FDBF3212C3723003637CD /* Fonts */,
 			);
 			path = "Student Quiz";
@@ -107,7 +110,7 @@
 		899FDBFA212C3DB0003637CD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				897B6B1D212C310C00807269 /* Assets.xcassets */,
+				8959BF48212D5F270065066D /* Assets.xcassets */,
 				897B6B1F212C310C00807269 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
@@ -148,6 +151,7 @@
 				897B6B0F212C310B00807269 /* Sources */,
 				897B6B10212C310B00807269 /* Frameworks */,
 				897B6B11212C310B00807269 /* Resources */,
+				E6AF38CEBAB96F6547DE3BDD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -198,10 +202,11 @@
 			files = (
 				897B6B21212C310C00807269 /* LaunchScreen.storyboard in Resources */,
 				899FDBF7212C376A003637CD /* RobotoSlab-Bold.ttf in Resources */,
-				897B6B1E212C310C00807269 /* Assets.xcassets in Resources */,
 				899FDBF6212C3768003637CD /* OpenSans-Bold.ttf in Resources */,
 				899FDBF8212C376D003637CD /* OpenSans-Regular.ttf in Resources */,
+				8959BF49212D5F270065066D /* Assets.xcassets in Resources */,
 				897B6B1C212C310B00807269 /* Main.storyboard in Resources */,
+				8979161F212D8CDC008176EF /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +229,34 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6AF38CEBAB96F6547DE3BDD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Student Quiz/Pods-Student Quiz-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Student Quiz/Pods-Student Quiz-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

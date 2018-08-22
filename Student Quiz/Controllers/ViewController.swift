@@ -10,9 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var EmailTextField: UITextField!
+    @IBOutlet weak var PasswordTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // Adding padding to the Text Fields
+        let emailPaddingView = UIView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: 15, height: EmailTextField.frame.height)))
+        EmailTextField.leftView = emailPaddingView
+        EmailTextField.leftViewMode = UITextFieldViewMode.always
+        
+        let passwordPaddingView = UIView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: 15, height: PasswordTextField.frame.height)))
+        PasswordTextField.leftView = passwordPaddingView
+        PasswordTextField.leftViewMode = UITextFieldViewMode.always
     }
 
     override func didReceiveMemoryWarning() {
