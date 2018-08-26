@@ -16,6 +16,7 @@
 		899FDBF6212C3768003637CD /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 899FDBF4212C3739003637CD /* OpenSans-Bold.ttf */; };
 		899FDBF7212C376A003637CD /* RobotoSlab-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 899FDBF2212C371D003637CD /* RobotoSlab-Bold.ttf */; };
 		899FDBF8212C376D003637CD /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 899FDBF5212C373E003637CD /* OpenSans-Regular.ttf */; };
+		89A15CCE2132CE7D0061494E /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A15CCD2132CE7D0061494E /* HomeScreenViewController.swift */; };
 		DC67753CC5BAFFA48011BA41 /* Pods_Student_Quiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5132426293EB64BB102FE8D5 /* Pods_Student_Quiz.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		899FDBF2212C371D003637CD /* RobotoSlab-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Bold.ttf"; sourceTree = "<group>"; };
 		899FDBF4212C3739003637CD /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		899FDBF5212C373E003637CD /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		89A15CCD2132CE7D0061494E /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		B71DE81AC91783B86D8E4D0A /* Pods-Student Quiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Student Quiz.release.xcconfig"; path = "Pods/Target Support Files/Pods-Student Quiz/Pods-Student Quiz.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				897B6B18212C310B00807269 /* CreateAccountViewController.swift */,
+				89A15CCD2132CE7D0061494E /* HomeScreenViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			files = (
 				897B6B19212C310B00807269 /* CreateAccountViewController.swift in Sources */,
 				897B6B17212C310B00807269 /* AppDelegate.swift in Sources */,
+				89A15CCE2132CE7D0061494E /* HomeScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,7 +419,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.roigoujat.Dicee;
+				PRODUCT_BUNDLE_IDENTIFIER = com.roigoujat.StudentQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -434,7 +438,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.roigoujat.Dicee;
+				PRODUCT_BUNDLE_IDENTIFIER = com.roigoujat.StudentQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
