@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CreateAccountViewController: UIViewController {
 
     @IBOutlet weak var EmailTextField: UITextField!
     @IBOutlet weak var PasswordTextField: UITextField!

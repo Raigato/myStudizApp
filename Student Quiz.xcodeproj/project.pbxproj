@@ -10,7 +10,7 @@
 		8959BF49212D5F270065066D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8959BF48212D5F270065066D /* Assets.xcassets */; };
 		8979161F212D8CDC008176EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8979161E212D8CDC008176EF /* GoogleService-Info.plist */; };
 		897B6B17212C310B00807269 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897B6B16212C310B00807269 /* AppDelegate.swift */; };
-		897B6B19212C310B00807269 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897B6B18212C310B00807269 /* ViewController.swift */; };
+		897B6B19212C310B00807269 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897B6B18212C310B00807269 /* CreateAccountViewController.swift */; };
 		897B6B1C212C310B00807269 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 897B6B1A212C310B00807269 /* Main.storyboard */; };
 		897B6B21212C310C00807269 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 897B6B1F212C310C00807269 /* LaunchScreen.storyboard */; };
 		899FDBF6212C3768003637CD /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 899FDBF4212C3739003637CD /* OpenSans-Bold.ttf */; };
@@ -26,7 +26,7 @@
 		8979161E212D8CDC008176EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		897B6B13212C310B00807269 /* Student Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Student Quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		897B6B16212C310B00807269 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		897B6B18212C310B00807269 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		897B6B18212C310B00807269 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		897B6B1B212C310B00807269 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		897B6B20212C310C00807269 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		897B6B22212C310C00807269 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 		899FDBF9212C3D9D003637CD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				897B6B18212C310B00807269 /* ViewController.swift */,
+				897B6B18212C310B00807269 /* CreateAccountViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -236,8 +236,6 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Student Quiz/Pods-Student Quiz-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
@@ -246,8 +244,6 @@
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
@@ -266,7 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				897B6B19212C310B00807269 /* ViewController.swift in Sources */,
+				897B6B19212C310B00807269 /* CreateAccountViewController.swift in Sources */,
 				897B6B17212C310B00807269 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
