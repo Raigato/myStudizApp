@@ -10,17 +10,19 @@ import UIKit
 import Firebase
 
 class HomeScreenViewController: UIViewController {
-
-    @IBOutlet weak var uidLabel: UILabel!
+    
+    private let cellId = "QuizCell"
+    
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //logOutForTests()
-        
-        if let uid = Auth.auth().currentUser?.uid {
-            uidLabel.text = uid
-        }
+
+        // tableView layout
+        tableView.backgroundColor = UIColor(red:0.21, green:0.31, blue:0.42, alpha:1.0)
+        tableView.separatorStyle = .none
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -43,4 +45,22 @@ class HomeScreenViewController: UIViewController {
         }
     }
     
+}
+
+// MARK: - Extenstion for TableView
+// TODO: Make it use Firebase
+extension HomeScreenViewController : UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! QuizTableViewCell
+
+        cell.backgroundColor = .clear
+        cell.quizNameLabel.text = "Quiz \(indexPath.row + 1)"
+        
+        return cell
+    }
 }

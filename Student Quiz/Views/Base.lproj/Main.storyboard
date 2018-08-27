@@ -12,6 +12,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
         <array key="OpenSans-Regular.ttf">
             <string>OpenSans</string>
         </array>
@@ -192,22 +195,96 @@ All it takes is 5 seconds.</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tg1-ev-KBs">
-                                <rect key="frame" x="166.5" y="323" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7b5-ib-4uU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Studiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ag2-ZR-tA4">
+                                        <rect key="frame" x="146" y="28" width="83" height="64"/>
+                                        <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="27"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <size key="shadowOffset" width="1" height="2"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKu-y4-Ok1">
+                                        <rect key="frame" x="313" y="43" width="32" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="Wrj-cM-khv"/>
+                                            <constraint firstAttribute="width" constant="32" id="Z60-WY-tSu"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="plus"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.2470588235" green="0.75686274509999996" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="sKu-y4-Ok1" secondAttribute="trailing" constant="30" id="67P-5x-r40"/>
+                                    <constraint firstItem="ag2-ZR-tA4" firstAttribute="top" secondItem="7b5-ib-4uU" secondAttribute="topMargin" id="Nf2-iX-PeM"/>
+                                    <constraint firstItem="sKu-y4-Ok1" firstAttribute="centerY" secondItem="ag2-ZR-tA4" secondAttribute="centerY" id="Z56-Bu-Rah"/>
+                                    <constraint firstItem="ag2-ZR-tA4" firstAttribute="centerX" secondItem="7b5-ib-4uU" secondAttribute="centerX" id="gOS-1H-Jnf"/>
+                                    <constraint firstItem="ag2-ZR-tA4" firstAttribute="bottom" secondItem="7b5-ib-4uU" secondAttribute="bottomMargin" id="mAW-xl-IaN"/>
+                                    <constraint firstAttribute="height" constant="100" id="znf-EL-1Tc"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5lM-Cp-hfl">
+                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QuizCell" rowHeight="80" id="fZq-xN-plH" customClass="QuizTableViewCell" customModule="Student_Quiz" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fZq-xN-plH" id="kO6-a2-mee">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell" translatesAutoresizingMaskIntoConstraints="NO" id="6zi-VP-9PN">
+                                                    <rect key="frame" x="6" y="10" width="363" height="69.5"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz XX" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WjQ-VW-vNh">
+                                                    <rect key="frame" x="25" y="10" width="335" height="69.5"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="30"/>
+                                                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.49911708047945208" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <size key="shadowOffset" width="1" height="2"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="6zi-VP-9PN" firstAttribute="leading" secondItem="kO6-a2-mee" secondAttribute="leading" constant="6" id="Ljy-ob-fX1"/>
+                                                <constraint firstItem="WjQ-VW-vNh" firstAttribute="trailing" secondItem="kO6-a2-mee" secondAttribute="trailingMargin" id="X9Z-VO-XU9"/>
+                                                <constraint firstItem="6zi-VP-9PN" firstAttribute="top" secondItem="kO6-a2-mee" secondAttribute="top" constant="10" id="cIv-zd-zyP"/>
+                                                <constraint firstItem="WjQ-VW-vNh" firstAttribute="leading" secondItem="kO6-a2-mee" secondAttribute="leadingMargin" constant="10" id="e7o-hh-CC8"/>
+                                                <constraint firstItem="WjQ-VW-vNh" firstAttribute="top" secondItem="6zi-VP-9PN" secondAttribute="top" id="k4G-dD-W5w"/>
+                                                <constraint firstItem="WjQ-VW-vNh" firstAttribute="bottom" secondItem="6zi-VP-9PN" secondAttribute="bottom" id="oNx-87-wrq"/>
+                                                <constraint firstAttribute="bottom" secondItem="6zi-VP-9PN" secondAttribute="bottom" id="ya9-UH-b4D"/>
+                                                <constraint firstAttribute="trailing" secondItem="6zi-VP-9PN" secondAttribute="trailing" constant="6" id="zTD-kI-Sza"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="quizNameLabel" destination="WjQ-VW-vNh" id="Txw-BA-Y29"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ynM-Mm-tKY" id="5Kc-8U-TPJ"/>
+                                    <outlet property="delegate" destination="ynM-Mm-tKY" id="QIh-sO-26t"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Tg1-ev-KBs" firstAttribute="centerX" secondItem="u1E-8V-kdS" secondAttribute="centerX" id="IjP-bl-I2z"/>
-                            <constraint firstItem="Tg1-ev-KBs" firstAttribute="centerY" secondItem="u1E-8V-kdS" secondAttribute="centerY" id="tu0-3o-J9b"/>
+                            <constraint firstItem="7b5-ib-4uU" firstAttribute="centerX" secondItem="u1E-8V-kdS" secondAttribute="centerX" id="2zi-tW-AhN"/>
+                            <constraint firstItem="7b5-ib-4uU" firstAttribute="trailing" secondItem="2yO-Ew-qd6" secondAttribute="trailing" id="5iQ-m2-Fqn"/>
+                            <constraint firstItem="5lM-Cp-hfl" firstAttribute="leading" secondItem="2yO-Ew-qd6" secondAttribute="leading" id="O4v-Ml-mM5"/>
+                            <constraint firstItem="5lM-Cp-hfl" firstAttribute="bottom" secondItem="2yO-Ew-qd6" secondAttribute="bottom" id="OZ8-SM-wea"/>
+                            <constraint firstItem="5lM-Cp-hfl" firstAttribute="top" secondItem="7b5-ib-4uU" secondAttribute="bottom" id="UUR-vk-ax9"/>
+                            <constraint firstItem="7b5-ib-4uU" firstAttribute="leading" secondItem="2yO-Ew-qd6" secondAttribute="leading" id="bhs-3l-CHf"/>
+                            <constraint firstItem="5lM-Cp-hfl" firstAttribute="trailing" secondItem="2yO-Ew-qd6" secondAttribute="trailing" id="sst-Og-G5C"/>
+                            <constraint firstItem="7b5-ib-4uU" firstAttribute="top" secondItem="u1E-8V-kdS" secondAttribute="top" id="vjV-op-ATd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2yO-Ew-qd6"/>
                     </view>
                     <connections>
-                        <outlet property="uidLabel" destination="Tg1-ev-KBs" id="0Up-8i-7Sp"/>
+                        <outlet property="tableView" destination="5lM-Cp-hfl" id="Wba-Q6-Mm3"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignUpScreen" id="z0q-W8-f0t"/>
                     </connections>
                 </viewController>
@@ -220,5 +297,7 @@ All it takes is 5 seconds.</string>
         <image name="OutlineButtonNoThanks" width="164" height="64"/>
         <image name="SubmitButton" width="189" height="64"/>
         <image name="TextInput" width="328" height="58"/>
+        <image name="cell" width="363" height="68"/>
+        <image name="plus" width="32" height="34"/>
     </resources>
 </document>
