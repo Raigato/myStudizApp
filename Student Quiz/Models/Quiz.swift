@@ -6,6 +6,10 @@
 //  Copyright © 2018 Gabriel Raymondou. All rights reserved.
 //
 
+import Firebase
+
+// MARK: - Required enums
+
 enum Category {
     case Languages
     case Maths
@@ -27,16 +31,18 @@ enum Privacy {
 
 class Quiz {
     
+    // MARK: - Properties and constructor
+    
     var creator: String
     var title: String
     var description: String
     var category: Category
     var questions: [Question]
     var privacy: Privacy
-    var collaborators: [String]?
-    var reviews: [Review]?
+    var collaborators: [String]
+    var reviews: [Review]
     
-    init(createdby creator: String, entitled title: String, description: String, on category: Category, questions: [Question], privacy: Privacy, collaborators: [String]? = [], reviews: [Review]? = []) {
+    init(createdby creator: String, entitled title: String, description: String, on category: Category, questions: [Question], privacy: Privacy, collaborators: [String] = [], reviews: [Review] = []) {
         self.creator = creator
         self.title = title
         self.description = description
@@ -47,7 +53,7 @@ class Quiz {
         self.reviews = reviews
     }
     
-    // MARK: - Get/Set enum functions
+    // MARK: - Get/Set enum methods
     
     // -- GET
     func getCategory() -> String {
@@ -123,7 +129,7 @@ class Quiz {
         }
     }
     
-    // MARK: - Add functions
+    // MARK: - Add methods
     
     func addQuestion(question: String, answer: String) {
         let newQuestion = Question(question: question, answer: answer)
@@ -131,11 +137,69 @@ class Quiz {
     }
     
     func addCollaborator(uid: String) {
-        self.collaborators?.append(uid)
+        self.collaborators.append(uid)
     }
     
-    func addReview(rated rating: Int, comment: String = "") {
+    func addReview(rated rating: String, comment: String = "") {
         let newReview = Review(rated: rating, comment: comment)
-        self.reviews?.append(newReview)
+        self.reviews.append(newReview)
     }
+    
+    // MARK: - Convert to dictionary method
+    
+    func createDictionary() -> [String: Any] {
+        var dict = [String: Any]()
+        dict["creator"] = self.creator
+        dict["title"] = self.title
+        dict["description"] = self.description
+        dict["category"] = self.getCategory()
+        
+        var questionList = [[String: String]]()
+        for question in self.questions {
+            questionList.append(question.createDictionary())
+        }
+        dict["questions"] = questionList
+        
+        dict["privacy"] = self.getPrivacy()
+        dict["collaborators"] = self.collaborators
+        
+        var reviewList = [[String: String]]()
+        for review in self.reviews {
+            reviewList.append(review.createDictionary())
+        }
+        dict["reviews"] = reviewList
+        
+        return dict
+    }
+    
+    // MARK: - Database management methods
+    
+    let quizDB = Database.database().reference().child("Quiz")
+    
+    func saveInList(id: String) {
+        // TODO: Fetch before save
+        
+        func saveListForUser(uid: String, role: Role) {
+            let newList = QuizList(user: uid, quizList: [QuizRoleTuple(quizId: id, role: role)])
+            newList.save()
+        }
+        
+        saveListForUser(uid: self.creator, role: .Owner)
+        
+        for collaborator in self.collaborators {
+            saveListForUser(uid: collaborator, role: .Collaborator)
+        }
+    }
+    
+    func save() {
+        quizDB.childByAutoId().setValue(self.createDictionary()) { (error, reference) in
+            if error != nil {
+                print(error!)
+            } else {
+                print("Quiz \(reference.key) saved successfully!")
+                self.saveInList(id: reference.key)
+            }
+        }
+    }
+
 }

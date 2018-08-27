@@ -12,6 +12,7 @@ import Firebase
 class HomeScreenViewController: UIViewController {
     
     private let cellId = "QuizCell"
+    var quizArray : [[String: String]] = []
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -19,6 +20,9 @@ class HomeScreenViewController: UIViewController {
         super.viewDidLoad()
         
         //logOutForTests()
+        createNewQuizForTests()
+        
+        quizArray = fetchQuizList()
 
         // tableView layout
         tableView.backgroundColor = UIColor(red:0.21, green:0.31, blue:0.42, alpha:1.0)
@@ -45,6 +49,26 @@ class HomeScreenViewController: UIViewController {
         }
     }
     
+    func createNewQuizForTests() {
+        let newQuiz1 = Quiz(createdby: (Auth.auth().currentUser?.uid)!, entitled: "Math Quiz 101", description: "Just a math quiz", on: .Maths, questions: [], privacy: .Private)
+        newQuiz1.collaborators.append("GG5b4ThKvrPGivA85AhlAhiuwUw2")
+        newQuiz1.addQuestion(question: "What does make 1+1", answer: "2")
+        newQuiz1.addQuestion(question: "Now, what does make 1*1", answer: "1")
+        newQuiz1.addReview(rated: "4")
+        newQuiz1.addReview(rated: "3", comment: "Moyen quoi")
+        newQuiz1.save()
+    }
+    
+    // MARK: - Database functions
+    
+    func fetchQuizList() -> [[String: String]] {
+        var quizList = [[String: String]]()
+        
+        quizList = [["title": "Quiz Uno", "id": "5616115"], ["title": "Quiz Due", "id": "4646615"], ["title": "Quiz Tre", "id": "2303449"]]
+        
+        return quizList
+    }
+    
 }
 
 // MARK: - Extenstion for TableView
@@ -52,14 +76,14 @@ class HomeScreenViewController: UIViewController {
 extension HomeScreenViewController : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return quizArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! QuizTableViewCell
 
         cell.backgroundColor = .clear
-        cell.quizNameLabel.text = "Quiz \(indexPath.row + 1)"
+        cell.quizNameLabel.text = quizArray[indexPath.row]["title"]
         
         return cell
     }

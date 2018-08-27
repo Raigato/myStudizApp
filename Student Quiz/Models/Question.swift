@@ -7,11 +7,21 @@
 //
 
 class Question {
+    
+    // MARK: - Properties and constructor
+    
     var question: String
     var answer: String
     
     init(question: String, answer: String) {
         self.question = question
         self.answer = answer
+    }
+    
+    // MARK: - Convert to dictionary method
+    
+    func createDictionary() -> [String: String] {
+        let dict = ["question": self.question, "answer": self.answer]
+        return dict
     }
 }

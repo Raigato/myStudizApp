@@ -8,12 +8,20 @@
 
 class Review {
     
-    var rating: Int
-    var comment: String?
+    // MARK: - Properties and constructor
     
-    init(rated rating: Int, comment: String = "") {
+    var rating: String
+    var comment: String
+    
+    init(rated rating: String, comment: String = "") {
         self.rating = rating
         self.comment = comment
     }
     
+    // MARK: - Convert to dictionary method
+    
+    func createDictionary() -> [String: String] {
+        let dict = ["rating": self.rating, "comment": self.comment]
+        return dict
+    }
 }

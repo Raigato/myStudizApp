@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		891DADA2213469A1003CB827 /* QuizList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891DADA1213469A1003CB827 /* QuizList.swift */; };
 		894899A1213412D2003B515D /* QuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894899A0213412D2003B515D /* QuizTableViewCell.swift */; };
 		894899A42134254B003B515D /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894899A32134254B003B515D /* Quiz.swift */; };
 		894899A621342A8C003B515D /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894899A521342A8C003B515D /* Question.swift */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		5132426293EB64BB102FE8D5 /* Pods_Student_Quiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Student_Quiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70DA4B973A0F64CB9ED50A53 /* Pods-Student Quiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Student Quiz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Student Quiz/Pods-Student Quiz.debug.xcconfig"; sourceTree = "<group>"; };
+		891DADA1213469A1003CB827 /* QuizList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizList.swift; sourceTree = "<group>"; };
 		894899A0213412D2003B515D /* QuizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTableViewCell.swift; sourceTree = "<group>"; };
 		894899A32134254B003B515D /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		894899A521342A8C003B515D /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				894899A32134254B003B515D /* Quiz.swift */,
+				891DADA1213469A1003CB827 /* QuizList.swift */,
 				894899A521342A8C003B515D /* Question.swift */,
 				894899A721342ADC003B515D /* Review.swift */,
 			);
@@ -291,6 +294,7 @@
 				897B6B17212C310B00807269 /* AppDelegate.swift in Sources */,
 				894899A621342A8C003B515D /* Question.swift in Sources */,
 				894899A1213412D2003B515D /* QuizTableViewCell.swift in Sources */,
+				891DADA2213469A1003CB827 /* QuizList.swift in Sources */,
 				89A15CCE2132CE7D0061494E /* HomeScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
