@@ -25,12 +25,34 @@ class QuizList {
     
     // MARK: - Properties and constructor
     
-    var user: String
     var quizList: [QuizRoleTuple]
 
-    init(user: String, quizList: [QuizRoleTuple]) {
-        self.user = user
+    init(quizList: [QuizRoleTuple]) {
         self.quizList = quizList
+    }
+    
+    // MARK: - Get/Set enums
+    
+    static func getRole(role: Role) -> String {
+        switch role {
+        case .Owner:
+            return "Owner"
+        case .Collaborator:
+            return "Collaborator"
+        case .Favorite:
+            return "Favorite"
+        }
+    }
+    
+    static func setRole(role: String) -> Role {
+        switch role {
+        case "Owner":
+            return .Owner
+        case "Collaborator":
+            return .Collaborator
+        default:
+            return .Favorite
+        }
     }
     
     // MARK: - Add methods
@@ -43,23 +65,11 @@ class QuizList {
     
     func createDictionary() -> [String: Any] {
         
-        func getRole(role: Role) -> String {
-            switch role {
-            case .Owner:
-                return "Owner"
-            case .Collaborator:
-                return "Collaborator"
-            case .Favorite:
-                return "Favorite"
-            }
-        }
-        
         var dict = [String: Any]()
-        dict["user"] = self.user
         
         var newQuizList = [[String: String]]()
         for quiz in self.quizList {
-            let newQuiz = ["quizId": quiz.quizId, "role": getRole(role: quiz.role)]
+            let newQuiz = ["quizId": quiz.quizId, "role": QuizList.getRole(role: quiz.role)]
             newQuizList.append(newQuiz)
         }
         
@@ -71,14 +81,14 @@ class QuizList {
     
     // MARK: - Database management methods
     
-    let quizListDB = Database.database().reference().child("QuizList")
+    let quizListRef = Database.database().reference().child("QuizList")
     
-    func save() {
-        quizListDB.child(self.user).setValue(self.createDictionary()) { (error, reference) in
+    func save(for uid: String) {        
+        quizListRef.child(uid).setValue(self.createDictionary()) { (error, reference) in
             if error != nil {
                 print(error!)
             } else {
-                print("QuizList for \(self.user) saved successfully!")
+                print("QuizList for \(uid) saved successfully!")
             }
         }
     }

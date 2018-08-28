@@ -94,39 +94,11 @@ class Quiz {
     
     // -- SET
     func setCategory(category: String) {
-        switch category {
-        case "Languages":
-            self.category = .Languages
-        case "Maths":
-            self.category = .Maths
-        case "History":
-            self.category = .History
-        case "Geography":
-            self.category = .Geography
-        case "Science":
-            self.category = .Science
-        case "Literature":
-            self.category = .Literature
-        case "Arts":
-            self.category = .Arts
-        case "Business":
-            self.category = .Business
-        case "Law":
-            self.category = .Law
-        default:
-            self.category = .Misc
-        }
+        self.category = QuizService.convertCategory(category)
     }
     
     func setPrivacy(privacy: String) {
-        switch privacy {
-        case "Public":
-            self.privacy = .Public
-        case "Shared":
-            self.privacy = .Shared
-        default:
-            self.privacy = .Private
-        }
+        self.privacy = QuizService.convertPrivacy(privacy)
     }
     
     // MARK: - Add methods
@@ -174,14 +146,18 @@ class Quiz {
     
     // MARK: - Database management methods
     
-    let quizDB = Database.database().reference().child("Quiz")
+    let quizRef = Database.database().reference().child("Quiz")
     
-    func saveInList(id: String) {
+    func saveInList(quizId: String) {
         // TODO: Fetch before save
         
         func saveListForUser(uid: String, role: Role) {
-            let newList = QuizList(user: uid, quizList: [QuizRoleTuple(quizId: id, role: role)])
-            newList.save()
+            QuizListService.observeQuizList(uid) { (quizList) in
+                if let newList = quizList {
+                    newList.addQuiz(quizId: quizId, role: role)
+                    newList.save(for: uid)
+                }
+            }
         }
         
         saveListForUser(uid: self.creator, role: .Owner)
@@ -192,12 +168,12 @@ class Quiz {
     }
     
     func save() {
-        quizDB.childByAutoId().setValue(self.createDictionary()) { (error, reference) in
+        quizRef.childByAutoId().setValue(self.createDictionary()) { (error, reference) in
             if error != nil {
                 print(error!)
             } else {
                 print("Quiz \(reference.key) saved successfully!")
-                self.saveInList(id: reference.key)
+                self.saveInList(quizId: reference.key)
             }
         }
     }
