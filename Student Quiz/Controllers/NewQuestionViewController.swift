@@ -34,8 +34,11 @@ class NewQuestionViewController: UIViewController {
         // TODO: Add Segue
         if formIsValid() {
             appendQuestion()
+            shouldSave()
         }
-        shouldSave()
+        if currentQuiz.questions.count < 1 {
+            Helpers.displayAlert(title: "Invalid info", message: "You must add at least one question to go further", with: self)
+        }
     }
     
     @IBAction func backButtonPressed(_ sender: UIButton) {

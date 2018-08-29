@@ -600,11 +600,76 @@ All it takes is 5 seconds.</string>
                     <connections>
                         <outlet property="answerLabel" destination="g9u-IL-tXD" id="iie-Zf-rpe"/>
                         <outlet property="questionLabel" destination="ah4-Hr-p7n" id="1lT-Q7-O8p"/>
+                        <segue destination="UMf-IN-UMO" kind="show" id="d9y-gO-2Ew"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hCM-IQ-fNk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2325.5999999999999" y="76.847290640394093"/>
+        </scene>
+        <!--Privacy View Controller-->
+        <scene sceneID="A64-X1-igK">
+            <objects>
+                <viewController id="UMf-IN-UMO" customClass="PrivacyViewController" customModule="Student_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yRg-tP-phW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fRY-fR-qbE" userLabel="TopBar">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ab-Ol-MbM">
+                                        <rect key="frame" x="30" y="43" width="23" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="23" id="YPq-U5-wb2"/>
+                                            <constraint firstAttribute="height" constant="35" id="iJB-sD-p3p"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="back"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="04w-qc-SNY" eventType="touchUpInside" id="yQc-Wz-Cs3"/>
+                                            <segue destination="04w-qc-SNY" kind="show" id="pP9-vX-86v"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJ4-o7-QWO">
+                                        <rect key="frame" x="138.5" y="28" width="99" height="64"/>
+                                        <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="27"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <size key="shadowOffset" width="1" height="2"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.2470588235" green="0.75686274509999996" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="EJ4-o7-QWO" firstAttribute="top" secondItem="fRY-fR-qbE" secondAttribute="topMargin" id="4wl-wO-C2v"/>
+                                    <constraint firstItem="EJ4-o7-QWO" firstAttribute="bottom" secondItem="fRY-fR-qbE" secondAttribute="bottomMargin" id="VOm-rD-zGg"/>
+                                    <constraint firstItem="EJ4-o7-QWO" firstAttribute="centerY" secondItem="6Ab-Ol-MbM" secondAttribute="centerY" id="ZLB-iN-YdR"/>
+                                    <constraint firstAttribute="height" constant="100" id="bWs-hS-ilk"/>
+                                    <constraint firstItem="6Ab-Ol-MbM" firstAttribute="leading" secondItem="fRY-fR-qbE" secondAttribute="leading" constant="30" id="kOU-pX-uvs"/>
+                                    <constraint firstItem="EJ4-o7-QWO" firstAttribute="centerX" secondItem="fRY-fR-qbE" secondAttribute="centerX" id="xc1-Xf-7Mt"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qkl-ei-sCk">
+                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
+                                <color key="backgroundColor" red="0.21176470589999999" green="0.30980392159999998" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fRY-fR-qbE" firstAttribute="leading" secondItem="INN-Nb-bca" secondAttribute="leading" id="0mp-NE-nFZ"/>
+                            <constraint firstItem="Qkl-ei-sCk" firstAttribute="top" secondItem="fRY-fR-qbE" secondAttribute="bottom" id="2fM-1F-bG1"/>
+                            <constraint firstItem="fRY-fR-qbE" firstAttribute="top" secondItem="yRg-tP-phW" secondAttribute="top" id="4xA-2f-USZ"/>
+                            <constraint firstAttribute="bottom" secondItem="Qkl-ei-sCk" secondAttribute="bottom" id="Iyu-nL-3Ip"/>
+                            <constraint firstItem="INN-Nb-bca" firstAttribute="trailing" secondItem="Qkl-ei-sCk" secondAttribute="trailing" id="KnH-zr-MyW"/>
+                            <constraint firstItem="fRY-fR-qbE" firstAttribute="trailing" secondItem="INN-Nb-bca" secondAttribute="trailing" id="Y33-NE-dDQ"/>
+                            <constraint firstItem="Qkl-ei-sCk" firstAttribute="leading" secondItem="INN-Nb-bca" secondAttribute="leading" id="kPG-Yi-sne"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="INN-Nb-bca"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NDC-SF-ybD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3049" y="77"/>
         </scene>
     </scenes>
     <resources>
@@ -620,6 +685,7 @@ All it takes is 5 seconds.</string>
         <image name="plus" width="32" height="34"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="pP9-vX-86v"/>
         <segue reference="58j-QR-nq2"/>
         <segue reference="kPf-7t-uKa"/>
     </inferredMetricsTieBreakers>
