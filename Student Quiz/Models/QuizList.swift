@@ -63,7 +63,22 @@ class QuizList {
     // MARK: - Add methods
     
     func addQuiz(quizId: String, role: Role) {
-        self.quizList.append(QuizRoleTuple(quizId: quizId, role: role))
+        var foundAt = -1
+        
+        for (index, tuple) in self.quizList.enumerated() {
+            if tuple.quizId == quizId {
+                foundAt = index
+            }
+        }
+        
+        if foundAt > 0 {
+            if self.quizList[foundAt].role != role {
+                self.quizList[foundAt].role = role
+            }
+        } else {
+            self.quizList.append(QuizRoleTuple(quizId: quizId, role: role))
+        }
+
     }
     
     // MARK: - Convert to dictionary method
@@ -89,8 +104,6 @@ class QuizList {
     let quizListRef = Database.database().reference().child("QuizList")
     
     func save(for uid: String) {
-        // TODO: Check for existing values
-        
         quizListRef.child(uid).setValue(self.createDictionary()) { (error, reference) in
             if error != nil {
                 print(error!)
