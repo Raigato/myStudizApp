@@ -153,8 +153,6 @@ class Quiz {
     let quizRef = Database.database().reference().child("Quiz")
     
     func saveInList(quizId: String) {
-        // TODO: Fetch before save
-        
         func saveListForUser(uid: String, role: Role) {
             QuizListService.observeQuizList(uid) { (quizList) in
                 if let newList = quizList {
@@ -171,12 +169,11 @@ class Quiz {
         }
     }
     
-    func save(in quizId: String = "") {
+    func save(in quizId: String = "", completion: @escaping ((_ quizRef: String) -> ())) {        
         var thisQuizRef: DatabaseReference
         
         if quizId == "" {
             thisQuizRef = quizRef.childByAutoId()
-            currentQuizId = thisQuizRef.key
         } else {
             thisQuizRef = quizRef.child(quizId)
         }
@@ -188,6 +185,7 @@ class Quiz {
                 currentQuizId = reference.key
                 print("Quiz \(reference.key) saved successfully!")
                 self.saveInList(quizId: reference.key)
+                completion(reference.key)
             }
         }
     }

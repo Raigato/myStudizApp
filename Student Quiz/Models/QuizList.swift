@@ -14,6 +14,7 @@ enum Role {
     case Owner
     case Collaborator
     case Favorite
+    case None
 }
 
 struct QuizRoleTuple {
@@ -41,6 +42,8 @@ class QuizList {
             return "Collaborator"
         case .Favorite:
             return "Favorite"
+        default:
+            return "None"
         }
     }
     
@@ -50,8 +53,10 @@ class QuizList {
             return .Owner
         case "Collaborator":
             return .Collaborator
-        default:
+        case "Favorite":
             return .Favorite
+        default:
+            return .None
         }
     }
     
@@ -83,7 +88,9 @@ class QuizList {
     
     let quizListRef = Database.database().reference().child("QuizList")
     
-    func save(for uid: String) {        
+    func save(for uid: String) {
+        // TODO: Check for existing values
+        
         quizListRef.child(uid).setValue(self.createDictionary()) { (error, reference) in
             if error != nil {
                 print(error!)

@@ -600,7 +600,7 @@ All it takes is 5 seconds.</string>
                     <connections>
                         <outlet property="answerLabel" destination="g9u-IL-tXD" id="iie-Zf-rpe"/>
                         <outlet property="questionLabel" destination="ah4-Hr-p7n" id="1lT-Q7-O8p"/>
-                        <segue destination="UMf-IN-UMO" kind="show" id="d9y-gO-2Ew"/>
+                        <segue destination="UMf-IN-UMO" kind="show" identifier="goToPrivacy" id="d9y-gO-2Ew"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hCM-IQ-fNk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -685,6 +685,7 @@ All it takes is 5 seconds.</string>
         <image name="plus" width="32" height="34"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="d9y-gO-2Ew"/>
         <segue reference="pP9-vX-86v"/>
         <segue reference="58j-QR-nq2"/>
         <segue reference="kPf-7t-uKa"/>

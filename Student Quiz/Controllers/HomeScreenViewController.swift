@@ -75,7 +75,7 @@ class HomeScreenViewController: UIViewController {
         newQuiz1.addQuestion(question: "Now, what does make 1*1", answer: "1")
         newQuiz1.addReview(rated: "4")
         newQuiz1.addReview(rated: "3", comment: "Moyen quoi")
-        newQuiz1.save()
+        newQuiz1.save { (quizId) in }
     }
     
     // MARK: - Database functions

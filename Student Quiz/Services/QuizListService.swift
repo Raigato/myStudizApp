@@ -11,6 +11,20 @@ import Firebase
 
 class QuizListService {
     
+    static func getRoleForUser(uid: String, quizId: String, completion: @escaping ((_ role: Role?) -> ())) {
+        QuizListService.observeQuizList(uid) { (quizList) in
+            if let tupleArray = quizList?.quizList {
+                var role: Role = .None
+                for tuple in tupleArray {
+                    if tuple.quizId == quizId {
+                        role = tuple.role
+                    }
+                }
+                completion(role)
+            }
+        }
+    }
+    
     static func observeQuizList(_ uid: String, completion: @escaping ((_ quizList: QuizList?) -> ())) {
         let quizListRef = Database.database().reference().child("QuizList/\(uid)")
         

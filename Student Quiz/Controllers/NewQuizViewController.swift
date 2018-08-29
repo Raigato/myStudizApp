@@ -64,7 +64,6 @@ class NewQuizViewController: UIViewController {
     // MARK: Segue Handling
     
     @IBAction func nextButtonPressed(_ sender: Any) {
-        // TODO: Prepare for Segue
         if titleTextField.text != "" && descriptionTextField.text != "" && categoryButton.titleLabel?.text != "" {
             currentQuiz.creator = Auth.auth().currentUser!.uid
             currentQuiz.title = titleTextField.text!
@@ -72,7 +71,8 @@ class NewQuizViewController: UIViewController {
             currentQuiz.setCategory(category: categoryButton.titleLabel!.text!)
             
             if currentQuizId != "" {
-                currentQuiz.save(in: currentQuizId)
+                currentQuiz.save(in: currentQuizId) { (quizRed) in
+                }
             }
             performSegue(withIdentifier: "goToAddQuestions", sender: self)
         } else {
