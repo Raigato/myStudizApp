@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		891235A9213555A4009D8212 /* NewQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891235A8213555A4009D8212 /* NewQuizViewController.swift */; };
 		891DADA2213469A1003CB827 /* QuizList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891DADA1213469A1003CB827 /* QuizList.swift */; };
 		891DADA42134813E003CB827 /* QuizListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891DADA32134813E003CB827 /* QuizListService.swift */; };
 		891DADA62134814B003CB827 /* QuizService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891DADA52134814B003CB827 /* QuizService.swift */; };
+		89430BDC2136881700B09CA2 /* LeftPaddedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89430BDB2136881700B09CA2 /* LeftPaddedTextField.swift */; };
+		89430BDE2136882A00B09CA2 /* TopLeftPaddedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89430BDD2136882A00B09CA2 /* TopLeftPaddedTextField.swift */; };
+		89430BE1213693D600B09CA2 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89430BE0213693D600B09CA2 /* Helpers.swift */; };
 		894899A1213412D2003B515D /* QuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894899A0213412D2003B515D /* QuizTableViewCell.swift */; };
 		894899A42134254B003B515D /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894899A32134254B003B515D /* Quiz.swift */; };
 		894899A621342A8C003B515D /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894899A521342A8C003B515D /* Question.swift */; };
@@ -30,9 +34,13 @@
 /* Begin PBXFileReference section */
 		5132426293EB64BB102FE8D5 /* Pods_Student_Quiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Student_Quiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70DA4B973A0F64CB9ED50A53 /* Pods-Student Quiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Student Quiz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Student Quiz/Pods-Student Quiz.debug.xcconfig"; sourceTree = "<group>"; };
+		891235A8213555A4009D8212 /* NewQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewQuizViewController.swift; sourceTree = "<group>"; };
 		891DADA1213469A1003CB827 /* QuizList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizList.swift; sourceTree = "<group>"; };
 		891DADA32134813E003CB827 /* QuizListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizListService.swift; sourceTree = "<group>"; };
 		891DADA52134814B003CB827 /* QuizService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizService.swift; sourceTree = "<group>"; };
+		89430BDB2136881700B09CA2 /* LeftPaddedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftPaddedTextField.swift; sourceTree = "<group>"; };
+		89430BDD2136882A00B09CA2 /* TopLeftPaddedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopLeftPaddedTextField.swift; sourceTree = "<group>"; };
+		89430BE0213693D600B09CA2 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		894899A0213412D2003B515D /* QuizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTableViewCell.swift; sourceTree = "<group>"; };
 		894899A32134254B003B515D /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		894899A521342A8C003B515D /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
@@ -79,6 +87,16 @@
 				891DADA52134814B003CB827 /* QuizService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		89430BDF213688D700B09CA2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				89430BDB2136881700B09CA2 /* LeftPaddedTextField.swift */,
+				89430BDD2136882A00B09CA2 /* TopLeftPaddedTextField.swift */,
+				89430BE0213693D600B09CA2 /* Helpers.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		894899A2213424B8003B515D /* Custom Cell */ = {
@@ -138,6 +156,8 @@
 			children = (
 				897B6B18212C310B00807269 /* CreateAccountViewController.swift */,
 				89A15CCD2132CE7D0061494E /* HomeScreenViewController.swift */,
+				891235A8213555A4009D8212 /* NewQuizViewController.swift */,
+				89430BDF213688D700B09CA2 /* Helpers */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -278,6 +298,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Student Quiz/Pods-Student Quiz-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Dropper/Dropper.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Spinners/Spinners.framework",
@@ -286,6 +307,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Dropper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spinners.framework",
@@ -305,10 +327,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				891DADA62134814B003CB827 /* QuizService.swift in Sources */,
+				89430BE1213693D600B09CA2 /* Helpers.swift in Sources */,
 				897B6B19212C310B00807269 /* CreateAccountViewController.swift in Sources */,
+				89430BDC2136881700B09CA2 /* LeftPaddedTextField.swift in Sources */,
 				894899A42134254B003B515D /* Quiz.swift in Sources */,
+				891235A9213555A4009D8212 /* NewQuizViewController.swift in Sources */,
 				894899A821342ADC003B515D /* Review.swift in Sources */,
 				891DADA42134813E003CB827 /* QuizListService.swift in Sources */,
+				89430BDE2136882A00B09CA2 /* TopLeftPaddedTextField.swift in Sources */,
 				897B6B17212C310B00807269 /* AppDelegate.swift in Sources */,
 				894899A621342A8C003B515D /* Question.swift in Sources */,
 				894899A1213412D2003B515D /* QuizTableViewCell.swift in Sources */,

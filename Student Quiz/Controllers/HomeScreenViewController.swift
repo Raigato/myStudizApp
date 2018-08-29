@@ -58,6 +58,7 @@ class HomeScreenViewController: UIViewController {
         do {
             try Auth.auth().signOut()
         } catch {
+            // TODO: Changer ce print
             print("ça bug tamer")
         }
     }

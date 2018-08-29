@@ -42,7 +42,7 @@ class Quiz {
     var collaborators: [String]
     var reviews: [Review]
     
-    init(createdby creator: String, entitled title: String, description: String, on category: Category, questions: [Question], privacy: Privacy, collaborators: [String] = [], reviews: [Review] = []) {
+    init(createdby creator: String, entitled title: String, description: String, on category: Category, questions: [Question], privacy: Privacy = .Private, collaborators: [String] = [], reviews: [Review] = []) {
         self.creator = creator
         self.title = title
         self.description = description
@@ -54,6 +54,10 @@ class Quiz {
     }
     
     // MARK: - Get/Set enum methods
+    
+    static func getAllCategories() -> [String] {
+        return ["Languages", "Maths", "History", "Geography", "Science", "Literature", "Arts", "Business", "Law", "Misc"]
+    }
     
     // -- GET
     func getCategory() -> String {
