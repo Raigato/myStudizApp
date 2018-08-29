@@ -18,11 +18,12 @@ class QuizListService {
             let quizList: QuizList? = QuizList(quizList: [])
             
             if let dict = snapshot.value as? [String: Any] {
-                let quizArray = dict["quizList"] as! [[String: String]]
-                
-                for quiz in quizArray {
-                    quizList?.addQuiz(quizId: quiz["quizId"]!, role: QuizList.setRole(role: quiz["role"]!))
+                if let quizArray = dict["quizList"] as? [[String: String]] {
+                    for quiz in quizArray {
+                        quizList?.addQuiz(quizId: quiz["quizId"]!, role: QuizList.setRole(role: quiz["role"]!))
+                    }
                 }
+
             }
             
             completion(quizList)

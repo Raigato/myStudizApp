@@ -172,23 +172,22 @@ class Quiz {
     }
     
     func save(in quizId: String = "") {
+        var thisQuizRef: DatabaseReference
+        
         if quizId == "" {
-            quizRef.childByAutoId().setValue(self.createDictionary()) { (error, reference) in
-                if error != nil {
-                    print(error!)
-                } else {
-                    print("Quiz \(reference.key) saved successfully!")
-                    self.saveInList(quizId: reference.key)
-                }
-            }
+            thisQuizRef = quizRef.childByAutoId()
+            currentQuizId = thisQuizRef.key
         } else {
-            quizRef.child(quizId).setValue(self.createDictionary()) { (error, reference) in
-                if error != nil {
-                    print(error!)
-                } else {
-                    print("Quiz \(reference.key) saved successfully!")
-                    self.saveInList(quizId: reference.key)
-                }
+            thisQuizRef = quizRef.child(quizId)
+        }
+        
+        thisQuizRef.setValue(self.createDictionary()) { (error, reference) in
+            if error != nil {
+                print(error!)
+            } else {
+                currentQuizId = reference.key
+                print("Quiz \(reference.key) saved successfully!")
+                self.saveInList(quizId: reference.key)
             }
         }
     }

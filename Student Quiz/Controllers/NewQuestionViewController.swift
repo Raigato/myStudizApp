@@ -24,6 +24,7 @@ class NewQuestionViewController: UIViewController {
             appendQuestion()
             questionLabel.text = ""
             answerLabel.text = ""
+            shouldSave()
         } else {
             Helpers.displayAlert(title: "Invalid info", message: "You must provide a question and an answer", with: self)
         }
@@ -34,6 +35,7 @@ class NewQuestionViewController: UIViewController {
         if formIsValid() {
             appendQuestion()
         }
+        shouldSave()
     }
     
     @IBAction func backButtonPressed(_ sender: UIButton) {
@@ -52,6 +54,15 @@ class NewQuestionViewController: UIViewController {
     func appendQuestion() {
         if questionLabel.text != "" && answerLabel.text != "" {
             currentQuiz.addQuestion(question: questionLabel.text!, answer: answerLabel.text!)
+        }
+    }
+    
+    func shouldSave() {
+        if currentQuizId != "" {
+            currentQuiz.save(in: currentQuizId)
+        } else {
+            currentQuiz.privacy = .Private
+            currentQuiz.save()
         }
     }
 }

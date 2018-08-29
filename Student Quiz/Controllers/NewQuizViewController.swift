@@ -66,6 +66,7 @@ class NewQuizViewController: UIViewController {
     @IBAction func nextButtonPressed(_ sender: Any) {
         // TODO: Prepare for Segue
         if titleTextField.text != "" && descriptionTextField.text != "" && categoryButton.titleLabel?.text != "" {
+            currentQuiz.creator = Auth.auth().currentUser!.uid
             currentQuiz.title = titleTextField.text!
             currentQuiz.description = descriptionTextField.text!
             currentQuiz.setCategory(category: categoryButton.titleLabel!.text!)
