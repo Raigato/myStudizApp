@@ -12,6 +12,7 @@ import Dropper
 
 class NewQuizViewController: UIViewController {
     
+    var currentQuiz = Quiz(createdby: "", entitled: "", description: "", on: .Misc, questions: [])
     let dropper = Dropper(width: 320, height: 50)
 
     @IBOutlet weak var titleTextField: UITextField!
@@ -20,6 +21,8 @@ class NewQuizViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        print(currentQuiz.createDictionary())
         
         // Dropper setup
         dropper.width = categoryButton.frame.width
@@ -51,10 +54,17 @@ class NewQuizViewController: UIViewController {
     @IBAction func nextButtonPressed(_ sender: Any) {
         // TODO: Prepare for Segue
         if titleTextField.text != "" && descriptionTextField.text != "" && categoryButton.titleLabel?.text != "" {
-            let quiz: Quiz = Quiz(createdby: Auth.auth().currentUser!.uid, entitled: titleTextField.text!, description: descriptionTextField.text!, on: QuizService.convertCategory(categoryButton.titleLabel?.text), questions: [])
-            print(quiz.createDictionary())
+            currentQuiz = Quiz(createdby: Auth.auth().currentUser!.uid, entitled: titleTextField.text!, description: descriptionTextField.text!, on: QuizService.convertCategory(categoryButton.titleLabel?.text), questions: [])
+            performSegue(withIdentifier: "goToAddQuestions", sender: self)
         } else {
             Helpers.displayAlert(title: "Invalid info", message: "You must provide a title, a description and a category", with: self)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToAddQuestions" {
+            let nextViewController = segue.destination as! NewQuestionViewController
+            nextViewController.currentQuiz = currentQuiz
         }
     }
     

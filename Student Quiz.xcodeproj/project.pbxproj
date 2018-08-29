@@ -14,6 +14,8 @@
 		89430BDC2136881700B09CA2 /* LeftPaddedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89430BDB2136881700B09CA2 /* LeftPaddedTextField.swift */; };
 		89430BDE2136882A00B09CA2 /* TopLeftPaddedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89430BDD2136882A00B09CA2 /* TopLeftPaddedTextField.swift */; };
 		89430BE1213693D600B09CA2 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89430BE0213693D600B09CA2 /* Helpers.swift */; };
+		89430BE321369D7E00B09CA2 /* NewQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89430BE221369D7E00B09CA2 /* NewQuestionViewController.swift */; };
+		89430BE52136A1BE00B09CA2 /* EndEditingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89430BE42136A1BE00B09CA2 /* EndEditingScrollView.swift */; };
 		894899A1213412D2003B515D /* QuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894899A0213412D2003B515D /* QuizTableViewCell.swift */; };
 		894899A42134254B003B515D /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894899A32134254B003B515D /* Quiz.swift */; };
 		894899A621342A8C003B515D /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894899A521342A8C003B515D /* Question.swift */; };
@@ -41,6 +43,8 @@
 		89430BDB2136881700B09CA2 /* LeftPaddedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftPaddedTextField.swift; sourceTree = "<group>"; };
 		89430BDD2136882A00B09CA2 /* TopLeftPaddedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopLeftPaddedTextField.swift; sourceTree = "<group>"; };
 		89430BE0213693D600B09CA2 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		89430BE221369D7E00B09CA2 /* NewQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewQuestionViewController.swift; sourceTree = "<group>"; };
+		89430BE42136A1BE00B09CA2 /* EndEditingScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndEditingScrollView.swift; sourceTree = "<group>"; };
 		894899A0213412D2003B515D /* QuizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTableViewCell.swift; sourceTree = "<group>"; };
 		894899A32134254B003B515D /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		894899A521342A8C003B515D /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
@@ -95,6 +99,7 @@
 				89430BDB2136881700B09CA2 /* LeftPaddedTextField.swift */,
 				89430BDD2136882A00B09CA2 /* TopLeftPaddedTextField.swift */,
 				89430BE0213693D600B09CA2 /* Helpers.swift */,
+				89430BE42136A1BE00B09CA2 /* EndEditingScrollView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -157,6 +162,7 @@
 				897B6B18212C310B00807269 /* CreateAccountViewController.swift */,
 				89A15CCD2132CE7D0061494E /* HomeScreenViewController.swift */,
 				891235A8213555A4009D8212 /* NewQuizViewController.swift */,
+				89430BE221369D7E00B09CA2 /* NewQuestionViewController.swift */,
 				89430BDF213688D700B09CA2 /* Helpers */,
 			);
 			path = Controllers;
@@ -336,9 +342,11 @@
 				891DADA42134813E003CB827 /* QuizListService.swift in Sources */,
 				89430BDE2136882A00B09CA2 /* TopLeftPaddedTextField.swift in Sources */,
 				897B6B17212C310B00807269 /* AppDelegate.swift in Sources */,
+				89430BE52136A1BE00B09CA2 /* EndEditingScrollView.swift in Sources */,
 				894899A621342A8C003B515D /* Question.swift in Sources */,
 				894899A1213412D2003B515D /* QuizTableViewCell.swift in Sources */,
 				891DADA2213469A1003CB827 /* QuizList.swift in Sources */,
+				89430BE321369D7E00B09CA2 /* NewQuestionViewController.swift in Sources */,
 				89A15CCE2132CE7D0061494E /* HomeScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
