@@ -10,6 +10,9 @@ import UIKit
 import Firebase
 import Spinners
 
+var currentQuizId: String = ""
+var currentQuiz = Quiz(createdby: "", entitled: "", description: "", on: .Misc, questions: [])
+
 class HomeScreenViewController: UIViewController {
     
     private let cellId = "QuizCell"
@@ -47,6 +50,8 @@ class HomeScreenViewController: UIViewController {
             performSegue(withIdentifier: "goToSignUpScreen", sender: self)
         }
         
+        currentQuizId = ""
+        currentQuiz = Quiz(createdby: "", entitled: "", description: "", on: .Misc, questions: [])
     }
     
     

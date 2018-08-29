@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ynM-Mm-tKY">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -28,11 +28,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="CreateAccountViewController" customModule="Student_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="Create Account">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abA-iT-Gjt" customClass="EndEditingScrollView" customModule="Student_Quiz" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="100" width="375" height="678"/>
+                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6m4-F8-vu6">
                                         <rect key="frame" x="30" y="45" width="316" height="35"/>
@@ -69,7 +69,7 @@
                                         <size key="shadowOffset" width="1" height="2"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="llY-NH-sXV">
-                                        <rect key="frame" x="10" y="305" width="162" height="63.333333333333314"/>
+                                        <rect key="frame" x="10" y="305" width="162" height="63.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="llY-NH-sXV" secondAttribute="height" multiplier="41:16" id="AgF-Y0-aBM"/>
                                         </constraints>
@@ -79,7 +79,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ofp-Rj-1Cc">
-                                        <rect key="frame" x="177" y="305" width="187" height="63.333333333333314"/>
+                                        <rect key="frame" x="177" y="305" width="187" height="63.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Ofp-Rj-1Cc" secondAttribute="height" multiplier="189:64" id="MAI-fU-t7m"/>
                                         </constraints>
@@ -89,7 +89,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aB2-b6-qTv">
-                                        <rect key="frame" x="30" y="404.33333333333331" width="314" height="100"/>
+                                        <rect key="frame" x="30" y="404.5" width="314" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="hD8-tA-ivl"/>
                                         </constraints>
@@ -139,7 +139,7 @@ All it takes is 5 seconds.</string>
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Account or Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6g3-Hf-MNQ">
-                                        <rect key="frame" x="34.666666666666657" y="52" width="307" height="40"/>
+                                        <rect key="frame" x="34.5" y="28" width="307" height="64"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="27"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -156,7 +156,7 @@ All it takes is 5 seconds.</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Eg-TC-4Ef">
-                                <rect key="frame" x="0.0" y="778" width="375" height="34"/>
+                                <rect key="frame" x="0.0" y="667" width="375" height="0.0"/>
                                 <color key="backgroundColor" red="0.21176470588235294" green="0.30980392156862746" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
@@ -192,14 +192,14 @@ All it takes is 5 seconds.</string>
             <objects>
                 <viewController id="ynM-Mm-tKY" userLabel="Home Screen View Controller" customClass="HomeScreenViewController" customModule="Student_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u1E-8V-kdS" userLabel="Home Screen" customClass="home">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7b5-ib-4uU" userLabel="TopBar">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Studiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ag2-ZR-tA4">
-                                        <rect key="frame" x="146.66666666666666" y="52" width="83.333333333333343" height="40"/>
+                                        <rect key="frame" x="145.5" y="28" width="84" height="64"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="27"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -207,7 +207,7 @@ All it takes is 5 seconds.</string>
                                         <size key="shadowOffset" width="1" height="2"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKu-y4-Ok1">
-                                        <rect key="frame" x="313" y="55" width="32" height="34"/>
+                                        <rect key="frame" x="313" y="43" width="32" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="Wrj-cM-khv"/>
                                             <constraint firstAttribute="width" constant="32" id="Z60-WY-tSu"/>
@@ -230,21 +230,21 @@ All it takes is 5 seconds.</string>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5lM-Cp-hfl" userLabel="QuizList">
-                                <rect key="frame" x="0.0" y="100" width="375" height="678"/>
+                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QuizCell" rowHeight="80" id="fZq-xN-plH" customClass="QuizTableViewCell" customModule="Student_Quiz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fZq-xN-plH" id="kO6-a2-mee">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.666666666666671"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell" translatesAutoresizingMaskIntoConstraints="NO" id="6zi-VP-9PN">
-                                                    <rect key="frame" x="6" y="10" width="363" height="69.666666666666671"/>
+                                                    <rect key="frame" x="6" y="10" width="363" height="69.5"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz XX" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WjQ-VW-vNh">
-                                                    <rect key="frame" x="25" y="10" width="335" height="69.666666666666671"/>
+                                                    <rect key="frame" x="25" y="10" width="335" height="69.5"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="30"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -301,14 +301,14 @@ All it takes is 5 seconds.</string>
             <objects>
                 <viewController id="HCW-wT-gzB" customClass="NewQuizViewController" customModule="Student_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0ld-j1-8gb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GsZ-bf-6Rx" userLabel="TopBar">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Quiz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJt-vf-kR2">
-                                        <rect key="frame" x="125.66666666666669" y="52" width="124" height="40"/>
+                                        <rect key="frame" x="125.5" y="28" width="124" height="64"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="27"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -316,7 +316,7 @@ All it takes is 5 seconds.</string>
                                         <size key="shadowOffset" width="1" height="2"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kK9-g4-Rfg">
-                                        <rect key="frame" x="30" y="55" width="23" height="35"/>
+                                        <rect key="frame" x="30" y="43" width="23" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="HPg-Mo-cOD"/>
                                             <constraint firstAttribute="width" constant="23" id="yu4-ek-07J"/>
@@ -338,10 +338,10 @@ All it takes is 5 seconds.</string>
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J7h-eH-Rfj" userLabel="Content" customClass="EndEditingScrollView" customModule="Student_Quiz" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="100" width="375" height="712"/>
+                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P63-yE-lIr">
-                                        <rect key="frame" x="29.999999999999996" y="30" width="48.666666666666657" height="35"/>
+                                        <rect key="frame" x="30" y="30" width="48.5" height="35"/>
                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="24"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -383,9 +383,9 @@ All it takes is 5 seconds.</string>
                                         <size key="shadowOffset" width="1" height="2"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AUz-lq-btj">
-                                        <rect key="frame" x="190" y="483" width="164" height="64"/>
+                                        <rect key="frame" x="180" y="455" width="164" height="64"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="AUz-lq-btj" secondAttribute="height" multiplier="41:16" id="x2H-ho-zcN"/>
+                                            <constraint firstAttribute="width" secondItem="AUz-lq-btj" secondAttribute="height" multiplier="41:16" id="AqJ-5h-i6Y"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="Next Button"/>
                                         <connections>
@@ -410,22 +410,22 @@ All it takes is 5 seconds.</string>
                                 <constraints>
                                     <constraint firstItem="oSm-CA-uR2" firstAttribute="leading" secondItem="J7h-eH-Rfj" secondAttribute="leading" constant="28" id="3O7-Ru-zNH"/>
                                     <constraint firstItem="P63-yE-lIr" firstAttribute="leading" secondItem="J7h-eH-Rfj" secondAttribute="leading" constant="30" id="3oN-KU-zGu"/>
+                                    <constraint firstItem="AUz-lq-btj" firstAttribute="top" secondItem="hwO-CN-f2B" secondAttribute="bottom" constant="45" id="3ty-5B-OA1"/>
                                     <constraint firstItem="oSm-CA-uR2" firstAttribute="centerX" secondItem="J7h-eH-Rfj" secondAttribute="centerX" id="5kj-O4-nvb"/>
                                     <constraint firstItem="P63-yE-lIr" firstAttribute="top" secondItem="J7h-eH-Rfj" secondAttribute="top" constant="30" id="6d9-ln-a7p"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4RX-Rg-aSU" secondAttribute="trailing" constant="20" symbolic="YES" id="78j-Ju-xUG"/>
+                                    <constraint firstAttribute="trailing" secondItem="AUz-lq-btj" secondAttribute="trailing" constant="30" id="ADX-FD-iew"/>
                                     <constraint firstItem="pMP-BQ-dWR" firstAttribute="centerX" secondItem="J7h-eH-Rfj" secondAttribute="centerX" id="AGL-8m-RDo"/>
                                     <constraint firstItem="pMP-BQ-dWR" firstAttribute="leading" secondItem="J7h-eH-Rfj" secondAttribute="leading" constant="28" id="AW2-JN-Gj8"/>
                                     <constraint firstAttribute="trailing" secondItem="pMP-BQ-dWR" secondAttribute="trailing" constant="27" id="BkP-j4-Qxa"/>
                                     <constraint firstItem="pMP-BQ-dWR" firstAttribute="top" secondItem="P63-yE-lIr" secondAttribute="bottom" constant="15" id="DwR-sj-FFX"/>
                                     <constraint firstItem="hwO-CN-f2B" firstAttribute="top" secondItem="4RX-Rg-aSU" secondAttribute="bottom" constant="15" id="Qmf-Vw-lfS"/>
-                                    <constraint firstAttribute="trailing" secondItem="AUz-lq-btj" secondAttribute="trailing" constant="20" id="Sri-qO-hVP"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8Uq-1F-pUD" secondAttribute="trailing" constant="20" symbolic="YES" id="VxZ-Fc-5Sw"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hwO-CN-f2B" secondAttribute="trailing" constant="30" id="Wg3-Hh-cvG"/>
                                     <constraint firstItem="4RX-Rg-aSU" firstAttribute="leading" secondItem="J7h-eH-Rfj" secondAttribute="leading" constant="30" id="XqS-ME-VWc"/>
                                     <constraint firstAttribute="trailing" secondItem="oSm-CA-uR2" secondAttribute="trailing" constant="27" id="ZS2-Rx-J2h"/>
                                     <constraint firstItem="8Uq-1F-pUD" firstAttribute="top" secondItem="pMP-BQ-dWR" secondAttribute="bottom" constant="15" id="cU4-Tf-ZUX"/>
                                     <constraint firstItem="4RX-Rg-aSU" firstAttribute="top" secondItem="oSm-CA-uR2" secondAttribute="bottom" constant="15" id="cqU-Db-Glc"/>
-                                    <constraint firstAttribute="bottom" secondItem="AUz-lq-btj" secondAttribute="bottom" constant="20" id="klm-X1-yei"/>
                                     <constraint firstItem="hwO-CN-f2B" firstAttribute="leading" secondItem="J7h-eH-Rfj" secondAttribute="leading" constant="30" id="lUT-yS-6fk"/>
                                     <constraint firstItem="oSm-CA-uR2" firstAttribute="top" secondItem="8Uq-1F-pUD" secondAttribute="bottom" constant="15" id="q3i-OV-xVi"/>
                                     <constraint firstAttribute="bottom" secondItem="P63-yE-lIr" secondAttribute="bottom" constant="502" id="tPg-Pw-ZT8"/>
@@ -463,22 +463,26 @@ All it takes is 5 seconds.</string>
             <objects>
                 <viewController id="04w-qc-SNY" customClass="NewQuestionViewController" customModule="Student_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ukn-kw-3cj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fUY-dM-H5r" userLabel="TopBar">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTu-Uk-1XI">
-                                        <rect key="frame" x="30" y="55" width="23" height="35"/>
+                                        <rect key="frame" x="30" y="43" width="23" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="23" id="Ytr-KX-X2Z"/>
                                             <constraint firstAttribute="height" constant="35" id="snt-Rn-WRS"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="back"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="04w-qc-SNY" eventType="touchUpInside" id="Clc-or-cfq"/>
+                                            <segue destination="HCW-wT-gzB" kind="show" identifier="goBackToNewQuiz" id="58j-QR-nq2"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iG9-Yv-R6t">
-                                        <rect key="frame" x="97" y="52" width="180" height="40"/>
+                                        <rect key="frame" x="97.5" y="28" width="180" height="64"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="27"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -497,8 +501,88 @@ All it takes is 5 seconds.</string>
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3lf-v2-toy" customClass="EndEditingScrollView" customModule="Student_Quiz" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="100" width="375" height="712"/>
+                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVc-hB-mLy">
+                                        <rect key="frame" x="30" y="45" width="103.5" height="35"/>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <size key="shadowOffset" width="1" height="2"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="TextInput" translatesAutoresizingMaskIntoConstraints="NO" id="ah4-Hr-p7n" customClass="LeftPaddedTextField" customModule="Student_Quiz" customModuleProvider="target">
+                                        <rect key="frame" x="28" y="95" width="319" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="7FU-93-3Wu"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YWp-WX-2FT">
+                                        <rect key="frame" x="30" y="175" width="84.5" height="35"/>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <size key="shadowOffset" width="1" height="2"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="TextInput" translatesAutoresizingMaskIntoConstraints="NO" id="g9u-IL-tXD" customClass="LeftPaddedTextField" customModule="Student_Quiz" customModuleProvider="target">
+                                        <rect key="frame" x="28" y="225" width="319" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="MoY-jn-mDH"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m9g-Hv-8cq">
+                                        <rect key="frame" x="10" y="320" width="160" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="m9g-Hv-8cq" secondAttribute="height" multiplier="5:2" id="qCi-Rv-RRZ"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="Finish Button"/>
+                                        <connections>
+                                            <action selector="finishButtonPressed:" destination="04w-qc-SNY" eventType="touchUpInside" id="BHc-jQ-xPr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJg-tg-YPI">
+                                        <rect key="frame" x="175" y="320" width="189" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="TJg-tg-YPI" secondAttribute="height" multiplier="189:64" id="RCx-uV-NCI"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="MoreQuestion Button"/>
+                                        <connections>
+                                            <action selector="moreQuestionButtonPressed:" destination="04w-qc-SNY" eventType="touchUpInside" id="ZZX-Zf-Nw1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="0.21176470589999999" green="0.30980392159999998" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="TJg-tg-YPI" firstAttribute="height" secondItem="m9g-Hv-8cq" secondAttribute="height" id="198-ST-vN8"/>
+                                    <constraint firstItem="ah4-Hr-p7n" firstAttribute="centerX" secondItem="3lf-v2-toy" secondAttribute="centerX" id="Dtz-bY-gyN"/>
+                                    <constraint firstItem="TJg-tg-YPI" firstAttribute="leading" secondItem="m9g-Hv-8cq" secondAttribute="trailing" constant="5" id="Hc8-zW-H9J"/>
+                                    <constraint firstItem="YWp-WX-2FT" firstAttribute="leading" secondItem="3lf-v2-toy" secondAttribute="leading" constant="30" id="IiN-Ff-cd9"/>
+                                    <constraint firstItem="fVc-hB-mLy" firstAttribute="leading" secondItem="3lf-v2-toy" secondAttribute="leading" constant="30" id="OEe-yp-Rz2"/>
+                                    <constraint firstAttribute="trailing" secondItem="g9u-IL-tXD" secondAttribute="trailing" constant="27" id="Rd0-up-TYn"/>
+                                    <constraint firstItem="TJg-tg-YPI" firstAttribute="top" secondItem="g9u-IL-tXD" secondAttribute="bottom" constant="45" id="SCD-0i-cJ4"/>
+                                    <constraint firstItem="g9u-IL-tXD" firstAttribute="top" secondItem="YWp-WX-2FT" secondAttribute="bottom" constant="15" id="Uft-z2-EfV"/>
+                                    <constraint firstItem="TJg-tg-YPI" firstAttribute="leading" secondItem="m9g-Hv-8cq" secondAttribute="trailing" constant="5" id="VDe-YS-EEj"/>
+                                    <constraint firstItem="fVc-hB-mLy" firstAttribute="top" secondItem="3lf-v2-toy" secondAttribute="top" constant="45" id="VpD-Rq-aRJ"/>
+                                    <constraint firstItem="ah4-Hr-p7n" firstAttribute="leading" secondItem="3lf-v2-toy" secondAttribute="leading" constant="28" id="WDF-Tf-03S"/>
+                                    <constraint firstItem="m9g-Hv-8cq" firstAttribute="top" secondItem="g9u-IL-tXD" secondAttribute="bottom" constant="45" id="bCQ-DQ-T0d"/>
+                                    <constraint firstAttribute="trailing" secondItem="TJg-tg-YPI" secondAttribute="trailing" constant="10" id="hqb-Ee-Q2a"/>
+                                    <constraint firstItem="m9g-Hv-8cq" firstAttribute="leading" secondItem="3lf-v2-toy" secondAttribute="leading" constant="10" id="lQU-et-bWt"/>
+                                    <constraint firstAttribute="bottom" secondItem="fVc-hB-mLy" secondAttribute="bottom" constant="649" id="m02-WU-gQl"/>
+                                    <constraint firstAttribute="trailing" secondItem="ah4-Hr-p7n" secondAttribute="trailing" constant="27" id="qHb-uV-TPM"/>
+                                    <constraint firstItem="g9u-IL-tXD" firstAttribute="leading" secondItem="3lf-v2-toy" secondAttribute="leading" constant="28" id="ral-VN-S72"/>
+                                    <constraint firstItem="ah4-Hr-p7n" firstAttribute="top" secondItem="fVc-hB-mLy" secondAttribute="bottom" constant="15" id="sMB-yc-D0o"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YWp-WX-2FT" secondAttribute="trailing" id="u2E-gD-JeH"/>
+                                    <constraint firstItem="YWp-WX-2FT" firstAttribute="top" secondItem="ah4-Hr-p7n" secondAttribute="bottom" constant="30" id="wr3-m4-Qgk"/>
+                                    <constraint firstItem="g9u-IL-tXD" firstAttribute="centerX" secondItem="3lf-v2-toy" secondAttribute="centerX" id="xBD-Pw-NjE"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fVc-hB-mLy" secondAttribute="trailing" id="zvy-0r-3Cq"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -513,14 +597,20 @@ All it takes is 5 seconds.</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yrJ-ea-1H3"/>
                     </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="g9u-IL-tXD" id="iie-Zf-rpe"/>
+                        <outlet property="questionLabel" destination="ah4-Hr-p7n" id="1lT-Q7-O8p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hCM-IQ-fNk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2327" y="77"/>
+            <point key="canvasLocation" x="2325.5999999999999" y="76.847290640394093"/>
         </scene>
     </scenes>
     <resources>
         <image name="Dropdown" width="320" height="50"/>
+        <image name="Finish Button" width="164" height="64"/>
+        <image name="MoreQuestion Button" width="189" height="64"/>
         <image name="Next Button" width="164" height="64"/>
         <image name="OutlineButtonNoThanks" width="164" height="64"/>
         <image name="SubmitButton" width="189" height="64"/>
@@ -530,6 +620,7 @@ All it takes is 5 seconds.</string>
         <image name="plus" width="32" height="34"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="j3z-bt-sdT"/>
+        <segue reference="58j-QR-nq2"/>
+        <segue reference="kPf-7t-uKa"/>
     </inferredMetricsTieBreakers>
 </document>

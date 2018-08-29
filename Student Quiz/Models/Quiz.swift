@@ -8,7 +8,7 @@
 
 import Firebase
 
-// MARK: - Required enums
+// MARK: Required enums
 
 enum Category {
     case Languages
@@ -31,7 +31,7 @@ enum Privacy {
 
 class Quiz {
     
-    // MARK: - Properties and constructor
+    // MARK: Properties and constructor
     
     var creator: String
     var title: String
@@ -53,7 +53,7 @@ class Quiz {
         self.reviews = reviews
     }
     
-    // MARK: - Get/Set enum methods
+    // MARK: Get/Set enum methods
     
     static func getAllCategories() -> [String] {
         return ["Languages", "Maths", "History", "Geography", "Science", "Literature", "Arts", "Business", "Law", "Misc"]
@@ -105,7 +105,7 @@ class Quiz {
         self.privacy = QuizService.convertPrivacy(privacy)
     }
     
-    // MARK: - Add methods
+    // MARK: Add methods
     
     func addQuestion(question: String, answer: String) {
         let newQuestion = Question(question: question, answer: answer)
@@ -121,7 +121,7 @@ class Quiz {
         self.reviews.append(newReview)
     }
     
-    // MARK: - Convert to dictionary method
+    // MARK: Convert to dictionary method
     
     func createDictionary() -> [String: Any] {
         var dict = [String: Any]()
@@ -148,7 +148,7 @@ class Quiz {
         return dict
     }
     
-    // MARK: - Database management methods
+    // MARK: Database management methods
     
     let quizRef = Database.database().reference().child("Quiz")
     
@@ -171,13 +171,24 @@ class Quiz {
         }
     }
     
-    func save() {
-        quizRef.childByAutoId().setValue(self.createDictionary()) { (error, reference) in
-            if error != nil {
-                print(error!)
-            } else {
-                print("Quiz \(reference.key) saved successfully!")
-                self.saveInList(quizId: reference.key)
+    func save(in quizId: String = "") {
+        if quizId == "" {
+            quizRef.childByAutoId().setValue(self.createDictionary()) { (error, reference) in
+                if error != nil {
+                    print(error!)
+                } else {
+                    print("Quiz \(reference.key) saved successfully!")
+                    self.saveInList(quizId: reference.key)
+                }
+            }
+        } else {
+            quizRef.child(quizId).setValue(self.createDictionary()) { (error, reference) in
+                if error != nil {
+                    print(error!)
+                } else {
+                    print("Quiz \(reference.key) saved successfully!")
+                    self.saveInList(quizId: reference.key)
+                }
             }
         }
     }

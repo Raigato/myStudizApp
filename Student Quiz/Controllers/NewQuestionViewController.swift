@@ -10,12 +10,48 @@ import UIKit
 
 class NewQuestionViewController: UIViewController {
     
-    var currentQuiz = Quiz(createdby: "", entitled: "", description: "", on: .Misc, questions: [])
+    @IBOutlet weak var questionLabel: LeftPaddedTextField!
+    @IBOutlet weak var answerLabel: LeftPaddedTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        print(currentQuiz.createDictionary())
     }
-
+    
+    // MARK: Segues handling
+    
+    @IBAction func moreQuestionButtonPressed(_ sender: UIButton) {
+        if formIsValid() {
+            appendQuestion()
+            questionLabel.text = ""
+            answerLabel.text = ""
+        } else {
+            Helpers.displayAlert(title: "Invalid info", message: "You must provide a question and an answer", with: self)
+        }
+    }
+    
+    @IBAction func finishButtonPressed(_ sender: UIButton) {
+        // TODO: Add Segue
+        if formIsValid() {
+            appendQuestion()
+        }
+    }
+    
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+    }
+    
+    // MARK: Helper functions
+    
+    func formIsValid() -> Bool {
+        if questionLabel.text != "" && answerLabel.text != "" {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func appendQuestion() {
+        if questionLabel.text != "" && answerLabel.text != "" {
+            currentQuiz.addQuestion(question: questionLabel.text!, answer: answerLabel.text!)
+        }
+    }
 }

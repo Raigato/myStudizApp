@@ -12,7 +12,6 @@ import Dropper
 
 class NewQuizViewController: UIViewController {
     
-    var currentQuiz = Quiz(createdby: "", entitled: "", description: "", on: .Misc, questions: [])
     let dropper = Dropper(width: 320, height: 50)
 
     @IBOutlet weak var titleTextField: UITextField!
@@ -21,8 +20,6 @@ class NewQuizViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        print(currentQuiz.createDictionary())
         
         // Dropper setup
         dropper.width = categoryButton.frame.width
@@ -39,8 +36,21 @@ class NewQuizViewController: UIViewController {
         
         // Button setting
         categoryButton.titleEdgeInsets.left = 15
+        
+        // Fill labels
+        titleTextField.text = currentQuiz.title
+        descriptionTextField.text = currentQuiz.description
+        categoryButton.setTitle(currentQuiz.getCategory(), for: .normal)
     }
-
+    
+    // MARK: UI functions
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        // -- Dismisses the keyboard when you touch the topbar
+        
+        self.view.endEditing(true)
+    }
+    
     @IBAction func categoryButtonPressed(_ sender: UIButton) {
         if dropper.status == .hidden {
             dropper.showWithAnimation(0.15, options: Dropper.Alignment.left, button: categoryButton)
@@ -48,30 +58,25 @@ class NewQuizViewController: UIViewController {
         } else {
             dropper.hideWithAnimation(0.15)
         }
-    
+        
     }
+    
+    // MARK: Segue Handling
     
     @IBAction func nextButtonPressed(_ sender: Any) {
         // TODO: Prepare for Segue
         if titleTextField.text != "" && descriptionTextField.text != "" && categoryButton.titleLabel?.text != "" {
-            currentQuiz = Quiz(createdby: Auth.auth().currentUser!.uid, entitled: titleTextField.text!, description: descriptionTextField.text!, on: QuizService.convertCategory(categoryButton.titleLabel?.text), questions: [])
+            currentQuiz.title = titleTextField.text!
+            currentQuiz.description = descriptionTextField.text!
+            currentQuiz.setCategory(category: categoryButton.titleLabel!.text!)
+            
+            if currentQuizId != "" {
+                currentQuiz.save(in: currentQuizId)
+            }
             performSegue(withIdentifier: "goToAddQuestions", sender: self)
         } else {
             Helpers.displayAlert(title: "Invalid info", message: "You must provide a title, a description and a category", with: self)
         }
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToAddQuestions" {
-            let nextViewController = segue.destination as! NewQuestionViewController
-            nextViewController.currentQuiz = currentQuiz
-        }
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        // -- Dismisses the keyboard when you touch the topbar
-        
-        self.view.endEditing(true)
     }
 
 }
