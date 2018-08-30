@@ -13,11 +13,14 @@ class NewQuestionViewController: UIViewController {
     
     var role: Role = .Owner
     
-    @IBOutlet weak var questionLabel: LeftPaddedTextField!
+    @IBOutlet weak var questionLabel: LeftPaddedTextField! // TODO: Are Text Fields
     @IBOutlet weak var answerLabel: LeftPaddedTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        questionLabel.delegate = self
+        answerLabel.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -103,5 +106,20 @@ class NewQuestionViewController: UIViewController {
         } else {
             chooseSegue(role: role)
         }
+    }
+}
+
+// MARK: - TextField extension
+
+extension NewQuestionViewController : UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // -- Handles the press of the return button on a textField
+        
+        if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        return false
     }
 }

@@ -26,6 +26,7 @@ class PrivacyViewController: UIViewController {
     @IBOutlet weak var separator: UIImageView!
     
     @IBOutlet weak var switchButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +39,12 @@ class PrivacyViewController: UIViewController {
     }
 
     @IBAction func nextButtonPressed(_ sender: UIButton) {
-        // TODO: Segues handling
+        currentQuiz.privacy = currentChoice
+        currentQuiz.save(in: currentQuizId) { (quizId) in }
+        
+        if currentChoice == .Shared {
+            performSegue(withIdentifier: "goToCollaborators", sender: self)
+        }
     }
     
     @IBAction func switchButtonPressed(_ sender: UIButton) {

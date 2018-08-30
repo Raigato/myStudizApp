@@ -479,7 +479,7 @@
                                         <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <size key="shadowOffset" width="1" height="2"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="TextInput" translatesAutoresizingMaskIntoConstraints="NO" id="ah4-Hr-p7n" customClass="LeftPaddedTextField" customModule="Student_Quiz" customModuleProvider="target">
+                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="TextInput" translatesAutoresizingMaskIntoConstraints="NO" id="ah4-Hr-p7n" customClass="LeftPaddedTextField" customModule="Student_Quiz" customModuleProvider="target">
                                         <rect key="frame" x="28" y="95" width="319" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="7FU-93-3Wu"/>
@@ -496,7 +496,7 @@
                                         <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <size key="shadowOffset" width="1" height="2"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="TextInput" translatesAutoresizingMaskIntoConstraints="NO" id="g9u-IL-tXD" customClass="LeftPaddedTextField" customModule="Student_Quiz" customModuleProvider="target">
+                                    <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="TextInput" translatesAutoresizingMaskIntoConstraints="NO" id="g9u-IL-tXD" customClass="LeftPaddedTextField" customModule="Student_Quiz" customModuleProvider="target">
                                         <rect key="frame" x="28" y="225" width="319" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="MoY-jn-mDH"/>
@@ -718,6 +718,7 @@
                         <viewLayoutGuide key="safeArea" id="INN-Nb-bca"/>
                     </view>
                     <connections>
+                        <outlet property="nextButton" destination="67s-9n-SLP" id="Ful-rQ-s2d"/>
                         <outlet property="privateText" destination="Ib2-gU-A0u" id="jER-Cs-23E"/>
                         <outlet property="privateTitle" destination="lVG-Xx-aWy" id="gbK-oA-Gk0"/>
                         <outlet property="selectorImage" destination="baZ-cq-7I7" id="VJD-Rh-6mc"/>
@@ -914,9 +915,9 @@
         <image name="plus" width="32" height="34"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kMg-V9-TSy"/>
+        <segue reference="d9y-gO-2Ew"/>
         <segue reference="pP9-vX-86v"/>
-        <segue reference="rSm-Sc-zDf"/>
-        <segue reference="j3z-bt-sdT"/>
+        <segue reference="58j-QR-nq2"/>
+        <segue reference="kPf-7t-uKa"/>
     </inferredMetricsTieBreakers>
 </document>
