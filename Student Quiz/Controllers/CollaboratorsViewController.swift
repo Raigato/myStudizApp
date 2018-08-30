@@ -23,6 +23,12 @@ class CollaboratorsViewController: UIViewController {
         
     }
 
+    // MARK: Set Collaborators array function
+    
+    func setCollaborators() {
+        
+    }
+    
 }
 
 // MARK: TableView Extension

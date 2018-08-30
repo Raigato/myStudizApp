@@ -11,11 +11,24 @@ import Firebase
 
 class NewQuestionViewController: UIViewController {
     
+    var role: Role = .Owner
+    
     @IBOutlet weak var questionLabel: LeftPaddedTextField!
     @IBOutlet weak var answerLabel: LeftPaddedTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        // TODO: Test with other roles
+        if currentQuizId != "" {
+            QuizListService.getRoleForUser(uid: Auth.auth().currentUser!.uid, quizId: currentQuizId) { (role) in
+                if let fetchedRole = role {
+                    self.role = fetchedRole
+                }
+            }
+        }
     }
     
     // MARK: Segues handling
@@ -39,10 +52,10 @@ class NewQuestionViewController: UIViewController {
     }
     
     @IBAction func finishButtonPressed(_ sender: UIButton) {
-        // TODO: Bug - Need to click twice
-        
         if formIsValid() {
             appendQuestion()
+            questionLabel.text = ""
+            answerLabel.text = ""
             if currentQuizId != "" {
                 currentQuiz.save(in: currentQuizId) { (quizId) in
                     self.finishButtonAfterSave()
@@ -78,23 +91,17 @@ class NewQuestionViewController: UIViewController {
     
     func chooseSegue(role: Role) {
         // TODO: Adding more Segue
-        
         if role == .Owner {
             performSegue(withIdentifier: "goToPrivacy", sender: self)
-        } else {
-            print("No Segue implemented yet")
         }
+        
     }
     
     func finishButtonAfterSave() {
         if currentQuiz.questions.count < 1 {
             Helpers.displayAlert(title: "Invalid info", message: "You must add at least one question to go further", with: self)
         } else {
-            QuizListService.getRoleForUser(uid: Auth.auth().currentUser!.uid, quizId: currentQuizId) { (role) in
-                if let fetchedRole = role {
-                    self.chooseSegue(role: fetchedRole)
-                }
-            }
+            chooseSegue(role: role)
         }
     }
 }

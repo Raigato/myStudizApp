@@ -184,13 +184,13 @@ class Quiz {
             thisQuizRef = quizRef.child(quizId)
         }
         
-        thisQuizRef.setValue(self.createDictionary()) { (error, reference) in
+        thisQuizRef.updateChildValues(self.createDictionary()) { (error, reference) in
             if error != nil {
                 print(error!)
             } else {
+                self.saveInList(quizId: reference.key)
                 currentQuizId = reference.key
                 print("Quiz \(reference.key) saved successfully!")
-                self.saveInList(quizId: reference.key)
                 completion(reference.key)
             }
         }
