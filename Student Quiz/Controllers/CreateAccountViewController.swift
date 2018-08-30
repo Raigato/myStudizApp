@@ -11,7 +11,7 @@ import Firebase
 
 class CreateAccountViewController: UIViewController {
     
-    //TODO: Forgotten password
+    //TODO: Forgotten password, Username, Remove No Thanks
 
     @IBOutlet weak var EmailTextField: UITextField!
     @IBOutlet weak var PasswordTextField: UITextField!
@@ -27,15 +27,6 @@ class CreateAccountViewController: UIViewController {
         // -- Dismisses the keyboard when you touch the topbar
         
         self.view.endEditing(true)
-    }
-
-    @IBAction func noThanksPressed(_ sender: UIButton) {
-        // -- Handles the press of the noThanksButton
-        
-        EmailTextField.resignFirstResponder()
-        PasswordTextField.resignFirstResponder()
-        
-        performSegue(withIdentifier: "goToHomeScreen", sender: self)
     }
     
     @IBAction func submitPressed(_ sender: UIButton) {

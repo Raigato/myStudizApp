@@ -10,6 +10,12 @@ import Foundation
 import Firebase
 
 class UserService {
- 
     
+    static func getUserName(uid: String) {
+        let userRef = Database.database().reference().child("users").child(uid)
+        
+        userRef.observeSingleEvent(of: .value) { (snapshot) in
+            print(snapshot)
+        }
+    }
 }

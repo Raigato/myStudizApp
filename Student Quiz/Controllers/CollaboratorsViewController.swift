@@ -16,11 +16,10 @@ class CollaboratorsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // tableView layout
         tableView.backgroundColor = UIColor(red:0.21, green:0.31, blue:0.42, alpha:1.0)
         tableView.separatorStyle = .none
-        
         
     }
 
@@ -48,7 +47,16 @@ extension CollaboratorsViewController : UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        collaborators[indexPath.row].2 = !collaborators[indexPath.row].2
+        let collaborator = collaborators[indexPath.row]
+        
+        collaborators[indexPath.row].2 = !collaborator.2
+        
+        if !collaborator.2 {
+            currentQuiz.addCollaborator(uid: collaborator.0)
+        } else {
+            currentQuiz.deleteCollaborator(uid: collaborator.0)
+        }
+        
         tableView.reloadData()
     }
 }

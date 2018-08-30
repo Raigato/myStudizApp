@@ -105,7 +105,7 @@ class Quiz {
         self.privacy = QuizService.convertPrivacy(privacy)
     }
     
-    // MARK: Add methods
+    // MARK: Add/Delete methods
     
     func addQuestion(question: String, answer: String) {
         let newQuestion = Question(question: question, answer: answer)
@@ -114,6 +114,12 @@ class Quiz {
     
     func addCollaborator(uid: String) {
         self.collaborators.append(uid)
+    }
+    
+    func deleteCollaborator(uid: String) {
+        if let index = self.collaborators.index(of: uid) {
+            self.collaborators.remove(at: index)
+        }
     }
     
     func addReview(rated rating: String, comment: String = "") {
