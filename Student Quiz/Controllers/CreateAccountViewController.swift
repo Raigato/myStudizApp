@@ -11,7 +11,7 @@ import Firebase
 
 class CreateAccountViewController: UIViewController {
     
-    //TODO: Forgotten password, Username, Remove No Thanks
+    //TODO: Forgotten password, Add email verification
 
     @IBOutlet weak var EmailTextField: UITextField!
     @IBOutlet weak var PasswordTextField: UITextField!
@@ -39,24 +39,27 @@ class CreateAccountViewController: UIViewController {
         if EmailTextField.text == "" || PasswordTextField.text == "" {
             Helpers.displayAlert(title: "Missing credentials", message: "You must provide both an email and a password", with: self)
         } else {
-            if let email = EmailTextField.text {
-                if let password = PasswordTextField.text {
-                    // Create account
-                    Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+            guard let email = EmailTextField.text, let password = PasswordTextField.text else {
+                Helpers.displayAlert(title: "Missing credentials", message: "You must provide both an email and a password", with: self)
+                return
+            }
+
+            // Create account
+            Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+                if error != nil {
+                    let errorMessage = error!.localizedDescription
+                    // If Error -> Sign in
+                    Auth.auth().signIn(withEmail: email, password: password, completion: { (result, error) in
                         if error != nil {
-                            let errorMessage = error!.localizedDescription
-                            // If Error -> Sign in
-                            Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
-                                if error != nil {
-                                    Helpers.displayAlert(title: "Invalid credentials", message: errorMessage, with: self)
-                                }
-                                self.performSegue(withIdentifier: "goToHomeScreen", sender: self)
-                            })
-                        } else {
-                            self.performSegue(withIdentifier: "goToHomeScreen", sender: self)
+                            Helpers.displayAlert(title: "Invalid credentials", message: errorMessage, with: self)
                         }
-                    }
+                        self.performSegue(withIdentifier: "goToHomeScreen", sender: self)
+                    })
+                } else {
+                    UserService.createUserProfile(uid: result!.user.uid, email: email)
+                    self.performSegue(withIdentifier: "goToHomeScreen", sender: self)
                 }
+
             }
         }
     }

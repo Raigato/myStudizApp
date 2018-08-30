@@ -45,6 +45,7 @@ class HomeScreenViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         if Auth.auth().currentUser?.uid != nil {
             currentUserId = Auth.auth().currentUser!.uid
+            setUsername()
             fetchQuizList()
         } else {
             performSegue(withIdentifier: "goToSignUpScreen", sender: self)
@@ -85,8 +86,8 @@ class HomeScreenViewController: UIViewController {
         QuizListService.observeQuizList(currentUserId) { (quizList) in
             if let array = quizList?.quizList {
                 self.quizArray = array
-                self.tableView.reloadData()
                 self.fetchTitleList()
+                self.tableView.reloadData()
             }
             self.spinners.dismiss()
         }
@@ -99,6 +100,40 @@ class HomeScreenViewController: UIViewController {
                     self.titleArray.append(newQuiz.title)
                     self.tableView.reloadData()
                 }
+            }
+        }
+    }
+    
+    func setUsername() {
+        UserService.getUserProfile(uid: currentUserId) { (user) in
+            if user["username"] == "" {
+                var textField = UITextField()
+                let alert = UIAlertController(title: "No Username chosen yet 😕", message: "Please choose your username so you will be able to share Quizzes with your friends!", preferredStyle: .alert)
+                let action = UIAlertAction(title: "Choose username", style: .default, handler: { (action) in
+                    if let newUsername = textField.text {
+                        if newUsername == "" {
+                            alert.title = "No Username entered 😏"
+                            alert.message = "It seems that you tried to trick us!\nWould you mind setting a true username?"
+                            self.present(alert, animated: true, completion: nil)
+                        } else {
+                            UserService.usernameAlreadyExists(username: newUsername, completion: { (exists) in
+                                if exists {
+                                    alert.title = "Username already taken 😕"
+                                    alert.message = "It seems that someone stole your username \(newUsername)!\nWould you mind setting a new one?"
+                                    self.present(alert, animated: true, completion: nil)
+                                } else {
+                                    UserService.createUserProfile(uid: self.currentUserId, email: user["email"]!, username: newUsername)
+                                }
+                            })
+                        }
+                    }
+                })
+                alert.addTextField(configurationHandler: { (alertTextField) in
+                    alertTextField.placeholder = "Username"
+                    textField = alertTextField
+                })
+                alert.addAction(action)
+                self.present(alert, animated: true, completion: nil)
             }
         }
     }
