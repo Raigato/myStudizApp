@@ -16,7 +16,7 @@ var currentQuiz = Quiz(createdby: "", entitled: "", description: "", on: .Misc, 
 class HomeScreenViewController: UIViewController {
     
     private let cellId = "QuizCell"
-    var quizList : [QuizRoleTuple] = []
+    var quizArray : [QuizRoleTuple] = []
     var titleArray : [String] = []
     var currentUserId : String = ""
     
@@ -84,7 +84,7 @@ class HomeScreenViewController: UIViewController {
         spinners.present()
         QuizListService.observeQuizList(currentUserId) { (quizList) in
             if let array = quizList?.quizList {
-                self.quizList = array
+                self.quizArray = array
                 self.tableView.reloadData()
                 self.fetchTitleList()
             }
@@ -93,7 +93,7 @@ class HomeScreenViewController: UIViewController {
     }
     
     func fetchTitleList() {
-        for quiz in quizList {
+        for quiz in quizArray {
             QuizService.observeQuiz(quiz.quizId) { (quiz) in
                 if let newQuiz = quiz {
                     self.titleArray.append(newQuiz.title)

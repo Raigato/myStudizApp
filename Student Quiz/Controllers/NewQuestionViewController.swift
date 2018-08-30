@@ -39,6 +39,8 @@ class NewQuestionViewController: UIViewController {
     }
     
     @IBAction func finishButtonPressed(_ sender: UIButton) {
+        // TODO: Bug - Need to click twice
+        
         if formIsValid() {
             appendQuestion()
             if currentQuizId != "" {
