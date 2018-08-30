@@ -233,7 +233,7 @@ All it takes is 5 seconds.</string>
                                 <rect key="frame" x="0.0" y="100" width="375" height="567"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QuizCell" rowHeight="80" id="fZq-xN-plH" customClass="QuizTableViewCell" customModule="Student_Quiz" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QuizCell" rowHeight="80" id="fZq-xN-plH" customClass="QuizTableViewCell" customModule="Student_Quiz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fZq-xN-plH" id="kO6-a2-mee">
@@ -807,7 +807,7 @@ All it takes is 5 seconds.</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgm-GA-3dw">
                                 <rect key="frame" x="0.0" y="100" width="375" height="50"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" background="Search Bar" translatesAutoresizingMaskIntoConstraints="NO" id="Wql-MC-2BU">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" background="Search Bar" translatesAutoresizingMaskIntoConstraints="NO" id="Wql-MC-2BU" customClass="SearchPaddedTextField" customModule="Student_Quiz" customModuleProvider="target">
                                         <rect key="frame" x="-3" y="-1" width="381" height="52"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
@@ -824,11 +824,11 @@ All it takes is 5 seconds.</string>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e3t-CC-G0N">
-                                <rect key="frame" x="0.0" y="150" width="375" height="517"/>
+                                <rect key="frame" x="0.0" y="150" width="375" height="437"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" red="0.21176470589999999" green="0.30980392159999998" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CollaboratorCell" rowHeight="50" id="Mfx-3J-M5C" customClass="CollaboratorTableViewCell" customModule="Student_Quiz" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CollaboratorCell" rowHeight="50" id="Mfx-3J-M5C" customClass="CollaboratorTableViewCell" customModule="Student_Quiz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mfx-3J-M5C" id="KEs-mr-pnY">
@@ -879,19 +879,41 @@ All it takes is 5 seconds.</string>
                                     <outlet property="delegate" destination="QeX-eB-cqH" id="QEI-jW-1we"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F6H-4p-lM8">
+                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1pA-za-Ho0">
+                                        <rect key="frame" x="191" y="8" width="164" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="1pA-za-Ho0" secondAttribute="height" multiplier="41:16" id="umB-P4-Jz9"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="Final Button"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.21176470589999999" green="0.30980392159999998" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="1pA-za-Ho0" firstAttribute="top" secondItem="F6H-4p-lM8" secondAttribute="top" constant="8" id="DS1-PH-tAm"/>
+                                    <constraint firstAttribute="trailing" secondItem="1pA-za-Ho0" secondAttribute="trailing" constant="20" id="J6h-yZ-lXx"/>
+                                    <constraint firstAttribute="bottom" secondItem="1pA-za-Ho0" secondAttribute="baseline" constant="8" id="yAC-zT-XZN"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="e3t-CC-G0N" firstAttribute="leading" secondItem="D24-q8-weT" secondAttribute="leading" id="2SL-gz-HDc"/>
                             <constraint firstItem="fmQ-ex-Mfd" firstAttribute="top" secondItem="hFd-ze-eIU" secondAttribute="top" id="4XT-d5-AJC"/>
+                            <constraint firstItem="D24-q8-weT" firstAttribute="trailing" secondItem="F6H-4p-lM8" secondAttribute="trailing" id="Byd-Ht-d4O"/>
                             <constraint firstItem="dgm-GA-3dw" firstAttribute="top" secondItem="fmQ-ex-Mfd" secondAttribute="bottom" id="C83-bb-prR"/>
+                            <constraint firstAttribute="bottom" secondItem="F6H-4p-lM8" secondAttribute="bottom" id="D7f-Cr-y7k"/>
+                            <constraint firstItem="e3t-CC-G0N" firstAttribute="trailing" secondItem="D24-q8-weT" secondAttribute="trailing" id="D8B-sb-83G"/>
+                            <constraint firstItem="F6H-4p-lM8" firstAttribute="leading" secondItem="D24-q8-weT" secondAttribute="leading" id="FhJ-Lu-LKq"/>
+                            <constraint firstItem="e3t-CC-G0N" firstAttribute="top" secondItem="dgm-GA-3dw" secondAttribute="bottom" id="OhR-w1-CKX"/>
                             <constraint firstItem="dgm-GA-3dw" firstAttribute="leading" secondItem="D24-q8-weT" secondAttribute="leading" id="QRW-jT-HRw"/>
-                            <constraint firstItem="D24-q8-weT" firstAttribute="trailing" secondItem="e3t-CC-G0N" secondAttribute="trailing" id="S8v-Gi-q1B"/>
                             <constraint firstAttribute="trailing" secondItem="fmQ-ex-Mfd" secondAttribute="trailing" id="WmW-LM-TBa"/>
-                            <constraint firstItem="e3t-CC-G0N" firstAttribute="top" secondItem="dgm-GA-3dw" secondAttribute="bottom" id="e3e-f6-8BC"/>
+                            <constraint firstItem="D24-q8-weT" firstAttribute="bottom" secondItem="e3t-CC-G0N" secondAttribute="bottom" constant="80" id="YvC-vZ-uES"/>
+                            <constraint firstItem="F6H-4p-lM8" firstAttribute="top" secondItem="e3t-CC-G0N" secondAttribute="bottom" id="ZcQ-g6-1wz"/>
                             <constraint firstItem="fmQ-ex-Mfd" firstAttribute="leading" secondItem="D24-q8-weT" secondAttribute="leading" id="qhp-kr-vZA"/>
                             <constraint firstItem="D24-q8-weT" firstAttribute="trailing" secondItem="dgm-GA-3dw" secondAttribute="trailing" id="s2R-Oj-GdO"/>
-                            <constraint firstAttribute="bottom" secondItem="e3t-CC-G0N" secondAttribute="bottom" id="uch-lZ-gYQ"/>
+                            <constraint firstItem="e3t-CC-G0N" firstAttribute="leading" secondItem="D24-q8-weT" secondAttribute="leading" id="tJu-cX-McC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="D24-q8-weT"/>
                     </view>
@@ -901,13 +923,14 @@ All it takes is 5 seconds.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qfy-Tc-nCE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3794" y="77"/>
+            <point key="canvasLocation" x="3792.8000000000002" y="76.847290640394093"/>
         </scene>
     </scenes>
     <resources>
         <image name="Checkbox" width="34" height="34"/>
         <image name="Checkmark" width="37" height="27"/>
         <image name="Dropdown" width="320" height="50"/>
+        <image name="Final Button" width="164" height="64"/>
         <image name="Finish Button" width="164" height="64"/>
         <image name="MoreQuestion Button" width="189" height="64"/>
         <image name="Next Button" width="164" height="64"/>

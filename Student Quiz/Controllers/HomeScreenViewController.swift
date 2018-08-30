@@ -116,6 +116,8 @@ extension HomeScreenViewController : UITableViewDataSource, UITableViewDelegate 
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! QuizTableViewCell
 
         cell.backgroundColor = .clear
+        cell.selectionStyle = .none
+        
         cell.quizNameLabel.text = titleArray[indexPath.row]
         
         return cell

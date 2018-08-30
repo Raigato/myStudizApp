@@ -10,6 +10,8 @@ import UIKit
 
 class CollaboratorsViewController: UIViewController {
 
+    var collaborators: [(String, String, Bool)] = [("GG5b4ThKvrPGivA85AhlAhiuwUw2", "test2@gmail.com", true), ("msArIDm0qZSKU7JGpzOh2fTAWOi1", "test3@gmail.com", false)]
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -18,6 +20,8 @@ class CollaboratorsViewController: UIViewController {
         // tableView layout
         tableView.backgroundColor = UIColor(red:0.21, green:0.31, blue:0.42, alpha:1.0)
         tableView.separatorStyle = .none
+        
+        
     }
 
 }
@@ -26,20 +30,25 @@ class CollaboratorsViewController: UIViewController {
 
 extension CollaboratorsViewController : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return collaborators.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CollaboratorCell", for: indexPath) as! CollaboratorTableViewCell
         
         cell.backgroundColor = .clear
-        cell.isChecked(false)
-        cell.usernameLabel.text = "User \(indexPath.row)"
+        cell.selectionStyle = .none
+        
+        let collaborator = collaborators[indexPath.row]
+        
+        cell.isChecked(collaborator.2)
+        cell.usernameLabel.text = "\(collaborator.1)"
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        collaborators[indexPath.row].2 = !collaborators[indexPath.row].2
+        tableView.reloadData()
     }
 }

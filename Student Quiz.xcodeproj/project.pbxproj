@@ -10,6 +10,8 @@
 		891235A9213555A4009D8212 /* NewQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891235A8213555A4009D8212 /* NewQuizViewController.swift */; };
 		89137C352137DA1C00119136 /* CollaboratorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89137C342137DA1C00119136 /* CollaboratorsViewController.swift */; };
 		89137C372137DBFB00119136 /* CollaboratorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89137C362137DBFB00119136 /* CollaboratorTableViewCell.swift */; };
+		89137C392137DF5D00119136 /* SearchPaddedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89137C382137DF5D00119136 /* SearchPaddedTextField.swift */; };
+		89137C3B2137EAA000119136 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89137C3A2137EAA000119136 /* UserService.swift */; };
 		89148F0A2136D73C00FE3402 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89148F092136D73C00FE3402 /* PrivacyViewController.swift */; };
 		891DADA2213469A1003CB827 /* QuizList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891DADA1213469A1003CB827 /* QuizList.swift */; };
 		891DADA42134813E003CB827 /* QuizListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891DADA32134813E003CB827 /* QuizListService.swift */; };
@@ -42,6 +44,8 @@
 		891235A8213555A4009D8212 /* NewQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewQuizViewController.swift; sourceTree = "<group>"; };
 		89137C342137DA1C00119136 /* CollaboratorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollaboratorsViewController.swift; sourceTree = "<group>"; };
 		89137C362137DBFB00119136 /* CollaboratorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollaboratorTableViewCell.swift; sourceTree = "<group>"; };
+		89137C382137DF5D00119136 /* SearchPaddedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPaddedTextField.swift; sourceTree = "<group>"; };
+		89137C3A2137EAA000119136 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		89148F092136D73C00FE3402 /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
 		891DADA1213469A1003CB827 /* QuizList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizList.swift; sourceTree = "<group>"; };
 		891DADA32134813E003CB827 /* QuizListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizListService.swift; sourceTree = "<group>"; };
@@ -95,6 +99,7 @@
 			children = (
 				891DADA32134813E003CB827 /* QuizListService.swift */,
 				891DADA52134814B003CB827 /* QuizService.swift */,
+				89137C3A2137EAA000119136 /* UserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -103,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				89430BDB2136881700B09CA2 /* LeftPaddedTextField.swift */,
+				89137C382137DF5D00119136 /* SearchPaddedTextField.swift */,
 				89430BDD2136882A00B09CA2 /* TopLeftPaddedTextField.swift */,
 				89430BE0213693D600B09CA2 /* Helpers.swift */,
 				89430BE42136A1BE00B09CA2 /* EndEditingScrollView.swift */,
@@ -344,6 +350,7 @@
 				891DADA62134814B003CB827 /* QuizService.swift in Sources */,
 				89430BE1213693D600B09CA2 /* Helpers.swift in Sources */,
 				897B6B19212C310B00807269 /* CreateAccountViewController.swift in Sources */,
+				89137C392137DF5D00119136 /* SearchPaddedTextField.swift in Sources */,
 				89430BDC2136881700B09CA2 /* LeftPaddedTextField.swift in Sources */,
 				894899A42134254B003B515D /* Quiz.swift in Sources */,
 				891235A9213555A4009D8212 /* NewQuizViewController.swift in Sources */,
@@ -354,6 +361,7 @@
 				89137C352137DA1C00119136 /* CollaboratorsViewController.swift in Sources */,
 				89430BE52136A1BE00B09CA2 /* EndEditingScrollView.swift in Sources */,
 				894899A621342A8C003B515D /* Question.swift in Sources */,
+				89137C3B2137EAA000119136 /* UserService.swift in Sources */,
 				894899A1213412D2003B515D /* QuizTableViewCell.swift in Sources */,
 				89137C372137DBFB00119136 /* CollaboratorTableViewCell.swift in Sources */,
 				891DADA2213469A1003CB827 /* QuizList.swift in Sources */,
