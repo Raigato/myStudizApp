@@ -40,6 +40,8 @@ class UserService {
         userRef.observeSingleEvent(of: .value) { (snapshot) in
             if let userDict = snapshot.value as? [String: String] {
                 completion(userDict)
+            } else {
+                completion([:])
             }
         }
     }

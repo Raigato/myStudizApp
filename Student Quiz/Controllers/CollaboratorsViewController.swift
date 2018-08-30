@@ -10,23 +10,44 @@ import UIKit
 
 class CollaboratorsViewController: UIViewController {
 
-    var collaborators: [(String, String, Bool)] = [("GG5b4ThKvrPGivA85AhlAhiuwUw2", "test2@gmail.com", true), ("msArIDm0qZSKU7JGpzOh2fTAWOi1", "test3@gmail.com", false)]
+    var collaborators: [(String, String, Bool)] = []
     
+    @IBOutlet weak var searchBarTextField: SearchPaddedTextField!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        searchBarTextField.delegate = self
         
         // tableView layout
         tableView.backgroundColor = UIColor(red:0.21, green:0.31, blue:0.42, alpha:1.0)
         tableView.separatorStyle = .none
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setCollaborators()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        // -- Dismisses the keyboard when you touch the topbar
+        
+        self.view.endEditing(true)
+    }
 
     // MARK: Set Collaborators array function
     
     func setCollaborators() {
-        
+        for collaboratorId in currentQuiz.collaborators {
+            UserService.getUserProfile(uid: collaboratorId) { (userInfo) in
+                if userInfo != [:] {
+                    print((collaboratorId, userInfo["username"]!, true))
+                    self.collaborators.append((collaboratorId, userInfo["username"]!, true))
+                    self.tableView.reloadData()
+                }
+            }
+        }
     }
     
 }
@@ -64,5 +85,15 @@ extension CollaboratorsViewController : UITableViewDataSource, UITableViewDelega
         }
         
         tableView.reloadData()
+    }
+}
+
+// MARK: - TextField extension
+
+extension CollaboratorsViewController : UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // -- Handles the press of the return button on a textField
+        textField.resignFirstResponder()
+        return false
     }
 }

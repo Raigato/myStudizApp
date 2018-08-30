@@ -50,26 +50,21 @@ class NewQuestionViewController: UIViewController {
                 }
             }
         } else {
-            Helpers.displayAlert(title: "Invalid info", message: "You must provide a question and an answer", with: self)
+            Helpers.displayAlert(title: "Forgot something? 🤷‍♂️", message: "You must provide a question and its answer", with: self)
         }
     }
     
     @IBAction func finishButtonPressed(_ sender: UIButton) {
         if formIsValid() {
             appendQuestion()
-            questionLabel.text = ""
-            answerLabel.text = ""
-            if currentQuizId != "" {
-                currentQuiz.save(in: currentQuizId) { (quizId) in
-                    self.finishButtonAfterSave()
-                }
-            } else {
-                currentQuiz.privacy = .Private
-                currentQuiz.save { (quizId) in
-                    currentQuizId = quizId
-                    self.finishButtonAfterSave()
-                }
-            }
+        }
+
+        if currentQuiz.questions.count < 1 {
+            Helpers.displayAlert(title: "A Quiz without Questions 🤔", message: "You must add at least one question (and its answer) to go further", with: self)
+        } else if !formIsValid() && (questionLabel.text != "" || answerLabel.text != "") {
+            Helpers.displayAlert(title: "Forgot something? 🤷‍♂️", message: "You must provide a question and its answer", with: self)
+        } else {
+            finishButtonHandler()
         }
     }
     
@@ -100,11 +95,17 @@ class NewQuestionViewController: UIViewController {
         
     }
     
-    func finishButtonAfterSave() {
-        if currentQuiz.questions.count < 1 {
-            Helpers.displayAlert(title: "Invalid info", message: "You must add at least one question to go further", with: self)
+    func finishButtonHandler() {
+        if currentQuizId != "" {
+            currentQuiz.save(in: currentQuizId) { (quizId) in
+                self.chooseSegue(role: self.role)
+            }
         } else {
-            chooseSegue(role: role)
+            currentQuiz.privacy = .Private
+            currentQuiz.save { (quizId) in
+                currentQuizId = quizId
+                self.chooseSegue(role: self.role)
+            }
         }
     }
 }

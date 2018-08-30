@@ -37,10 +37,10 @@ class CreateAccountViewController: UIViewController {
         
         // Verify the form
         if EmailTextField.text == "" || PasswordTextField.text == "" {
-            Helpers.displayAlert(title: "Missing credentials", message: "You must provide both an email and a password", with: self)
+            Helpers.displayAlert(title: "Missing credentials 👮‍♀️", message: "You must provide both an email and a password", with: self)
         } else {
             guard let email = EmailTextField.text, let password = PasswordTextField.text else {
-                Helpers.displayAlert(title: "Missing credentials", message: "You must provide both an email and a password", with: self)
+                Helpers.displayAlert(title: "Missing credentials 👮‍♀️", message: "You must provide both an email and a password", with: self)
                 return
             }
 
@@ -51,7 +51,7 @@ class CreateAccountViewController: UIViewController {
                     // If Error -> Sign in
                     Auth.auth().signIn(withEmail: email, password: password, completion: { (result, error) in
                         if error != nil {
-                            Helpers.displayAlert(title: "Invalid credentials", message: errorMessage, with: self)
+                            Helpers.displayAlert(title: "Invalid credentials 👮‍♂️", message: errorMessage, with: self)
                         }
                         self.performSegue(withIdentifier: "goToHomeScreen", sender: self)
                     })

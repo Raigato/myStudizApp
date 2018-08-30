@@ -104,7 +104,6 @@ class QuizList {
     let quizListRef = Database.database().reference().child("QuizList")
     
     func save(for uid: String) {
-        print(self.createDictionary())
         quizListRef.child(uid).updateChildValues(self.createDictionary()) { (error, reference) in
             if error != nil {
                 print(error!)

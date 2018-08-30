@@ -779,7 +779,7 @@
                                 <rect key="frame" x="0.0" y="100" width="375" height="50"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" background="Search Bar" translatesAutoresizingMaskIntoConstraints="NO" id="Wql-MC-2BU" customClass="SearchPaddedTextField" customModule="Student_Quiz" customModuleProvider="target">
-                                        <rect key="frame" x="-3" y="-1" width="381" height="52"/>
+                                        <rect key="frame" x="-5" y="-1" width="385" height="52"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -789,12 +789,12 @@
                                 <constraints>
                                     <constraint firstItem="Wql-MC-2BU" firstAttribute="top" secondItem="dgm-GA-3dw" secondAttribute="top" constant="-1" id="XVb-8t-6rF"/>
                                     <constraint firstAttribute="height" constant="50" id="hkU-re-3zr"/>
-                                    <constraint firstItem="Wql-MC-2BU" firstAttribute="leading" secondItem="dgm-GA-3dw" secondAttribute="leading" constant="-3" id="hqa-zQ-bRB"/>
-                                    <constraint firstAttribute="trailing" secondItem="Wql-MC-2BU" secondAttribute="trailing" constant="-3" id="iGe-He-XKB"/>
+                                    <constraint firstItem="Wql-MC-2BU" firstAttribute="leading" secondItem="dgm-GA-3dw" secondAttribute="leading" constant="-5" id="hqa-zQ-bRB"/>
+                                    <constraint firstAttribute="trailing" secondItem="Wql-MC-2BU" secondAttribute="trailing" constant="-5" id="iGe-He-XKB"/>
                                     <constraint firstAttribute="bottom" secondItem="Wql-MC-2BU" secondAttribute="bottom" constant="-1" id="mti-ZZ-5OH"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e3t-CC-G0N">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e3t-CC-G0N" customClass="EndEditingTableView" customModule="Student_Quiz" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="150" width="375" height="437"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" red="0.21176470589999999" green="0.30980392159999998" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -889,6 +889,7 @@
                         <viewLayoutGuide key="safeArea" id="D24-q8-weT"/>
                     </view>
                     <connections>
+                        <outlet property="searchBarTextField" destination="Wql-MC-2BU" id="agn-G6-0R1"/>
                         <outlet property="tableView" destination="e3t-CC-G0N" id="bFd-3e-oJ0"/>
                     </connections>
                 </viewController>
@@ -915,9 +916,9 @@
         <image name="plus" width="32" height="34"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="d9y-gO-2Ew"/>
+        <segue reference="kMg-V9-TSy"/>
         <segue reference="pP9-vX-86v"/>
-        <segue reference="58j-QR-nq2"/>
+        <segue reference="rSm-Sc-zDf"/>
         <segue reference="kPf-7t-uKa"/>
     </inferredMetricsTieBreakers>
 </document>

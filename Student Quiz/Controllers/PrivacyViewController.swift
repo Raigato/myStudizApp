@@ -43,6 +43,8 @@ class PrivacyViewController: UIViewController {
         currentQuiz.save(in: currentQuizId) { (quizId) in }
         
         if currentChoice == .Shared {
+            currentQuiz.addCollaborator(uid: "HyHGAY3pK7ahR6JGTQOxoFjs4Vl2")
+            currentQuiz.addCollaborator(uid: "IwJ6vnUBryfbJXlqGqXmweJNyMo2")
             performSegue(withIdentifier: "goToCollaborators", sender: self)
         }
     }

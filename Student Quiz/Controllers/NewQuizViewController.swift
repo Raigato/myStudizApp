@@ -76,7 +76,7 @@ class NewQuizViewController: UIViewController {
             }
             performSegue(withIdentifier: "goToAddQuestions", sender: self)
         } else {
-            Helpers.displayAlert(title: "Invalid info", message: "You must provide a title, a description and a category", with: self)
+            Helpers.displayAlert(title: "As it, your quiz won't be searchable 🕵️‍♀️", message: "You must provide a title, a description and a category", with: self)
         }
     }
 
