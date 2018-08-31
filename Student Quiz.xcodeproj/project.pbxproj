@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		89116DA6213960C400727C5E /* ChoseQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89116DA5213960C400727C5E /* ChoseQuizViewController.swift */; };
 		8911841621398570003D87E3 /* RunQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8911841521398570003D87E3 /* RunQuizViewController.swift */; };
+		8911841821398EF8003D87E3 /* runQuizProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8911841721398EF8003D87E3 /* runQuizProgressView.swift */; };
 		891235A9213555A4009D8212 /* NewQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891235A8213555A4009D8212 /* NewQuizViewController.swift */; };
 		89137C352137DA1C00119136 /* CollaboratorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89137C342137DA1C00119136 /* CollaboratorsViewController.swift */; };
 		89137C372137DBFB00119136 /* CollaboratorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89137C362137DBFB00119136 /* CollaboratorTableViewCell.swift */; };
@@ -45,6 +46,7 @@
 		70DA4B973A0F64CB9ED50A53 /* Pods-Student Quiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Student Quiz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Student Quiz/Pods-Student Quiz.debug.xcconfig"; sourceTree = "<group>"; };
 		89116DA5213960C400727C5E /* ChoseQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoseQuizViewController.swift; sourceTree = "<group>"; };
 		8911841521398570003D87E3 /* RunQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunQuizViewController.swift; sourceTree = "<group>"; };
+		8911841721398EF8003D87E3 /* runQuizProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = runQuizProgressView.swift; sourceTree = "<group>"; };
 		891235A8213555A4009D8212 /* NewQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewQuizViewController.swift; sourceTree = "<group>"; };
 		89137C342137DA1C00119136 /* CollaboratorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollaboratorsViewController.swift; sourceTree = "<group>"; };
 		89137C362137DBFB00119136 /* CollaboratorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollaboratorTableViewCell.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				89430BDD2136882A00B09CA2 /* TopLeftPaddedTextField.swift */,
 				89430BE0213693D600B09CA2 /* Helpers.swift */,
 				89430BE42136A1BE00B09CA2 /* EndEditingScrollView.swift */,
+				8911841721398EF8003D87E3 /* runQuizProgressView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 			files = (
 				891DADA62134814B003CB827 /* QuizService.swift in Sources */,
 				89430BE1213693D600B09CA2 /* Helpers.swift in Sources */,
+				8911841821398EF8003D87E3 /* runQuizProgressView.swift in Sources */,
 				897B6B19212C310B00807269 /* CreateAccountViewController.swift in Sources */,
 				89137C392137DF5D00119136 /* SearchPaddedTextField.swift in Sources */,
 				89430BDC2136881700B09CA2 /* LeftPaddedTextField.swift in Sources */,

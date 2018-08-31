@@ -63,14 +63,7 @@ class ChoseQuizViewController: UIViewController {
     // MARK: UI selection functions
     
     func setTitle() {
-        let fullTitle = currentQuiz.title
-        var fullTitleArr = fullTitle.components(separatedBy: " ")
-        let displayedTitle = fullTitleArr[0] + " " + fullTitleArr[1]
-        if displayedTitle.count > 15 {
-            titleLabel.text = String(displayedTitle.prefix(15))
-        } else {
-            titleLabel.text = displayedTitle
-        }
+        titleLabel.text = Helpers.reduceTitle(currentQuiz.title)
     }
     
     func selectButtonsToDisplay() {

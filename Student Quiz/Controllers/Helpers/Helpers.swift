@@ -14,4 +14,14 @@ class Helpers {
         alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         view.present(alertController, animated: true, completion: nil)
     }
+    
+    static func reduceTitle(_ title: String) -> String {
+        var titleArr = title.components(separatedBy: " ")
+        let reducedTitle = titleArr[0] + " " + titleArr[1]
+        if reducedTitle.count > 15 {
+            return String(reducedTitle.prefix(15))
+        } else {
+            return reducedTitle
+        }
+    }
 }
