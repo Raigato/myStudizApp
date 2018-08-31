@@ -158,7 +158,13 @@ extension HomeScreenViewController : UITableViewDataSource, UITableViewDelegate 
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        <#code#>
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        currentQuizId = quizArray[indexPath.row].quizId
+        QuizService.observeQuiz(currentQuizId) { (quiz) in
+            if let foundQuiz = quiz {
+                currentQuiz = foundQuiz
+            }
+        }
+        performSegue(withIdentifier: "goToChoseQuiz", sender: self)
+    }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89116DA6213960C400727C5E /* ChoseQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89116DA5213960C400727C5E /* ChoseQuizViewController.swift */; };
 		891235A9213555A4009D8212 /* NewQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891235A8213555A4009D8212 /* NewQuizViewController.swift */; };
 		89137C352137DA1C00119136 /* CollaboratorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89137C342137DA1C00119136 /* CollaboratorsViewController.swift */; };
 		89137C372137DBFB00119136 /* CollaboratorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89137C362137DBFB00119136 /* CollaboratorTableViewCell.swift */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		5132426293EB64BB102FE8D5 /* Pods_Student_Quiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Student_Quiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70DA4B973A0F64CB9ED50A53 /* Pods-Student Quiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Student Quiz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Student Quiz/Pods-Student Quiz.debug.xcconfig"; sourceTree = "<group>"; };
+		89116DA5213960C400727C5E /* ChoseQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoseQuizViewController.swift; sourceTree = "<group>"; };
 		891235A8213555A4009D8212 /* NewQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewQuizViewController.swift; sourceTree = "<group>"; };
 		89137C342137DA1C00119136 /* CollaboratorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollaboratorsViewController.swift; sourceTree = "<group>"; };
 		89137C362137DBFB00119136 /* CollaboratorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollaboratorTableViewCell.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				89430BE221369D7E00B09CA2 /* NewQuestionViewController.swift */,
 				89148F092136D73C00FE3402 /* PrivacyViewController.swift */,
 				89137C342137DA1C00119136 /* CollaboratorsViewController.swift */,
+				89116DA5213960C400727C5E /* ChoseQuizViewController.swift */,
 				89430BDF213688D700B09CA2 /* Helpers */,
 			);
 			path = Controllers;
@@ -363,6 +366,7 @@
 				894899A621342A8C003B515D /* Question.swift in Sources */,
 				89137C3B2137EAA000119136 /* UserService.swift in Sources */,
 				894899A1213412D2003B515D /* QuizTableViewCell.swift in Sources */,
+				89116DA6213960C400727C5E /* ChoseQuizViewController.swift in Sources */,
 				89137C372137DBFB00119136 /* CollaboratorTableViewCell.swift in Sources */,
 				891DADA2213469A1003CB827 /* QuizList.swift in Sources */,
 				89148F0A2136D73C00FE3402 /* PrivacyViewController.swift in Sources */,
