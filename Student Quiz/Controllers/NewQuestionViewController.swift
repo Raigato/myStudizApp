@@ -88,11 +88,12 @@ class NewQuestionViewController: UIViewController {
     }
     
     func chooseSegue(role: Role) {
-        // TODO: Adding more Segue
         if role == .Owner {
             performSegue(withIdentifier: "goToPrivacy", sender: self)
         }
-        
+        if role == .Collaborator {
+            performSegue(withIdentifier: "fromNewQuestionToChoseQuiz", sender: self)
+        }
     }
     
     func finishButtonHandler() {

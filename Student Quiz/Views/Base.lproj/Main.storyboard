@@ -265,6 +265,62 @@
             </objects>
             <point key="canvasLocation" x="813.60000000000002" y="76.911544227886068"/>
         </scene>
+        <!--Run Quiz View Controller-->
+        <scene sceneID="MKN-FY-aGE">
+            <objects>
+                <viewController id="iFP-4D-fJD" customClass="RunQuizViewController" customModule="Student_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v0p-UB-u0c">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ke7-DP-6o0" userLabel="TopBar">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Two Words" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWO-C7-m8x">
+                                        <rect key="frame" x="115.5" y="28" width="144" height="64"/>
+                                        <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="27"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <size key="shadowOffset" width="1" height="2"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XTY-e1-jMJ">
+                                        <rect key="frame" x="30" y="43" width="23" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="ROF-CB-uVi"/>
+                                            <constraint firstAttribute="width" constant="23" id="m01-QZ-lPw"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="back"/>
+                                        <connections>
+                                            <segue destination="g8k-3s-sWu" kind="show" id="2Xv-vK-ddI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.2470588235" green="0.75686274509999996" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="BWO-C7-m8x" firstAttribute="centerX" secondItem="Ke7-DP-6o0" secondAttribute="centerX" id="51W-BQ-WxQ"/>
+                                    <constraint firstItem="XTY-e1-jMJ" firstAttribute="leading" secondItem="Ke7-DP-6o0" secondAttribute="leading" constant="30" id="5uy-rx-xsY"/>
+                                    <constraint firstAttribute="height" constant="100" id="Zhk-Bc-jqg"/>
+                                    <constraint firstItem="XTY-e1-jMJ" firstAttribute="centerY" secondItem="BWO-C7-m8x" secondAttribute="centerY" id="hRp-WZ-zDW"/>
+                                    <constraint firstItem="BWO-C7-m8x" firstAttribute="bottom" secondItem="Ke7-DP-6o0" secondAttribute="bottomMargin" id="tey-HN-rtJ"/>
+                                    <constraint firstItem="BWO-C7-m8x" firstAttribute="top" secondItem="Ke7-DP-6o0" secondAttribute="topMargin" id="vN3-M9-0J6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ke7-DP-6o0" firstAttribute="centerX" secondItem="v0p-UB-u0c" secondAttribute="centerX" id="Ezn-u0-yZT"/>
+                            <constraint firstItem="Ke7-DP-6o0" firstAttribute="top" secondItem="v0p-UB-u0c" secondAttribute="top" id="M9n-Ig-6yC"/>
+                            <constraint firstItem="Ke7-DP-6o0" firstAttribute="trailing" secondItem="sxm-ge-2he" secondAttribute="trailing" id="naP-WP-tqc"/>
+                            <constraint firstItem="Ke7-DP-6o0" firstAttribute="leading" secondItem="sxm-ge-2he" secondAttribute="leading" id="v9x-wn-LB1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sxm-ge-2he"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8bi-0b-TE8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="79" y="893"/>
+        </scene>
         <!--Chose Quiz View Controller-->
         <scene sceneID="5eN-wA-NjN">
             <objects>
@@ -382,12 +438,17 @@
                     <connections>
                         <outlet property="deleteButton" destination="ggB-JG-hQs" id="yOr-qo-1cL"/>
                         <outlet property="editButton" destination="4vt-0A-Rrn" id="xMj-sQ-fh2"/>
+                        <outlet property="shareButton" destination="jCU-bI-IyB" id="Jln-fH-CsQ"/>
                         <outlet property="titleLabel" destination="p0l-rd-SPR" id="UKU-VS-UZb"/>
+                        <segue destination="UMf-IN-UMO" kind="show" identifier="fromShareToPrivacy" id="CY2-3c-bnw"/>
+                        <segue destination="HCW-wT-gzB" kind="show" identifier="fromEditToNewQuiz" id="SHY-nd-iuT"/>
+                        <segue destination="04w-qc-SNY" kind="show" identifier="fromEditToNewQuestion" id="Lac-LY-sZL"/>
+                        <segue destination="iFP-4D-fJD" kind="show" identifier="toRunQuiz" id="9Ni-dY-Rei"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bjN-vO-Tke" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="446" y="895"/>
+            <point key="canvasLocation" x="814" y="893"/>
         </scene>
         <!--New Quiz View Controller-->
         <scene sceneID="t2S-RP-YKH">
@@ -694,6 +755,7 @@
                         <outlet property="answerLabel" destination="g9u-IL-tXD" id="iie-Zf-rpe"/>
                         <outlet property="questionLabel" destination="ah4-Hr-p7n" id="1lT-Q7-O8p"/>
                         <segue destination="UMf-IN-UMO" kind="show" identifier="goToPrivacy" id="d9y-gO-2Ew"/>
+                        <segue destination="g8k-3s-sWu" kind="show" identifier="fromNewQuestionToChoseQuiz" id="rO4-9B-trA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hCM-IQ-fNk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1050,10 +1112,11 @@
         <image name="plus" width="32" height="34"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kMg-V9-TSy"/>
-        <segue reference="pP9-vX-86v"/>
-        <segue reference="rSm-Sc-zDf"/>
-        <segue reference="2wC-AQ-1SK"/>
+        <segue reference="9Ni-dY-Rei"/>
+        <segue reference="CY2-3c-bnw"/>
+        <segue reference="Lac-LY-sZL"/>
+        <segue reference="SHY-nd-iuT"/>
+        <segue reference="2Xv-vK-ddI"/>
         <segue reference="n9G-WF-gh4"/>
     </inferredMetricsTieBreakers>
 </document>

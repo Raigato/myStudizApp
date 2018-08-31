@@ -47,6 +47,10 @@ class PrivacyViewController: UIViewController {
         }
         
         if currentChoice == .Private {
+            for collaborator in currentQuiz.collaborators {
+                currentQuiz.deleteCollaborator(uid: collaborator)
+                QuizListService.removeQuizForUser(for: collaborator, quiz: currentQuizId)
+            }
             performSegue(withIdentifier: "goToChoseQuizFromPrivate", sender: self)
         }
     }

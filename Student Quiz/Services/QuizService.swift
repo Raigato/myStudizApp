@@ -11,6 +11,17 @@ import Firebase
 
 class QuizService {
     
+    static func deleteQuiz(by uid: String, quizId: String) {
+        QuizListService.getRoleForUser(uid: uid, quizId: quizId) { (role) in
+            if let foundRole = role {
+                if foundRole == .Owner {
+                    let quizRref = Database.database().reference().child("Quiz/\(quizId)")
+                    quizRref.removeValue()
+                }
+            }
+        }
+    }
+    
     static func observeQuiz(_ quizId: String, completion: @escaping ((_ quiz: Quiz?) -> ())) {
         let quizRef = Database.database().reference().child("Quiz/\(quizId)")
         
@@ -27,7 +38,7 @@ class QuizService {
                 
                 quiz = Quiz(createdby: creator!, entitled: title!, description: description!, on: category, questions: [], privacy: privacy, collaborators: [], reviews: [])
                 
-                if let fetchedQuestions = dict["quizList"] as? [[String: String]] {
+                if let fetchedQuestions = dict["questions"] as? [[String: String]] {
                     for fetchedQuestion in fetchedQuestions {
                         quiz?.addQuestion(question: fetchedQuestion["question"]!, answer: fetchedQuestion["answer"]!)
                     }

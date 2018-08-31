@@ -7,28 +7,86 @@
 //
 
 import UIKit
+import Firebase
 
 class ChoseQuizViewController: UIViewController {
+    
+    var userRole: Role = .None
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var editButton: UIButton!
+    @IBOutlet weak var shareButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        selectButtonsToDisplay()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setTitle()
     }
 
     @IBAction func deleteButtonPressed(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Quiz delete 🗑", message: "Are you sure you want to delete this awesome Quiz?", preferredStyle: .alert)
+        let sayYes = UIAlertAction(title: "Yes", style: .default) { (action) in
+            QuizService.deleteQuiz(by: Auth.auth().currentUser!.uid, quizId: currentQuizId)
+            self.performSegue(withIdentifier: "fromChoseQuizToHome", sender: self)
+        }
+        let sayNo = UIAlertAction(title: "No", style: .default, handler: nil)
+        
+        alert.addAction(sayNo)
+        alert.addAction(sayYes)
+        present(alert, animated: true, completion: nil)
     }
     
     @IBAction func runButtonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "toRunQuiz", sender: self)
     }
     
     @IBAction func editButtonPressed(_ sender: UIButton) {
+        if userRole == .Owner {
+            performSegue(withIdentifier: "fromEditToNewQuiz", sender: self)
+        }
+        if userRole == .Collaborator {
+            performSegue(withIdentifier: "fromEditToNewQuestion", sender: self)
+        }
     }
     
     @IBAction func shareButtonPressed(_ sender: UIButton) {
+        if userRole == .Owner {
+            performSegue(withIdentifier: "fromShareToPrivacy", sender: self)
+        }
+    }
+    
+    // MARK: UI selection functions
+    
+    func setTitle() {
+        let fullTitle = currentQuiz.title
+        var fullTitleArr = fullTitle.components(separatedBy: " ")
+        let displayedTitle = fullTitleArr[0] + " " + fullTitleArr[1]
+        if displayedTitle.count > 15 {
+            titleLabel.text = String(displayedTitle.prefix(15))
+        } else {
+            titleLabel.text = displayedTitle
+        }
+    }
+    
+    func selectButtonsToDisplay() {
+        QuizListService.getRoleForUser(uid: Auth.auth().currentUser!.uid, quizId: currentQuizId) { (role) in
+            if let foundRole = role {
+                self.userRole = foundRole
+                
+                // -- Select buttons according to the role
+                if foundRole != .Owner {
+                    self.deleteButton.isHidden = true
+                    self.shareButton.isHidden = true
+                }
+                if foundRole != .Owner && foundRole != .Collaborator {
+                    self.editButton.isHidden = true
+                }
+            }
+        }
     }
 }
