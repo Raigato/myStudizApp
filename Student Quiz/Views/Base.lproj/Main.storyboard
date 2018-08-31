@@ -159,7 +159,7 @@
         <scene sceneID="R1T-Qo-cbk">
             <objects>
                 <viewController id="ynM-Mm-tKY" userLabel="Home Screen View Controller" customClass="HomeScreenViewController" customModule="Student_Quiz" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="u1E-8V-kdS" userLabel="Home Screen" customClass="home">
+                    <view key="view" contentMode="scaleToFill" id="u1E-8V-kdS" userLabel="Home Screen">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -258,7 +258,7 @@
                     <connections>
                         <outlet property="tableView" destination="5lM-Cp-hfl" id="Wba-Q6-Mm3"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignUpScreen" id="z0q-W8-f0t"/>
-                        <segue destination="g8k-3s-sWu" kind="show" identifier="goToChoseQuiz" id="2wC-AQ-1SK"/>
+                        <segue destination="g8k-3s-sWu" kind="show" identifier="fromHomeToChoseQuiz" id="2wC-AQ-1SK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lyh-lQ-6VB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -382,7 +382,6 @@
                     <connections>
                         <outlet property="deleteButton" destination="ggB-JG-hQs" id="yOr-qo-1cL"/>
                         <outlet property="editButton" destination="4vt-0A-Rrn" id="xMj-sQ-fh2"/>
-                        <outlet property="editButtonPressed" destination="4vt-0A-Rrn" id="HfC-VP-pLG"/>
                         <outlet property="titleLabel" destination="p0l-rd-SPR" id="UKU-VS-UZb"/>
                     </connections>
                 </viewController>

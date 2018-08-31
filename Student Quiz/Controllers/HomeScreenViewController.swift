@@ -165,6 +165,6 @@ extension HomeScreenViewController : UITableViewDataSource, UITableViewDelegate 
                 currentQuiz = foundQuiz
             }
         }
-        performSegue(withIdentifier: "goToChoseQuiz", sender: self)
+        performSegue(withIdentifier: "fromHomeToChoseQuiz", sender: self)
     }
 }
