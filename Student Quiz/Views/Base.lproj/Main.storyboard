@@ -840,6 +840,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="checkbox" destination="Vce-lt-Wp4" id="qRi-S6-X23"/>
                                             <outlet property="checkmark" destination="tZk-V5-OYB" id="YmZ-A2-aVz"/>
                                             <outlet property="usernameLabel" destination="ofC-6z-u1I" id="Wvi-3g-rng"/>
                                         </connections>

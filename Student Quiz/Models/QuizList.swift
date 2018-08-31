@@ -72,7 +72,7 @@ class QuizList {
         }
         
         if foundAt >= 0 {
-            if self.quizList[foundAt].role != role {
+            if self.quizList[foundAt].role != .Owner && self.quizList[foundAt].role != role {
                 self.quizList[foundAt].role = role
             }
         } else {
@@ -104,7 +104,7 @@ class QuizList {
     let quizListRef = Database.database().reference().child("QuizList")
     
     func save(for uid: String) {
-        quizListRef.child(uid).updateChildValues(self.createDictionary()) { (error, reference) in
+        quizListRef.child(uid).setValue(self.createDictionary()) { (error, reference) in
             if error != nil {
                 print(error!)
             } else {

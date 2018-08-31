@@ -11,6 +11,14 @@ import Firebase
 
 class UserService {
     
+    static func isActiveUser(uid: String) -> Bool {
+        if uid == Auth.auth().currentUser?.uid {
+            return true
+        } else {
+            return false
+        }
+    }
+    
     static func usernameAlreadyExists(username: String, completion: @escaping ((_ exists: Bool) -> ())) {
         let usernameRef = Database.database().reference().child("username")
         
@@ -43,6 +51,19 @@ class UserService {
             } else {
                 completion([:])
             }
+        }
+    }
+    
+    static func getAllUsers(completion: @escaping ((_ userArray: [String]) -> ())) {
+        let usersRef = Database.database().reference().child("userProfile")
+        
+        usersRef.observeSingleEvent(of: .value) { (snapshot) in
+            var users: [String] = []
+            for child in snapshot.children {
+                let snap = child as! DataSnapshot
+                users.append(snap.key)
+            }
+            completion(users)
         }
     }
 }

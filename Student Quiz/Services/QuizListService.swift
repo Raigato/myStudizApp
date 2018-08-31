@@ -43,4 +43,21 @@ class QuizListService {
             completion(quizList)
         }
     }
+    
+    static func removeQuizForUser(for uid: String, quiz quizId: String) {
+        QuizListService.observeQuizList(uid) { (quizList) in
+            if let list = quizList?.quizList {
+                var foundAt = -1
+                for (index, quiz) in list.enumerated() {
+                    if quiz.quizId == quizId {
+                        foundAt = index
+                    }
+                }
+                if foundAt >= 0 {
+                    let quizListRef = Database.database().reference().child("QuizList/\(uid)/quizList/\(foundAt)")
+                    quizListRef.removeValue()
+                }
+            }
+        }
+    }
 }

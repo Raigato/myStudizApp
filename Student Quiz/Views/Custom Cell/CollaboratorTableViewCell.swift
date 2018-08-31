@@ -12,6 +12,7 @@ class CollaboratorTableViewCell: UITableViewCell {
 
     @IBOutlet weak var usernameLabel: UILabel!
     
+    @IBOutlet weak var checkbox: UIImageView!
     @IBOutlet weak var checkmark: UIImageView!
     
     func isChecked(_ checked: Bool) {
