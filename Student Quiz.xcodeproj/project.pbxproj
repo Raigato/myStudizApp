@@ -34,6 +34,7 @@
 		897B6B19212C310B00807269 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897B6B18212C310B00807269 /* CreateAccountViewController.swift */; };
 		897B6B1C212C310B00807269 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 897B6B1A212C310B00807269 /* Main.storyboard */; };
 		897B6B21212C310C00807269 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 897B6B1F212C310C00807269 /* LaunchScreen.storyboard */; };
+		89801B20213AAFD300781471 /* EndQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89801B1F213AAFD300781471 /* EndQuizViewController.swift */; };
 		899FDBF6212C3768003637CD /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 899FDBF4212C3739003637CD /* OpenSans-Bold.ttf */; };
 		899FDBF7212C376A003637CD /* RobotoSlab-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 899FDBF2212C371D003637CD /* RobotoSlab-Bold.ttf */; };
 		899FDBF8212C376D003637CD /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 899FDBF5212C373E003637CD /* OpenSans-Regular.ttf */; };
@@ -71,6 +72,7 @@
 		897B6B1B212C310B00807269 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		897B6B20212C310C00807269 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		897B6B22212C310C00807269 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89801B1F213AAFD300781471 /* EndQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndQuizViewController.swift; sourceTree = "<group>"; };
 		899FDBF2212C371D003637CD /* RobotoSlab-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Bold.ttf"; sourceTree = "<group>"; };
 		899FDBF4212C3739003637CD /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		899FDBF5212C373E003637CD /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				89137C342137DA1C00119136 /* CollaboratorsViewController.swift */,
 				89116DA5213960C400727C5E /* ChoseQuizViewController.swift */,
 				8911841521398570003D87E3 /* RunQuizViewController.swift */,
+				89801B1F213AAFD300781471 /* EndQuizViewController.swift */,
 				89430BDF213688D700B09CA2 /* Helpers */,
 			);
 			path = Controllers;
@@ -305,8 +308,6 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Student Quiz/Pods-Student Quiz-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Dropper/Dropper.framework",
@@ -317,8 +318,6 @@
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Dropper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
@@ -337,15 +336,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Student Quiz-checkManifestLockResult.txt",
 			);
@@ -374,6 +369,7 @@
 				8911841621398570003D87E3 /* RunQuizViewController.swift in Sources */,
 				897B6B17212C310B00807269 /* AppDelegate.swift in Sources */,
 				89137C352137DA1C00119136 /* CollaboratorsViewController.swift in Sources */,
+				89801B20213AAFD300781471 /* EndQuizViewController.swift in Sources */,
 				89430BE52136A1BE00B09CA2 /* EndEditingScrollView.swift in Sources */,
 				894899A621342A8C003B515D /* Question.swift in Sources */,
 				89137C3B2137EAA000119136 /* UserService.swift in Sources */,

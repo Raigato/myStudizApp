@@ -36,8 +36,7 @@ class RunQuizViewController: UIViewController {
             nextQuestion()
         } else {
             verifyAnswer()
-            print(calculateScore())
-            // TODO: Segue to end Quiz
+            performSegue(withIdentifier: "goToResults", sender: self)
         }
     }
     
@@ -112,6 +111,16 @@ class RunQuizViewController: UIViewController {
                 questions.append((questionArray[pick], false))
                 questionArray.remove(at: pick)
             }
+        }
+    }
+    
+    // MARK: Segue Handling
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToResults" {
+            let nextView = segue.destination as! EndQuizViewController
+            nextView.score = calculateScore()
+            nextView.summary = questions
         }
     }
     
