@@ -17,6 +17,9 @@ class Helpers {
     
     static func reduceTitle(_ title: String) -> String {
         var titleArr = title.components(separatedBy: " ")
+        if titleArr.count <= 1 {
+            return title
+        }
         let reducedTitle = titleArr[0] + " " + titleArr[1]
         if reducedTitle.count > 15 {
             return String(reducedTitle.prefix(15))
