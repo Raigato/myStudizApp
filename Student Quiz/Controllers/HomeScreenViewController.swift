@@ -46,8 +46,7 @@ class HomeScreenViewController: UIViewController {
         if Auth.auth().currentUser?.uid != nil {
             currentUserId = Auth.auth().currentUser!.uid
             setUsername()
-            fetchQuizList()
-        } else {
+            fetchQuizList()        } else {
             performSegue(withIdentifier: "goToSignUpScreen", sender: self)
         }
         
@@ -140,7 +139,6 @@ class HomeScreenViewController: UIViewController {
 }
 
 // MARK: - Extenstion for TableView
-// TODO: Onclick Segue
 extension HomeScreenViewController : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

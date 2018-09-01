@@ -19,11 +19,10 @@ class RunQuizViewController: UIViewController {
     @IBOutlet weak var answerTextField: LeftPaddedTextField!
     @IBOutlet weak var progressLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
-    @IBOutlet weak var progressBar: UIView!
+    @IBOutlet weak var progressBar: UIProgressView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        progressBar.frame.size.width = 200
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -37,6 +36,7 @@ class RunQuizViewController: UIViewController {
             nextQuestion()
         } else {
             verifyAnswer()
+            print(calculateScore())
             // TODO: Segue to end Quiz
         }
     }
@@ -48,9 +48,12 @@ class RunQuizViewController: UIViewController {
     }
     
     func updateUI() {
+        // -- Reinit Form
         questionLabel.text = questions[currentQuestionNo].0.question
-        scoreLabel.text = "Score: \(calculateScore()) %"
+        answerTextField.text = ""
         
+        // -- Update Progress
+        scoreLabel.text = "Score: \(calculateScore()) %"
         // Format numbers
         var questionNo = ""
         if currentQuestionNo < 9 {
@@ -64,9 +67,8 @@ class RunQuizViewController: UIViewController {
         } else {
             numberOfQuestions = "\(questions.count)"
         }
-        
         progressLabel.text = "Question: \(questionNo)/\(numberOfQuestions)"
-        answerTextField.text = ""
+        progressBar.progress = Float(currentQuestionNo + 1)/Float(questions.count)
     }
     
     func verifyAnswer() {

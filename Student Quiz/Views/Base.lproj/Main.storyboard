@@ -309,7 +309,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uef-pq-3v7" userLabel="Content">
                                 <rect key="frame" x="0.0" y="100" width="375" height="712"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is the most interesting question ever?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lnm-K6-Tuz">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is the most interesting question ever?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lnm-K6-Tuz">
                                         <rect key="frame" x="10" y="60" width="355" height="73"/>
                                         <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="26"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -353,26 +353,26 @@
                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1bP-Yt-AKN" userLabel="Progress Bar">
-                                        <rect key="frame" x="0.0" y="697" width="50" height="15"/>
-                                        <color key="backgroundColor" red="0.98823529409999999" green="0.31764705879999999" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mfh-7t-FfQ">
+                                        <rect key="frame" x="0.0" y="663" width="375" height="15"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="55a-zu-g07"/>
-                                            <constraint firstAttribute="height" constant="15" id="vqg-qq-8fh"/>
+                                            <constraint firstAttribute="height" constant="15" id="mgA-TI-Uht"/>
                                         </constraints>
-                                    </view>
+                                        <color key="progressTintColor" red="0.98823529409999999" green="0.31764705879999999" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="trackTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </progressView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.21176470589999999" green="0.30980392159999998" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="srP-HR-GHi" firstAttribute="leading" secondItem="uef-pq-3v7" secondAttribute="leading" constant="5" id="B2J-ta-FCn"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="srP-HR-GHi" secondAttribute="trailing" constant="20" symbolic="YES" id="CaA-vS-x1E"/>
                                     <constraint firstItem="DhP-gs-pSh" firstAttribute="centerX" secondItem="uef-pq-3v7" secondAttribute="centerX" id="D7I-Rr-jWM"/>
-                                    <constraint firstItem="1bP-Yt-AKN" firstAttribute="leading" secondItem="uef-pq-3v7" secondAttribute="leading" id="FkZ-CS-MTC"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lnm-K6-Tuz" secondAttribute="trailing" id="Jf8-CM-hp6"/>
                                     <constraint firstItem="7aC-M3-hxm" firstAttribute="leading" secondItem="uef-pq-3v7" secondAttribute="leading" constant="20" id="NyZ-7l-Olx"/>
-                                    <constraint firstAttribute="bottom" secondItem="1bP-Yt-AKN" secondAttribute="bottom" id="SH1-f5-w5Q"/>
+                                    <constraint firstAttribute="trailing" secondItem="mfh-7t-FfQ" secondAttribute="trailing" id="TOw-58-Bx2"/>
                                     <constraint firstItem="srP-HR-GHi" firstAttribute="top" secondItem="DhP-gs-pSh" secondAttribute="bottom" constant="30" id="U2L-is-fIj"/>
                                     <constraint firstItem="lnm-K6-Tuz" firstAttribute="centerX" secondItem="uef-pq-3v7" secondAttribute="centerX" id="a7r-mb-eXV"/>
+                                    <constraint firstItem="mfh-7t-FfQ" firstAttribute="leading" secondItem="uef-pq-3v7" secondAttribute="leading" id="e3d-aH-cd9"/>
                                     <constraint firstAttribute="trailing" secondItem="5FX-mj-ydf" secondAttribute="trailing" constant="5" id="jgy-A1-7qX"/>
                                     <constraint firstItem="lnm-K6-Tuz" firstAttribute="leading" secondItem="uef-pq-3v7" secondAttribute="leading" constant="10" id="mS5-Bf-UKr"/>
                                     <constraint firstItem="5FX-mj-ydf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="uef-pq-3v7" secondAttribute="leading" constant="20" symbolic="YES" id="ra1-C4-WHs"/>
@@ -389,6 +389,7 @@
                             <constraint firstItem="sxm-ge-2he" firstAttribute="trailing" secondItem="uef-pq-3v7" secondAttribute="trailing" id="Lk4-7x-5Mp"/>
                             <constraint firstItem="Ke7-DP-6o0" firstAttribute="top" secondItem="v0p-UB-u0c" secondAttribute="top" id="M9n-Ig-6yC"/>
                             <constraint firstItem="uef-pq-3v7" firstAttribute="top" secondItem="Ke7-DP-6o0" secondAttribute="bottom" id="jvI-3J-Bzc"/>
+                            <constraint firstItem="mfh-7t-FfQ" firstAttribute="bottom" secondItem="sxm-ge-2he" secondAttribute="bottom" id="k7F-4j-Lsg"/>
                             <constraint firstItem="5FX-mj-ydf" firstAttribute="bottom" secondItem="sxm-ge-2he" secondAttribute="bottom" constant="-20" id="kDC-ZR-FRc"/>
                             <constraint firstItem="uef-pq-3v7" firstAttribute="leading" secondItem="sxm-ge-2he" secondAttribute="leading" id="mgZ-Jf-wNc"/>
                             <constraint firstItem="Ke7-DP-6o0" firstAttribute="trailing" secondItem="sxm-ge-2he" secondAttribute="trailing" id="naP-WP-tqc"/>
@@ -399,7 +400,7 @@
                     </view>
                     <connections>
                         <outlet property="answerTextField" destination="7aC-M3-hxm" id="npw-gK-L14"/>
-                        <outlet property="progressBar" destination="1bP-Yt-AKN" id="Y7J-Py-Sz7"/>
+                        <outlet property="progressBar" destination="mfh-7t-FfQ" id="c9j-uQ-AYk"/>
                         <outlet property="progressLabel" destination="srP-HR-GHi" id="8EB-kV-uJD"/>
                         <outlet property="questionLabel" destination="lnm-K6-Tuz" id="X2S-QJ-cse"/>
                         <outlet property="scoreLabel" destination="5FX-mj-ydf" id="Grg-td-na7"/>

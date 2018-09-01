@@ -17,6 +17,11 @@ class QuizService {
                 if foundRole == .Owner {
                     let quizRref = Database.database().reference().child("Quiz/\(quizId)")
                     quizRref.removeValue()
+                    UserService.getAllUsers(completion: { (users) in
+                        for user in users {
+                            QuizListService.removeQuizForUser(for: user, quiz: quizId)
+                        }
+                    })
                 }
             }
         }
