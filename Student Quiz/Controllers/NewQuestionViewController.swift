@@ -122,6 +122,6 @@ extension NewQuestionViewController : UITextFieldDelegate {
         } else {
             textField.resignFirstResponder()
         }
-        return false
+        return true
     }
 }

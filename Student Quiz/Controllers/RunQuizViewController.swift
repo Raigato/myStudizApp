@@ -9,7 +9,8 @@
 import UIKit
 
 class RunQuizViewController: UIViewController {
-
+    // TODO: Add "alerts" on validate to notify the user
+    
     var currentQuestionNo: Int = 0
     lazy var score: Int = 0
     lazy var questions: [(Question, Bool)] = []
@@ -23,6 +24,8 @@ class RunQuizViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        answerTextField.delegate = self
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -32,6 +35,7 @@ class RunQuizViewController: UIViewController {
     }
     
     @IBAction func validateButtonPressed(_ sender: UIButton) {
+        answerTextField.resignFirstResponder()
         if currentQuestionNo < questions.count - 1 {
             nextQuestion()
         } else {
@@ -41,6 +45,10 @@ class RunQuizViewController: UIViewController {
     }
     
     // MARK: UI functions
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
     func setTitle() {
         titleLabel.text = Helpers.reduceTitle(currentQuiz.title)
@@ -124,4 +132,15 @@ class RunQuizViewController: UIViewController {
         }
     }
     
+}
+
+// MARK: - TextField extension
+
+extension RunQuizViewController : UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // -- Handles the press of the return button on a textField
+        
+        textField.resignFirstResponder()
+        return true
+    }
 }

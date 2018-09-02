@@ -24,7 +24,6 @@ class HomeScreenViewController: UIViewController {
     var spinners: Spinners!
     
     @IBAction func plusButtonClicked(_ sender: UIButton) {
-        tableView.reloadData()
     }
     
     override func viewDidLoad() {
