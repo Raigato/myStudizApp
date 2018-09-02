@@ -160,8 +160,8 @@ extension HomeScreenViewController : UITableViewDataSource, UITableViewDelegate 
         QuizService.observeQuiz(currentQuizId) { (quiz) in
             if let foundQuiz = quiz {
                 currentQuiz = foundQuiz
+                self.performSegue(withIdentifier: "fromHomeToChoseQuiz", sender: self)
             }
         }
-        performSegue(withIdentifier: "fromHomeToChoseQuiz", sender: self)
     }
 }

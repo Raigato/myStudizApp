@@ -27,10 +27,6 @@ class ChoseQuizViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         setTitle()
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        setTitle()
-    }
 
     @IBAction func deleteButtonPressed(_ sender: UIButton) {
         let alert = UIAlertController(title: "Quiz delete 🗑", message: "Are you sure you want to delete this awesome Quiz?", preferredStyle: .alert)

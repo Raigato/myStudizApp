@@ -60,11 +60,9 @@ class QuizService {
                         if let user = fetchedReview["user"] {
                             if let rating = fetchedReview["rating"] {
                                 if let comment = fetchedReview["comment"] {
-                                    if comment != "" {
-                                        quiz?.addReview(by: user, rated: rating, comment: comment)
-                                    } else {
-                                        quiz?.addReview(by: user, rated: rating)
-                                    }
+                                    quiz?.addReview(by: user, rated: rating, comment: comment)
+                                } else {
+                                    quiz?.addReview(by: user, rated: rating)
                                 }
                             }
                         }
