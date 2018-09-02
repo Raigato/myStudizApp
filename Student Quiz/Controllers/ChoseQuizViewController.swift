@@ -11,8 +11,6 @@ import Firebase
 
 class ChoseQuizViewController: UIViewController {
     
-    // TODO: Bug - Sometimes the title doesn't show up
-    
     var userRole: Role = .None
 
     @IBOutlet weak var titleLabel: UILabel!
@@ -27,6 +25,10 @@ class ChoseQuizViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        setTitle()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         setTitle()
     }
 

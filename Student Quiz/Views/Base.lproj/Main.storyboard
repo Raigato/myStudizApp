@@ -448,7 +448,7 @@ Your score: XX%</string>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="CmS-Uw-5TL" secondAttribute="height" multiplier="10:9" id="Lbp-eD-QNW"/>
                                         </constraints>
-                                        <state key="normal" backgroundImage="Active Star"/>
+                                        <state key="normal" backgroundImage="Inactive Star"/>
                                         <connections>
                                             <action selector="starButtonPressed:" destination="CBX-je-QNF" eventType="touchUpInside" id="JsF-3t-nSd"/>
                                         </connections>
@@ -458,7 +458,7 @@ Your score: XX%</string>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="iSK-QG-J2h" secondAttribute="height" multiplier="10:9" id="Opm-Ed-z3g"/>
                                         </constraints>
-                                        <state key="normal" backgroundImage="Active Star"/>
+                                        <state key="normal" backgroundImage="Inactive Star"/>
                                         <connections>
                                             <action selector="starButtonPressed:" destination="CBX-je-QNF" eventType="touchUpInside" id="8FG-YL-F4n"/>
                                         </connections>
@@ -468,7 +468,7 @@ Your score: XX%</string>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="zg4-L3-DXV" secondAttribute="height" multiplier="10:9" id="B5T-TZ-XNd"/>
                                         </constraints>
-                                        <state key="normal" backgroundImage="Active Star"/>
+                                        <state key="normal" backgroundImage="Inactive Star"/>
                                         <connections>
                                             <action selector="starButtonPressed:" destination="CBX-je-QNF" eventType="touchUpInside" id="Vlm-OE-YQl"/>
                                         </connections>
@@ -548,6 +548,7 @@ Your score: XX%</string>
                         <viewLayoutGuide key="safeArea" id="o6B-Jg-sb2"/>
                     </view>
                     <connections>
+                        <outlet property="commentTextField" destination="tUe-AN-jAp" id="m6e-Gy-TEn"/>
                         <outlet property="congratulationsLabel" destination="Jxt-Ce-YYR" id="tfG-B4-bxL"/>
                         <outletCollection property="starButtons" destination="CmS-Uw-5TL" collectionClass="NSMutableArray" id="DLO-CW-rcC"/>
                         <outletCollection property="starButtons" destination="iSK-QG-J2h" collectionClass="NSMutableArray" id="DFb-ar-Yrc"/>
@@ -1478,7 +1479,6 @@ Your score: XX%</string>
         </scene>
     </scenes>
     <resources>
-        <image name="Active Star" width="30" height="27"/>
         <image name="Answer Field" width="334" height="64"/>
         <image name="Checkbox" width="34" height="34"/>
         <image name="Checkmark" width="37" height="27"/>
@@ -1507,7 +1507,7 @@ Your score: XX%</string>
         <segue reference="kMg-V9-TSy"/>
         <segue reference="Lac-LY-sZL"/>
         <segue reference="rSm-Sc-zDf"/>
-        <segue reference="2wC-AQ-1SK"/>
+        <segue reference="xAb-lI-VY0"/>
         <segue reference="n9G-WF-gh4"/>
     </inferredMetricsTieBreakers>
 </document>

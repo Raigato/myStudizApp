@@ -72,8 +72,8 @@ class HomeScreenViewController: UIViewController {
         newQuiz1.collaborators.append("GG5b4ThKvrPGivA85AhlAhiuwUw2")
         newQuiz1.addQuestion(question: "What does make 1+1", answer: "2")
         newQuiz1.addQuestion(question: "Now, what does make 1*1", answer: "1")
-        newQuiz1.addReview(rated: "4")
-        newQuiz1.addReview(rated: "3", comment: "Moyen quoi")
+        newQuiz1.addReview(by: currentUserId, rated: "4")
+        newQuiz1.addReview(by: currentUserId, rated: "3", comment: "Moyen quoi")
         newQuiz1.save { (quizId) in }
     }
     

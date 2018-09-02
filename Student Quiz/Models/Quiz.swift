@@ -122,8 +122,8 @@ class Quiz {
         }
     }
     
-    func addReview(rated rating: String, comment: String = "") {
-        let newReview = Review(rated: rating, comment: comment)
+    func addReview(by user: String, rated rating: String, comment: String = "") {
+        let newReview = Review(by: user, rated: rating, comment: comment)
         self.reviews.append(newReview)
     }
     

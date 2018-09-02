@@ -16,16 +16,21 @@ class EndQuizViewController: UIViewController {
     var comment: String = ""
     
     @IBOutlet var starButtons: [UIButton]!
-    
+    @IBOutlet weak var commentTextField: TopLeftPaddedTextField!
     @IBOutlet weak var congratulationsLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        commentTextField.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
         congratulationsLabel.text = "Congratulations!\nYour score: \(score)%"
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     // MARK: Segue Handling
@@ -44,17 +49,21 @@ class EndQuizViewController: UIViewController {
     // MARK: Finish Button Handling
     @IBAction func finishButtonPressed(_ sender: UIButton) {
         if rating > 0 {
-            if comment != "" {
-                currentQuiz.addReview(rated: String(rating), comment: comment)
-            } else {
-                currentQuiz.addReview(rated: String(rating))
+            if let enteredComment = commentTextField.text {
+                comment = enteredComment
             }
-            currentQuiz.save { (quizId) in }
+            if comment != "" {
+                currentQuiz.addReview(by: UserService.currentUser(), rated: String(rating), comment: comment)
+            } else {
+                currentQuiz.addReview(by: UserService.currentUser(), rated: String(rating))
+            }
+            currentQuiz.save(in: currentQuizId) { (quizId) in }
         }
     }
     
     // MARK: Star Buttons Handling
     @IBAction func starButtonPressed(_ sender: UIButton) {
+        rating = sender.tag
         for button in starButtons {
             if button.tag <= sender.tag {
                 button.setBackgroundImage(UIImage(named: "Active Star"), for: .normal)
@@ -63,5 +72,15 @@ class EndQuizViewController: UIViewController {
             }
         }
     }
-    
+}
+
+// MARK: - TextField extension
+
+extension EndQuizViewController : UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // -- Handles the press of the return button on a textField
+        
+        textField.resignFirstResponder()
+        return true
+    }
 }

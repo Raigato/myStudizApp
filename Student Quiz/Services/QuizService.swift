@@ -57,12 +57,14 @@ class QuizService {
                 
                 if let fetchedReviews = dict["reviews"] as? [[String: String]] {
                     for fetchedReview in fetchedReviews {
-                        if let rating = fetchedReview["rating"] {
-                            if let comment = fetchedReview["comment"] {
-                                if comment != "" {
-                                    quiz?.addReview(rated: rating, comment: comment)
-                                } else {
-                                    quiz?.addReview(rated: rating)
+                        if let user = fetchedReview["user"] {
+                            if let rating = fetchedReview["rating"] {
+                                if let comment = fetchedReview["comment"] {
+                                    if comment != "" {
+                                        quiz?.addReview(by: user, rated: rating, comment: comment)
+                                    } else {
+                                        quiz?.addReview(by: user, rated: rating)
+                                    }
                                 }
                             }
                         }

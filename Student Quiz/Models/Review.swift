@@ -12,16 +12,21 @@ class Review {
     
     var rating: String
     var comment: String
+    var user: String
     
-    init(rated rating: String, comment: String = "") {
+    init(by user: String, rated rating: String, comment: String = "") {
         self.rating = rating
         self.comment = comment
+        self.user = user
     }
     
     // MARK: - Convert to dictionary method
     
     func createDictionary() -> [String: String] {
-        let dict = ["rating": self.rating, "comment": self.comment]
-        return dict
+        if self.comment == "" {
+            return ["rating": self.rating, "user": self.user]
+        } else {
+            return ["rating": self.rating, "comment": self.comment, "user": self.user]
+        }
     }
 }

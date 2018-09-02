@@ -11,6 +11,13 @@ import Firebase
 
 class UserService {
     
+    static func currentUser() -> String {
+        if let user = Auth.auth().currentUser?.uid {
+            return user
+        }
+        return ""
+    }
+    
     static func isActiveUser(uid: String) -> Bool {
         if uid == Auth.auth().currentUser?.uid {
             return true
