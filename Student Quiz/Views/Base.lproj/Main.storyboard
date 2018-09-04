@@ -178,8 +178,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zno-xB-i5H" userLabel="TopBar">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Quiz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aww-uZ-Fkx">
-                                        <rect key="frame" x="126" y="28" width="124" height="64"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aww-uZ-Fkx">
+                                        <rect key="frame" x="134.5" y="28" width="107" height="64"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="27"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -212,12 +212,13 @@
                                 <rect key="frame" x="0.0" y="100" width="375" height="567"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cf4-vi-ZMd">
-                                        <rect key="frame" x="0.0" y="258.5" width="375" height="50"/>
+                                        <rect key="frame" x="0.0" y="517" width="375" height="50"/>
                                         <color key="backgroundColor" red="0.98823529409999999" green="0.31764705879999999" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="U1m-Ap-TtI"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="18"/>
+                                        <size key="titleShadowOffset" width="1" height="2"/>
                                         <state key="normal" title="Log Out">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
@@ -226,13 +227,88 @@
                                             <action selector="logoutButtonPressed:" destination="jV8-Xh-bKy" eventType="touchUpInside" id="zAI-6P-qMN"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hsf-dW-1IZ">
+                                        <rect key="frame" x="0.0" y="30" width="375" height="50"/>
+                                        <color key="backgroundColor" red="0.2470588235" green="0.75686274509999996" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="wPI-tv-SxV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="20"/>
+                                        <size key="titleShadowOffset" width="1" height="2"/>
+                                        <state key="normal" title="Change Password">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changePasswordButtonPressed:" destination="jV8-Xh-bKy" eventType="touchUpInside" id="WCt-oE-TaJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IwV-GB-aHu">
+                                        <rect key="frame" x="0.0" y="110" width="375" height="50"/>
+                                        <color key="backgroundColor" red="0.2470588235" green="0.75686274509999996" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="T1E-pE-pzP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="20"/>
+                                        <size key="titleShadowOffset" width="1" height="2"/>
+                                        <state key="normal" title="Change Email">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changeEmailButtonPressed:" destination="jV8-Xh-bKy" eventType="touchUpInside" id="G4P-Ve-biP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpd-fB-F0q">
+                                        <rect key="frame" x="0.0" y="190" width="375" height="50"/>
+                                        <color key="backgroundColor" red="0.2470588235" green="0.75686274509999996" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="rm1-0b-H4F"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="20"/>
+                                        <size key="titleShadowOffset" width="1" height="2"/>
+                                        <state key="normal" title="Change Username">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changeUsernameButtonPressed:" destination="jV8-Xh-bKy" eventType="touchUpInside" id="Pe7-iz-WnI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpE-6i-N96">
+                                        <rect key="frame" x="0.0" y="280" width="375" height="50"/>
+                                        <color key="backgroundColor" red="0.98823529409999999" green="0.31764705879999999" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="e2y-Cx-LGu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="20"/>
+                                        <size key="titleShadowOffset" width="1" height="2"/>
+                                        <state key="normal" title="Delete Account">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="deleteAccountButtonPressed:" destination="jV8-Xh-bKy" eventType="touchUpInside" id="Wc3-MC-UjZ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.21176470589999999" green="0.30980392159999998" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="vpE-6i-N96" firstAttribute="top" secondItem="dpd-fB-F0q" secondAttribute="bottom" constant="40" id="5rf-zF-HCu"/>
+                                    <constraint firstItem="IwV-GB-aHu" firstAttribute="top" secondItem="Hsf-dW-1IZ" secondAttribute="bottom" constant="30" id="9Fl-jR-bhS"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hsf-dW-1IZ" secondAttribute="trailing" id="C3E-zx-4iP"/>
+                                    <constraint firstAttribute="trailing" secondItem="IwV-GB-aHu" secondAttribute="trailing" id="FJQ-qZ-54W"/>
                                     <constraint firstItem="cf4-vi-ZMd" firstAttribute="centerX" secondItem="ndK-OF-d7d" secondAttribute="centerX" id="Hem-Ux-sRr"/>
-                                    <constraint firstItem="cf4-vi-ZMd" firstAttribute="centerY" secondItem="ndK-OF-d7d" secondAttribute="centerY" id="WNb-dF-Zww"/>
+                                    <constraint firstItem="IwV-GB-aHu" firstAttribute="leading" secondItem="ndK-OF-d7d" secondAttribute="leading" id="IU4-jk-g6c"/>
+                                    <constraint firstAttribute="trailing" secondItem="dpd-fB-F0q" secondAttribute="trailing" id="MGY-t4-lb7"/>
+                                    <constraint firstItem="Hsf-dW-1IZ" firstAttribute="top" secondItem="ndK-OF-d7d" secondAttribute="top" constant="30" id="O8d-FV-WyW"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cf4-vi-ZMd" secondAttribute="trailing" id="YEy-d6-Zgw"/>
+                                    <constraint firstAttribute="trailing" secondItem="vpE-6i-N96" secondAttribute="trailing" id="YeV-1v-d14"/>
+                                    <constraint firstItem="dpd-fB-F0q" firstAttribute="top" secondItem="IwV-GB-aHu" secondAttribute="bottom" constant="30" id="idN-BX-5ut"/>
                                     <constraint firstItem="cf4-vi-ZMd" firstAttribute="leading" secondItem="ndK-OF-d7d" secondAttribute="leading" id="jbF-Ea-9pz"/>
+                                    <constraint firstItem="dpd-fB-F0q" firstAttribute="leading" secondItem="ndK-OF-d7d" secondAttribute="leading" id="mVF-QP-TOk"/>
+                                    <constraint firstItem="vpE-6i-N96" firstAttribute="leading" secondItem="ndK-OF-d7d" secondAttribute="leading" id="vFe-bg-7Io"/>
+                                    <constraint firstItem="Hsf-dW-1IZ" firstAttribute="leading" secondItem="ndK-OF-d7d" secondAttribute="leading" id="x2d-bm-I7B"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -240,6 +316,7 @@
                         <constraints>
                             <constraint firstItem="zno-xB-i5H" firstAttribute="trailing" secondItem="T6b-2X-2iH" secondAttribute="trailing" id="1d2-S0-lQ9"/>
                             <constraint firstItem="ndK-OF-d7d" firstAttribute="leading" secondItem="T6b-2X-2iH" secondAttribute="leading" id="618-CU-cUH"/>
+                            <constraint firstItem="cf4-vi-ZMd" firstAttribute="bottom" secondItem="T6b-2X-2iH" secondAttribute="bottom" id="8ff-db-LQy"/>
                             <constraint firstItem="zno-xB-i5H" firstAttribute="leading" secondItem="T6b-2X-2iH" secondAttribute="leading" id="IMh-Xq-Xv6"/>
                             <constraint firstItem="T6b-2X-2iH" firstAttribute="trailing" secondItem="ndK-OF-d7d" secondAttribute="trailing" id="NVn-V2-S7B"/>
                             <constraint firstItem="ndK-OF-d7d" firstAttribute="top" secondItem="zno-xB-i5H" secondAttribute="bottom" id="Ve0-ii-izm"/>
@@ -1617,7 +1694,7 @@ Your score: XX%</string>
     <inferredMetricsTieBreakers>
         <segue reference="d9y-gO-2Ew"/>
         <segue reference="97h-VB-8UF"/>
-        <segue reference="SHY-nd-iuT"/>
-        <segue reference="6bd-Aq-MNa"/>
+        <segue reference="rSm-Sc-zDf"/>
+        <segue reference="2wC-AQ-1SK"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -31,14 +31,14 @@ class CreateAccountViewController: UIViewController {
     
     @IBAction func resetPasswordPressed(_ sender: Any) {
         var textField = UITextField()
-        let alert = UIAlertController(title: "New Password requested 🤷‍♀️", message: "Please an enter your email to receive a new password", preferredStyle: .alert)
+        let alert = UIAlertController(title: "New Password Requested 🤷‍♀️", message: "Please an enter your email to receive a new password", preferredStyle: .alert)
         let action = UIAlertAction(title: "Submit", style: .default) { (action) in
             if let email = textField.text {
                 if !Helpers.isValidEmail(testStr: email) {
                     Helpers.displayAlert(title: "Invalid Email 👮‍♀️", message: "Please enter a valid email address", with: self)
                 } else {
                     UserService.passwordReset(withEmail: email, alertIn: self)
-                    Helpers.displayAlert(title: "New Password Sent 📬", message: "We have sent you an email at \(email) so you can reinitialize your password", with: self)
+                    Helpers.displayAlert(title: "New Password Sent 📬", message: "We have just sent you an email at \(email) so you can reinitialize your password", with: self)
                 }
             }
         }

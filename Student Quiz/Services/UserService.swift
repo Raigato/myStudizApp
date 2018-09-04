@@ -54,6 +54,24 @@ class UserService {
         }
     }
     
+    static func deleteUsername(username: String) {
+        let usernameRef = Database.database().reference().child("username").child(username)
+        usernameRef.removeValue()
+    }
+    
+    static func updateUserProfile(uid: String, newUserInfo: [String: String]) {
+        let userRef = Database.database().reference().child("userProfile").child(uid)
+        
+        if let newUsername = newUserInfo["username"] {
+            if newUsername != "" {
+                let usernameRef = Database.database().reference().child("username").child(newUsername)
+                usernameRef.setValue(uid)
+            }
+        }
+        
+        userRef.updateChildValues(newUserInfo)
+    }
+    
     static func createUserProfile(uid: String, email: String, username: String = "") {
         let userRef = Database.database().reference().child("userProfile").child(uid)
         
@@ -88,5 +106,9 @@ class UserService {
             }
             completion(users)
         }
+    }
+    
+    static func deleteAccount(uid: String) {
+        print(uid)
     }
 }
