@@ -37,7 +37,11 @@ class PrivacyViewController: UIViewController {
         currentChoice = currentQuiz.privacy
         updateUI(to: currentChoice)
     }
-
+    
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func nextButtonPressed(_ sender: UIButton) {
         currentQuiz.privacy = currentChoice
         currentQuiz.save(in: currentQuizId) { (quizId) in }

@@ -19,6 +19,14 @@ class UserService {
         }
     }
     
+    static func passwordReset(withEmail email: String, alertIn viewController: UIViewController) {
+        Auth.auth().sendPasswordReset(withEmail: email) { (error) in
+            if let errorMessage = error?.localizedDescription {
+                Helpers.displayAlert(title: "Error sending Password Reset", message: "\(errorMessage)", with: viewController)
+            }
+        }
+    }
+    
     static func currentUser() -> String {
         if let user = Auth.auth().currentUser?.uid {
             return user

@@ -43,6 +43,10 @@ class NewQuizViewController: UIViewController {
         categoryButton.setTitle(currentQuiz.getCategory(), for: .normal)
     }
     
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     // MARK: UI functions
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

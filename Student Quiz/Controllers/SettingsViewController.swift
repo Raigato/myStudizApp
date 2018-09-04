@@ -22,7 +22,7 @@ class SettingsViewController: UIViewController {
     
     @IBAction func logoutButtonPressed(_ sender: UIButton) {
         UserService.logOutUser(alertIn: self)
-        self.dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     
 }

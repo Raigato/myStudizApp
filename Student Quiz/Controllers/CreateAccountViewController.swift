@@ -30,7 +30,24 @@ class CreateAccountViewController: UIViewController {
     }
     
     @IBAction func resetPasswordPressed(_ sender: Any) {
-        print("Reset Password Pressed")
+        var textField = UITextField()
+        let alert = UIAlertController(title: "New Password requested 🤷‍♀️", message: "Please an enter your email to receive a new password", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Submit", style: .default) { (action) in
+            if let email = textField.text {
+                if !Helpers.isValidEmail(testStr: email) {
+                    Helpers.displayAlert(title: "Invalid Email 👮‍♀️", message: "Please enter a valid email address", with: self)
+                } else {
+                    UserService.passwordReset(withEmail: email, alertIn: self)
+                    Helpers.displayAlert(title: "New Password Sent 📬", message: "We have sent you an email at \(email) so you can reinitialize your password", with: self)
+                }
+            }
+        }
+        alert.addTextField { (alertTextField) in
+            alertTextField.placeholder = "Email address..."
+            textField = alertTextField
+        }
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
     }
     
     @IBAction func submitPressed(_ sender: UIButton) {
@@ -57,11 +74,14 @@ class CreateAccountViewController: UIViewController {
                         if error != nil {
                             Helpers.displayAlert(title: "Invalid credentials 👮‍♂️", message: errorMessage, with: self)
                         }
-                        self.performSegue(withIdentifier: "goToHomeScreen", sender: self)
+                        self.dismiss(animated: true, completion: nil)
                     })
                 } else {
                     UserService.createUserProfile(uid: result!.user.uid, email: email)
-                    self.performSegue(withIdentifier: "goToHomeScreen", sender: self)
+                    Auth.auth().currentUser?.sendEmailVerification(completion: { (error) in
+                        print("Error sending the verification email")
+                    })
+                    self.dismiss(animated: true, completion: nil)
                 }
 
             }

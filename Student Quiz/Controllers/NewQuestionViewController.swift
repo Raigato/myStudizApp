@@ -34,6 +34,10 @@ class NewQuestionViewController: UIViewController {
         }
     }
     
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     // MARK: Segues handling
     
     @IBAction func moreQuestionButtonPressed(_ sender: UIButton) {
@@ -66,9 +70,6 @@ class NewQuestionViewController: UIViewController {
         } else {
             finishButtonHandler()
         }
-    }
-    
-    @IBAction func backButtonPressed(_ sender: UIButton) {
     }
     
     // MARK: Helper functions

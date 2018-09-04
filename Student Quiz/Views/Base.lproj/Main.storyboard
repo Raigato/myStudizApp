@@ -161,7 +161,6 @@
                     <connections>
                         <outlet property="EmailTextField" destination="T2O-ma-MVN" id="Hfq-Ej-5J1"/>
                         <outlet property="PasswordTextField" destination="VHT-6Q-uZI" id="vYN-Nf-nwG"/>
-                        <segue destination="ynM-Mm-tKY" kind="show" identifier="goToHomeScreen" id="j3z-bt-sdT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -978,7 +977,7 @@ Your score: XX%</string>
                                         </constraints>
                                         <state key="normal" backgroundImage="back"/>
                                         <connections>
-                                            <segue destination="ynM-Mm-tKY" kind="show" id="kPf-7t-uKa"/>
+                                            <action selector="backButtonPressed:" destination="HCW-wT-gzB" eventType="touchUpInside" id="DaL-xU-tlP"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1132,8 +1131,7 @@ Your score: XX%</string>
                                         </constraints>
                                         <state key="normal" backgroundImage="back"/>
                                         <connections>
-                                            <action selector="backButtonPressed:" destination="04w-qc-SNY" eventType="touchUpInside" id="Clc-or-cfq"/>
-                                            <segue destination="HCW-wT-gzB" kind="show" identifier="goBackToNewQuiz" id="58j-QR-nq2"/>
+                                            <action selector="backButtonPressed:" destination="04w-qc-SNY" eventType="touchUpInside" id="7VG-DY-PH9"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iG9-Yv-R6t">
@@ -1282,8 +1280,7 @@ Your score: XX%</string>
                                         </constraints>
                                         <state key="normal" backgroundImage="back"/>
                                         <connections>
-                                            <action selector="backButtonPressed:" destination="04w-qc-SNY" eventType="touchUpInside" id="yQc-Wz-Cs3"/>
-                                            <segue destination="04w-qc-SNY" kind="show" id="pP9-vX-86v"/>
+                                            <action selector="backButtonPressed:" destination="UMf-IN-UMO" eventType="touchUpInside" id="n4V-5K-bQ6"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJ4-o7-QWO">
@@ -1618,10 +1615,9 @@ Your score: XX%</string>
         <image name="plus" width="32" height="34"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kMg-V9-TSy"/>
+        <segue reference="d9y-gO-2Ew"/>
         <segue reference="97h-VB-8UF"/>
-        <segue reference="rSm-Sc-zDf"/>
-        <segue reference="xAb-lI-VY0"/>
-        <segue reference="j3z-bt-sdT"/>
+        <segue reference="SHY-nd-iuT"/>
+        <segue reference="6bd-Aq-MNa"/>
     </inferredMetricsTieBreakers>
 </document>
