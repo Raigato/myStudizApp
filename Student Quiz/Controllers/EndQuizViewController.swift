@@ -15,6 +15,7 @@ class EndQuizViewController: UIViewController {
     var rating: Int = 0
     var comment: String = ""
     
+    @IBOutlet weak var rateThisQuizLabel: UILabel!
     @IBOutlet var starButtons: [UIButton]!
     @IBOutlet weak var commentTextField: TopLeftPaddedTextField!
     @IBOutlet weak var congratulationsLabel: UILabel!
@@ -27,6 +28,15 @@ class EndQuizViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         congratulationsLabel.text = "Congratulations!\nYour score: \(score)%"
+        
+        // Reviews are only available on public Quizzes
+        if currentQuiz.privacy != .Public {
+            rateThisQuizLabel.isHidden = true
+            for button in starButtons {
+                button.isHidden = true
+            }
+            commentTextField.isHidden = true
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -49,6 +59,7 @@ class EndQuizViewController: UIViewController {
     // MARK: Finish Button Handling
     @IBAction func finishButtonPressed(_ sender: UIButton) {
         if rating > 0 {
+            // TODO: Verify if is Owner or Collaborator
             if let enteredComment = commentTextField.text {
                 comment = enteredComment
             }

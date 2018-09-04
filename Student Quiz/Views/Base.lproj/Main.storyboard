@@ -662,6 +662,7 @@ Your score: XX%</string>
                     <connections>
                         <outlet property="commentTextField" destination="tUe-AN-jAp" id="m6e-Gy-TEn"/>
                         <outlet property="congratulationsLabel" destination="Jxt-Ce-YYR" id="tfG-B4-bxL"/>
+                        <outlet property="rateThisQuizLabel" destination="beG-dT-CFG" id="sDM-Ow-m1T"/>
                         <outletCollection property="starButtons" destination="CmS-Uw-5TL" collectionClass="NSMutableArray" id="DLO-CW-rcC"/>
                         <outletCollection property="starButtons" destination="iSK-QG-J2h" collectionClass="NSMutableArray" id="DFb-ar-Yrc"/>
                         <outletCollection property="starButtons" destination="zg4-L3-DXV" collectionClass="NSMutableArray" id="PLu-Ye-JlO"/>
@@ -1620,7 +1621,7 @@ Your score: XX%</string>
         <segue reference="kMg-V9-TSy"/>
         <segue reference="97h-VB-8UF"/>
         <segue reference="rSm-Sc-zDf"/>
-        <segue reference="2wC-AQ-1SK"/>
+        <segue reference="xAb-lI-VY0"/>
         <segue reference="j3z-bt-sdT"/>
     </inferredMetricsTieBreakers>
 </document>
