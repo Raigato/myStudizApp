@@ -64,8 +64,12 @@ class EndQuizViewController: UIViewController {
     // MARK: Star Buttons Handling
     @IBAction func starButtonPressed(_ sender: UIButton) {
         rating = sender.tag
+        updateUI()
+    }
+    
+    func updateUI() {
         for button in starButtons {
-            if button.tag <= sender.tag {
+            if button.tag <= rating {
                 button.setBackgroundImage(UIImage(named: "Active Star"), for: .normal)
             } else {
                 button.setBackgroundImage(UIImage(named: "Inactive Star"), for: .normal)

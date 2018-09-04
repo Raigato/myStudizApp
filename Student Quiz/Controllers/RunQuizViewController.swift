@@ -79,13 +79,22 @@ class RunQuizViewController: UIViewController {
     }
     
     func verifyAnswer() {
-        let rightAnswer = questions[currentQuestionNo].0.answer.lowercased().folding(options: .diacriticInsensitive, locale: .current).trimmingCharacters(in: .whitespaces)
-        let userAnswer = answerTextField.text?.lowercased().folding(options: .diacriticInsensitive, locale: .current).trimmingCharacters(in: .whitespaces)
-        
-        if userAnswer == rightAnswer {
-            score += 1
-            questions[currentQuestionNo].1 = true
+        let rightAnswer = formatAnswer(questions[currentQuestionNo].0.answer)
+        if var userAnswer = answerTextField.text {
+            userAnswer = formatAnswer(userAnswer)
+            
+            print(rightAnswer)
+            print(userAnswer)
+            
+            if userAnswer == rightAnswer {
+                score += 1
+                questions[currentQuestionNo].1 = true
+            }
         }
+    }
+    
+    func formatAnswer(_ answer: String) -> String {
+        return answer.lowercased().folding(options: .diacriticInsensitive, locale: .current).removingWhitespaces().removingPunctuations()
     }
     
     func calculateScore() -> Int {
@@ -142,5 +151,17 @@ extension RunQuizViewController : UITextFieldDelegate {
         
         textField.resignFirstResponder()
         return true
+    }
+}
+
+// MARK: - String extension
+
+extension String {
+    func removingWhitespaces() -> String {
+        return components(separatedBy: .whitespaces).joined()
+    }
+    
+    func removingPunctuations() -> String {
+        return components(separatedBy: .punctuationCharacters).joined()
     }
 }

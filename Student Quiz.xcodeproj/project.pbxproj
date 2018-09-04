@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		65DEC76C3AF38DE54ADF795D /* Pods_Student_Quiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BE5AE9BF7C4D41FFD6CBAD /* Pods_Student_Quiz.framework */; };
+		58506F8C735E3D8A7E529882 /* Pods_Student_Quiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13E5E41E92236D7687E2F708 /* Pods_Student_Quiz.framework */; };
 		890DB40F213C089A00C4FFCA /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890DB40E213C089A00C4FFCA /* ReviewViewController.swift */; };
 		890DB411213C0ACA00C4FFCA /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890DB410213C0ACA00C4FFCA /* ReviewTableViewCell.swift */; };
 		89116DA6213960C400727C5E /* ChoseQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89116DA5213960C400727C5E /* ChoseQuizViewController.swift */; };
@@ -44,8 +44,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		07BE5AE9BF7C4D41FFD6CBAD /* Pods_Student_Quiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Student_Quiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		634889F635AC755778AF9D2E /* Pods-Student Quiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Student Quiz.release.xcconfig"; path = "Pods/Target Support Files/Pods-Student Quiz/Pods-Student Quiz.release.xcconfig"; sourceTree = "<group>"; };
+		13E5E41E92236D7687E2F708 /* Pods_Student_Quiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Student_Quiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		22EB447E485D28DF83A0FE53 /* Pods-Student Quiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Student Quiz.release.xcconfig"; path = "Pods/Target Support Files/Pods-Student Quiz/Pods-Student Quiz.release.xcconfig"; sourceTree = "<group>"; };
 		890DB40E213C089A00C4FFCA /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		890DB410213C0ACA00C4FFCA /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
 		89116DA5213960C400727C5E /* ChoseQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoseQuizViewController.swift; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 		899FDBF4212C3739003637CD /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		899FDBF5212C373E003637CD /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		89A15CCD2132CE7D0061494E /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
-		9FB8332EFDB670C61EE0CD15 /* Pods-Student Quiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Student Quiz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Student Quiz/Pods-Student Quiz.debug.xcconfig"; sourceTree = "<group>"; };
+		FD4361FF1FBBC17F27D97966 /* Pods-Student Quiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Student Quiz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Student Quiz/Pods-Student Quiz.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,28 +89,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65DEC76C3AF38DE54ADF795D /* Pods_Student_Quiz.framework in Frameworks */,
+				58506F8C735E3D8A7E529882 /* Pods_Student_Quiz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0B2DF46C5EF86E1FAED69388 /* Pods */ = {
+		1B1949BF662A6CF869BFB2C8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9FB8332EFDB670C61EE0CD15 /* Pods-Student Quiz.debug.xcconfig */,
-				634889F635AC755778AF9D2E /* Pods-Student Quiz.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		0F5C7B8F0973EBA2C5E42419 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				07BE5AE9BF7C4D41FFD6CBAD /* Pods_Student_Quiz.framework */,
+				13E5E41E92236D7687E2F708 /* Pods_Student_Quiz.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		30062AA84F89EB9BC15C2C1B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FD4361FF1FBBC17F27D97966 /* Pods-Student Quiz.debug.xcconfig */,
+				22EB447E485D28DF83A0FE53 /* Pods-Student Quiz.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		891DADA721348150003CB827 /* Services */ = {
@@ -150,8 +150,8 @@
 			children = (
 				897B6B15212C310B00807269 /* Student Quiz */,
 				897B6B14212C310B00807269 /* Products */,
-				0B2DF46C5EF86E1FAED69388 /* Pods */,
-				0F5C7B8F0973EBA2C5E42419 /* Frameworks */,
+				30062AA84F89EB9BC15C2C1B /* Pods */,
+				1B1949BF662A6CF869BFB2C8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -243,11 +243,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 897B6B25212C310C00807269 /* Build configuration list for PBXNativeTarget "Student Quiz" */;
 			buildPhases = (
-				B53C70CAB2314B3C4EEF203E /* [CP] Check Pods Manifest.lock */,
+				A3CE41B5A3C97D8A27A98317 /* [CP] Check Pods Manifest.lock */,
 				897B6B0F212C310B00807269 /* Sources */,
 				897B6B10212C310B00807269 /* Frameworks */,
 				897B6B11212C310B00807269 /* Resources */,
-				10E0FDA7B95C24913B74B191 /* [CP] Embed Pods Frameworks */,
+				5BFDA79AE7CB0600F4FEBCCE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -309,10 +309,12 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		10E0FDA7B95C24913B74B191 /* [CP] Embed Pods Frameworks */ = {
+		5BFDA79AE7CB0600F4FEBCCE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Student Quiz/Pods-Student Quiz-frameworks.sh",
@@ -325,6 +327,8 @@
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Dropper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
@@ -339,16 +343,20 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Student Quiz/Pods-Student Quiz-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B53C70CAB2314B3C4EEF203E /* [CP] Check Pods Manifest.lock */ = {
+		A3CE41B5A3C97D8A27A98317 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Student Quiz-checkManifestLockResult.txt",
 			);
@@ -531,7 +539,7 @@
 		};
 		897B6B26212C310C00807269 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9FB8332EFDB670C61EE0CD15 /* Pods-Student Quiz.debug.xcconfig */;
+			baseConfigurationReference = FD4361FF1FBBC17F27D97966 /* Pods-Student Quiz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -550,7 +558,7 @@
 		};
 		897B6B27212C310C00807269 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 634889F635AC755778AF9D2E /* Pods-Student Quiz.release.xcconfig */;
+			baseConfigurationReference = 22EB447E485D28DF83A0FE53 /* Pods-Student Quiz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
