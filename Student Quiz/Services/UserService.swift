@@ -11,6 +11,14 @@ import Firebase
 
 class UserService {
     
+    static func logOutUser(alertIn viewController: UIViewController) {
+        do {
+            try Auth.auth().signOut()
+        } catch {
+            Helpers.displayAlert(title: "Cannot Log Out", message: "An error has occured when trying to logout", with: viewController)
+        }
+    }
+    
     static func currentUser() -> String {
         if let user = Auth.auth().currentUser?.uid {
             return user

@@ -45,7 +45,8 @@ class HomeScreenViewController: UIViewController {
         if Auth.auth().currentUser?.uid != nil {
             currentUserId = Auth.auth().currentUser!.uid
             setUsername()
-            fetchQuizList()        } else {
+            fetchQuizList()
+        } else {
             performSegue(withIdentifier: "goToSignUpScreen", sender: self)
         }
         
@@ -59,12 +60,7 @@ class HomeScreenViewController: UIViewController {
     func logOutForTests() {
         // -- Log out the user for tests purposes
         
-        do {
-            try Auth.auth().signOut()
-        } catch {
-            // TODO: Changer ce print
-            print("ça bug tamer")
-        }
+        UserService.logOutUser(alertIn: self)
     }
     
     func createNewQuizForTests() {
@@ -81,6 +77,7 @@ class HomeScreenViewController: UIViewController {
     
     func fetchQuizList() {
         spinners.present()
+        quizArray = []
         QuizListService.observeQuizList(currentUserId) { (quizList) in
             if let array = quizList?.quizList {
                 self.quizArray = array
@@ -92,6 +89,7 @@ class HomeScreenViewController: UIViewController {
     }
     
     func fetchTitleList() {
+        titleArray = []
         for quiz in quizArray {
             QuizService.observeQuiz(quiz.quizId) { (quiz) in
                 if let newQuiz = quiz {

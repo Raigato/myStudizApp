@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ynM-Mm-tKY">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -28,11 +28,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="CreateAccountViewController" customModule="Student_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="Create Account">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abA-iT-Gjt" customClass="EndEditingScrollView" customModule="Student_Quiz" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="100" width="375" height="678"/>
+                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6m4-F8-vu6">
                                         <rect key="frame" x="30" y="30" width="316" height="35"/>
@@ -69,13 +69,23 @@
                                         <size key="shadowOffset" width="1" height="2"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ofp-Rj-1Cc">
-                                        <rect key="frame" x="175" y="290" width="189" height="64"/>
+                                        <rect key="frame" x="175" y="311" width="189" height="64"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Ofp-Rj-1Cc" secondAttribute="height" multiplier="189:64" id="MAI-fU-t7m"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="SubmitButton"/>
                                         <connections>
                                             <action selector="submitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D0D-Qe-ioc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55l-A9-Ebw">
+                                        <rect key="frame" x="30" y="265" width="140" height="36"/>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
+                                        <state key="normal" title="Forgot Password?">
+                                            <color key="titleColor" red="0.98823529409999999" green="0.31764705879999999" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="resetPasswordPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gyb-1R-oJD"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -89,9 +99,11 @@
                                     <constraint firstItem="VHT-6Q-uZI" firstAttribute="leading" secondItem="abA-iT-Gjt" secondAttribute="leading" constant="28" id="ICX-pf-bK5"/>
                                     <constraint firstAttribute="trailing" secondItem="6m4-F8-vu6" secondAttribute="trailing" constant="28" id="OeD-Vx-Gpo"/>
                                     <constraint firstItem="T2O-ma-MVN" firstAttribute="centerX" secondItem="abA-iT-Gjt" secondAttribute="centerX" id="QtO-Lf-Iye"/>
+                                    <constraint firstItem="55l-A9-Ebw" firstAttribute="leading" secondItem="abA-iT-Gjt" secondAttribute="leading" constant="30" id="S9U-o1-XqP"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="55l-A9-Ebw" secondAttribute="trailing" id="TlK-FG-Nsr"/>
                                     <constraint firstAttribute="trailing" secondItem="VHT-6Q-uZI" secondAttribute="trailing" constant="27" id="UHW-EU-8A0"/>
                                     <constraint firstItem="3Wh-Dh-41w" firstAttribute="top" secondItem="T2O-ma-MVN" secondAttribute="bottom" constant="30" id="WsP-U9-jOV"/>
-                                    <constraint firstItem="Ofp-Rj-1Cc" firstAttribute="top" secondItem="VHT-6Q-uZI" secondAttribute="bottom" constant="30" id="XoH-DI-lDQ"/>
+                                    <constraint firstItem="55l-A9-Ebw" firstAttribute="top" secondItem="VHT-6Q-uZI" secondAttribute="bottom" constant="5" id="XH8-zW-9wZ"/>
                                     <constraint firstItem="3Wh-Dh-41w" firstAttribute="leading" secondItem="abA-iT-Gjt" secondAttribute="leading" constant="30" id="eRA-Th-bWR"/>
                                     <constraint firstAttribute="trailing" secondItem="Ofp-Rj-1Cc" secondAttribute="trailing" constant="10" id="igm-z1-FAL"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3Wh-Dh-41w" secondAttribute="trailing" id="k6p-mi-2xz"/>
@@ -100,6 +112,7 @@
                                     <constraint firstAttribute="bottom" secondItem="6m4-F8-vu6" secondAttribute="bottom" constant="487" id="q1n-gO-Zd1"/>
                                     <constraint firstItem="3Wh-Dh-41w" firstAttribute="centerX" secondItem="abA-iT-Gjt" secondAttribute="centerX" id="sos-eE-y4i"/>
                                     <constraint firstItem="T2O-ma-MVN" firstAttribute="leading" secondItem="abA-iT-Gjt" secondAttribute="leading" constant="28" id="uZd-vl-MiD"/>
+                                    <constraint firstItem="Ofp-Rj-1Cc" firstAttribute="top" secondItem="55l-A9-Ebw" secondAttribute="bottom" constant="10" id="vVN-y2-4Jy"/>
                                     <constraint firstItem="6m4-F8-vu6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="abA-iT-Gjt" secondAttribute="leading" id="vgg-QZ-vsR"/>
                                 </constraints>
                             </scrollView>
@@ -107,7 +120,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Account or Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6g3-Hf-MNQ">
-                                        <rect key="frame" x="34.666666666666657" y="52" width="307" height="40"/>
+                                        <rect key="frame" x="34.5" y="28" width="307" height="64"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="27"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -124,7 +137,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Eg-TC-4Ef">
-                                <rect key="frame" x="0.0" y="778" width="375" height="34"/>
+                                <rect key="frame" x="0.0" y="667" width="375" height="0.0"/>
                                 <color key="backgroundColor" red="0.21176470588235294" green="0.30980392156862746" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
@@ -155,27 +168,113 @@
             </objects>
             <point key="canvasLocation" x="814" y="-764"/>
         </scene>
-        <!--Home Screen View Controller-->
-        <scene sceneID="R1T-Qo-cbk">
+        <!--Settings View Controller-->
+        <scene sceneID="F8G-mv-iBU">
             <objects>
-                <viewController id="ynM-Mm-tKY" userLabel="Home Screen View Controller" customClass="HomeScreenViewController" customModule="Student_Quiz" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="u1E-8V-kdS" userLabel="Home Screen">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                <viewController id="jV8-Xh-bKy" customClass="SettingsViewController" customModule="Student_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bjB-h5-Vgo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7b5-ib-4uU" userLabel="TopBar">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zno-xB-i5H" userLabel="TopBar">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Studiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ag2-ZR-tA4">
-                                        <rect key="frame" x="145.66666666666666" y="52" width="84" height="40"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Quiz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aww-uZ-Fkx">
+                                        <rect key="frame" x="126" y="28" width="124" height="64"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="27"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <size key="shadowOffset" width="1" height="2"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKu-y4-Ok1">
-                                        <rect key="frame" x="313" y="55" width="32" height="34"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qT5-WD-bBG">
+                                        <rect key="frame" x="30" y="43" width="23" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="nfI-jS-mL7"/>
+                                            <constraint firstAttribute="width" constant="23" id="wCd-w6-CeZ"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="back"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="jV8-Xh-bKy" eventType="touchUpInside" id="7gz-HZ-jHq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.2470588235" green="0.75686274509999996" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="qT5-WD-bBG" firstAttribute="leading" secondItem="zno-xB-i5H" secondAttribute="leading" constant="30" id="1q6-D5-uU4"/>
+                                    <constraint firstItem="aww-uZ-Fkx" firstAttribute="bottom" secondItem="zno-xB-i5H" secondAttribute="bottomMargin" id="7Jn-Dc-iFk"/>
+                                    <constraint firstItem="aww-uZ-Fkx" firstAttribute="centerX" secondItem="zno-xB-i5H" secondAttribute="centerX" id="Rxz-0p-CDd"/>
+                                    <constraint firstItem="aww-uZ-Fkx" firstAttribute="top" secondItem="zno-xB-i5H" secondAttribute="topMargin" id="WDI-aV-lfg"/>
+                                    <constraint firstItem="qT5-WD-bBG" firstAttribute="centerY" secondItem="aww-uZ-Fkx" secondAttribute="centerY" id="iat-Vq-7VH"/>
+                                    <constraint firstAttribute="height" constant="100" id="rKp-4p-5W1"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ndK-OF-d7d">
+                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cf4-vi-ZMd">
+                                        <rect key="frame" x="0.0" y="258.5" width="375" height="50"/>
+                                        <color key="backgroundColor" red="0.98823529409999999" green="0.31764705879999999" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="U1m-Ap-TtI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="18"/>
+                                        <state key="normal" title="Log Out">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="logoutButtonPressed:" destination="jV8-Xh-bKy" eventType="touchUpInside" id="zAI-6P-qMN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.21176470589999999" green="0.30980392159999998" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="cf4-vi-ZMd" firstAttribute="centerX" secondItem="ndK-OF-d7d" secondAttribute="centerX" id="Hem-Ux-sRr"/>
+                                    <constraint firstItem="cf4-vi-ZMd" firstAttribute="centerY" secondItem="ndK-OF-d7d" secondAttribute="centerY" id="WNb-dF-Zww"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cf4-vi-ZMd" secondAttribute="trailing" id="YEy-d6-Zgw"/>
+                                    <constraint firstItem="cf4-vi-ZMd" firstAttribute="leading" secondItem="ndK-OF-d7d" secondAttribute="leading" id="jbF-Ea-9pz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zno-xB-i5H" firstAttribute="trailing" secondItem="T6b-2X-2iH" secondAttribute="trailing" id="1d2-S0-lQ9"/>
+                            <constraint firstItem="ndK-OF-d7d" firstAttribute="leading" secondItem="T6b-2X-2iH" secondAttribute="leading" id="618-CU-cUH"/>
+                            <constraint firstItem="zno-xB-i5H" firstAttribute="leading" secondItem="T6b-2X-2iH" secondAttribute="leading" id="IMh-Xq-Xv6"/>
+                            <constraint firstItem="T6b-2X-2iH" firstAttribute="trailing" secondItem="ndK-OF-d7d" secondAttribute="trailing" id="NVn-V2-S7B"/>
+                            <constraint firstItem="ndK-OF-d7d" firstAttribute="top" secondItem="zno-xB-i5H" secondAttribute="bottom" id="Ve0-ii-izm"/>
+                            <constraint firstItem="zno-xB-i5H" firstAttribute="top" secondItem="bjB-h5-Vgo" secondAttribute="top" id="r1w-cP-OHl"/>
+                            <constraint firstAttribute="bottom" secondItem="ndK-OF-d7d" secondAttribute="bottom" id="vej-Xd-Mur"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="T6b-2X-2iH"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mk6-wR-UMH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-58" y="77"/>
+        </scene>
+        <!--Home Screen View Controller-->
+        <scene sceneID="R1T-Qo-cbk">
+            <objects>
+                <viewController id="ynM-Mm-tKY" userLabel="Home Screen View Controller" customClass="HomeScreenViewController" customModule="Student_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u1E-8V-kdS" userLabel="Home Screen">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7b5-ib-4uU" userLabel="TopBar">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Studiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ag2-ZR-tA4">
+                                        <rect key="frame" x="145.5" y="28" width="84" height="64"/>
+                                        <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="27"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <size key="shadowOffset" width="1" height="2"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKu-y4-Ok1" userLabel="Plus Button">
+                                        <rect key="frame" x="313" y="43" width="32" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="Wrj-cM-khv"/>
                                             <constraint firstAttribute="width" constant="32" id="Z60-WY-tSu"/>
@@ -186,33 +285,46 @@
                                             <segue destination="HCW-wT-gzB" kind="show" identifier="goToNewQuiz" id="rSm-Sc-zDf"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9X-Wt-AL6" userLabel="Settings Button">
+                                        <rect key="frame" x="30" y="41" width="38" height="38"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="38" id="BBn-VA-jRJ"/>
+                                            <constraint firstAttribute="height" constant="38" id="Iih-Rw-TlS"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="Settings"/>
+                                        <connections>
+                                            <segue destination="jV8-Xh-bKy" kind="presentation" id="sbp-jV-w49"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.2470588235" green="0.75686274509999996" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="sKu-y4-Ok1" secondAttribute="trailing" constant="30" id="67P-5x-r40"/>
                                     <constraint firstItem="ag2-ZR-tA4" firstAttribute="top" secondItem="7b5-ib-4uU" secondAttribute="topMargin" id="Nf2-iX-PeM"/>
+                                    <constraint firstItem="Y9X-Wt-AL6" firstAttribute="leading" secondItem="7b5-ib-4uU" secondAttribute="leading" constant="30" id="WJb-f7-SjK"/>
                                     <constraint firstItem="sKu-y4-Ok1" firstAttribute="centerY" secondItem="ag2-ZR-tA4" secondAttribute="centerY" id="Z56-Bu-Rah"/>
                                     <constraint firstItem="ag2-ZR-tA4" firstAttribute="centerX" secondItem="7b5-ib-4uU" secondAttribute="centerX" id="gOS-1H-Jnf"/>
                                     <constraint firstItem="ag2-ZR-tA4" firstAttribute="bottom" secondItem="7b5-ib-4uU" secondAttribute="bottomMargin" id="mAW-xl-IaN"/>
+                                    <constraint firstItem="Y9X-Wt-AL6" firstAttribute="centerY" secondItem="ag2-ZR-tA4" secondAttribute="centerY" id="syY-po-0yV"/>
                                     <constraint firstAttribute="height" constant="100" id="znf-EL-1Tc"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5lM-Cp-hfl" userLabel="QuizList">
-                                <rect key="frame" x="0.0" y="100" width="375" height="712"/>
+                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QuizCell" rowHeight="80" id="fZq-xN-plH" customClass="QuizTableViewCell" customModule="Student_Quiz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fZq-xN-plH" id="kO6-a2-mee">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.666666666666671"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell" translatesAutoresizingMaskIntoConstraints="NO" id="6zi-VP-9PN">
-                                                    <rect key="frame" x="6" y="10" width="363" height="69.666666666666671"/>
+                                                    <rect key="frame" x="6" y="10" width="363" height="69.5"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz XX" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WjQ-VW-vNh">
-                                                    <rect key="frame" x="25" y="10" width="335" height="69.666666666666671"/>
+                                                    <rect key="frame" x="25" y="10" width="335" height="69.5"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="30"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -270,14 +382,14 @@
             <objects>
                 <viewController id="xDD-bT-Ntc" customClass="ReviewViewController" customModule="Student_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RY0-5W-wDM">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jj6-1F-iPm" userLabel="TopBar">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JG8-g3-ecr">
-                                        <rect key="frame" x="141" y="52" width="94" height="40"/>
+                                        <rect key="frame" x="141" y="28" width="94" height="64"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="27"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -285,7 +397,7 @@
                                         <size key="shadowOffset" width="1" height="2"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1U2-hm-jiW">
-                                        <rect key="frame" x="30" y="54.666666666666657" width="23" height="35"/>
+                                        <rect key="frame" x="30" y="42.5" width="23" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="23" id="geX-Ad-q5h"/>
                                             <constraint firstAttribute="height" constant="35" id="htB-oL-tVU"/>
@@ -307,24 +419,24 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8LX-Tc-Dhk">
-                                <rect key="frame" x="0.0" y="100" width="375" height="712"/>
+                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reviewCell" rowHeight="60" id="oGl-g6-cjL" customClass="ReviewTableViewCell" customModule="Student_Quiz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oGl-g6-cjL" id="ygV-2Y-nO4">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awC-JI-2LH">
-                                                    <rect key="frame" x="15" y="5.0000000000000018" width="360" height="24.666666666666671"/>
+                                                    <rect key="frame" x="15" y="5" width="360" height="24.5"/>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Answer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DjS-Vc-e9P">
-                                                    <rect key="frame" x="15" y="30.666666666666671" width="345" height="24"/>
+                                                    <rect key="frame" x="15" y="30.5" width="345" height="24"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -378,14 +490,14 @@
             <objects>
                 <viewController id="CBX-je-QNF" customClass="EndQuizViewController" customModule="Student_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iUi-4a-McZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="slB-5d-BfY" userLabel="TopBar">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w4T-Me-nXF">
-                                        <rect key="frame" x="139" y="52" width="97.666666666666686" height="40"/>
+                                        <rect key="frame" x="139" y="28" width="97.5" height="64"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="27"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -402,7 +514,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LpL-4t-buW">
-                                <rect key="frame" x="0.0" y="100" width="375" height="712"/>
+                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jxt-Ce-YYR">
                                         <rect key="frame" x="20" y="30" width="335" height="84"/>
@@ -425,7 +537,7 @@ Your score: XX%</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7io-pX-f7Y" userLabel="Finish">
-                                        <rect key="frame" x="201" y="614" width="164" height="64"/>
+                                        <rect key="frame" x="201" y="503" width="164" height="64"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="7io-pX-f7Y" secondAttribute="height" multiplier="41:16" id="80l-ph-X77"/>
                                         </constraints>
@@ -436,7 +548,7 @@ Your score: XX%</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate This Quiz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beG-dT-CFG">
-                                        <rect key="frame" x="30" y="223" width="143" height="29.666666666666657"/>
+                                        <rect key="frame" x="30" y="223" width="143" height="29.5"/>
                                         <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="20"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -444,7 +556,7 @@ Your score: XX%</string>
                                         <size key="shadowOffset" width="1" height="2"/>
                                     </label>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CmS-Uw-5TL" userLabel="Star 1">
-                                        <rect key="frame" x="40" y="257.66666666666669" width="30" height="27"/>
+                                        <rect key="frame" x="40" y="257.5" width="30" height="27"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="CmS-Uw-5TL" secondAttribute="height" multiplier="10:9" id="Lbp-eD-QNW"/>
                                         </constraints>
@@ -454,7 +566,7 @@ Your score: XX%</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSK-QG-J2h" userLabel="Star 2">
-                                        <rect key="frame" x="75" y="257.66666666666669" width="30" height="27"/>
+                                        <rect key="frame" x="75" y="257.5" width="30" height="27"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="iSK-QG-J2h" secondAttribute="height" multiplier="10:9" id="Opm-Ed-z3g"/>
                                         </constraints>
@@ -474,7 +586,7 @@ Your score: XX%</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHu-KL-DWV" userLabel="Star 4">
-                                        <rect key="frame" x="145" y="257.66666666666669" width="30" height="27"/>
+                                        <rect key="frame" x="145" y="257.5" width="30" height="27"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="gHu-KL-DWV" secondAttribute="height" multiplier="10:9" id="r3N-NO-qkS"/>
                                         </constraints>
@@ -484,7 +596,7 @@ Your score: XX%</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z75-1N-PLe" userLabel="Star 5">
-                                        <rect key="frame" x="180" y="257.66666666666669" width="30" height="27"/>
+                                        <rect key="frame" x="180" y="257.5" width="30" height="27"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="z75-1N-PLe" secondAttribute="height" multiplier="10:9" id="OrB-s5-N3X"/>
                                         </constraints>
@@ -494,7 +606,7 @@ Your score: XX%</string>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" minimumFontSize="17" background="TextInput" translatesAutoresizingMaskIntoConstraints="NO" id="tUe-AN-jAp" customClass="TopLeftPaddedTextField" customModule="Student_Quiz" customModuleProvider="target">
-                                        <rect key="frame" x="28" y="289.66666666666669" width="319" height="100"/>
+                                        <rect key="frame" x="28" y="289.5" width="319" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="YKI-8v-UtT"/>
                                         </constraints>
@@ -567,14 +679,14 @@ Your score: XX%</string>
             <objects>
                 <viewController id="iFP-4D-fJD" customClass="RunQuizViewController" customModule="Student_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v0p-UB-u0c">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ke7-DP-6o0" userLabel="TopBar">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Two Words" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWO-C7-m8x">
-                                        <rect key="frame" x="115.66666666666669" y="52" width="144" height="40"/>
+                                        <rect key="frame" x="115.5" y="28" width="144" height="64"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="27"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -582,7 +694,7 @@ Your score: XX%</string>
                                         <size key="shadowOffset" width="1" height="2"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XTY-e1-jMJ">
-                                        <rect key="frame" x="30" y="55" width="23" height="35"/>
+                                        <rect key="frame" x="30" y="43" width="23" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="ROF-CB-uVi"/>
                                             <constraint firstAttribute="width" constant="23" id="m01-QZ-lPw"/>
@@ -604,7 +716,7 @@ Your score: XX%</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uef-pq-3v7" userLabel="Content">
-                                <rect key="frame" x="0.0" y="100" width="375" height="712"/>
+                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is the most interesting question ever?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lnm-K6-Tuz">
                                         <rect key="frame" x="10" y="60" width="355" height="73"/>
@@ -615,7 +727,7 @@ Your score: XX%</string>
                                         <size key="shadowOffset" width="1" height="2"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question: XX/20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="srP-HR-GHi">
-                                        <rect key="frame" x="5" y="632.66666666666663" width="128" height="25.333333333333371"/>
+                                        <rect key="frame" x="5" y="521.5" width="128" height="25.5"/>
                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -623,7 +735,7 @@ Your score: XX%</string>
                                         <size key="shadowOffset" width="1" height="2"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: XX %" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5FX-mj-ydf">
-                                        <rect key="frame" x="278" y="632.66666666666663" width="92" height="25.333333333333371"/>
+                                        <rect key="frame" x="278" y="521.5" width="92" height="25.5"/>
                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -631,7 +743,7 @@ Your score: XX%</string>
                                         <size key="shadowOffset" width="1" height="2"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhP-gs-pSh">
-                                        <rect key="frame" x="105.66666666666669" y="288" width="164" height="64"/>
+                                        <rect key="frame" x="105.5" y="288" width="164" height="64"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="64" id="461-Ib-33V"/>
                                             <constraint firstAttribute="width" constant="164" id="oIi-RE-F16"/>
@@ -651,7 +763,7 @@ Your score: XX%</string>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mfh-7t-FfQ">
-                                        <rect key="frame" x="0.0" y="663" width="375" height="15"/>
+                                        <rect key="frame" x="0.0" y="552" width="375" height="15"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="15" id="mgA-TI-Uht"/>
                                         </constraints>
@@ -714,14 +826,14 @@ Your score: XX%</string>
             <objects>
                 <viewController id="g8k-3s-sWu" customClass="ChoseQuizViewController" customModule="Student_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AxJ-0e-XDM">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hie-wc-eda" userLabel="TopBar">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Two Words" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0l-rd-SPR">
-                                        <rect key="frame" x="115.66666666666669" y="52" width="144" height="40"/>
+                                        <rect key="frame" x="115.5" y="28" width="144" height="64"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="27"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -729,14 +841,14 @@ Your score: XX%</string>
                                         <size key="shadowOffset" width="1" height="2"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uc2-LI-Op6">
-                                        <rect key="frame" x="30" y="55" width="23" height="35"/>
+                                        <rect key="frame" x="30" y="43" width="23" height="35"/>
                                         <state key="normal" backgroundImage="back"/>
                                         <connections>
                                             <segue destination="ynM-Mm-tKY" kind="show" identifier="fromChoseQuizToHome" id="n9G-WF-gh4"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggB-JG-hQs">
-                                        <rect key="frame" x="315" y="55.666666666666657" width="30" height="33"/>
+                                        <rect key="frame" x="315" y="43.5" width="30" height="33"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="Unt-e2-wBD"/>
                                             <constraint firstAttribute="height" constant="33" id="ecv-m9-f0K"/>
@@ -760,10 +872,10 @@ Your score: XX%</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uPj-R0-ISg">
-                                <rect key="frame" x="0.0" y="100" width="375" height="712"/>
+                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bR6-GC-ygd">
-                                        <rect key="frame" x="30" y="30.000000000000007" width="315" height="107.66666666666669"/>
+                                        <rect key="frame" x="30" y="30" width="315" height="107.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="bR6-GC-ygd" secondAttribute="height" multiplier="167:57" id="whg-Z2-4Es"/>
                                         </constraints>
@@ -773,7 +885,7 @@ Your score: XX%</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4vt-0A-Rrn">
-                                        <rect key="frame" x="30" y="167.66666666666669" width="315" height="107.33333333333331"/>
+                                        <rect key="frame" x="30" y="167.5" width="315" height="107.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="4vt-0A-Rrn" secondAttribute="height" multiplier="167:57" id="J4u-9W-UE8"/>
                                         </constraints>
@@ -783,7 +895,7 @@ Your score: XX%</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCU-bI-IyB">
-                                        <rect key="frame" x="30" y="305" width="315" height="107.66666666666669"/>
+                                        <rect key="frame" x="30" y="305" width="315" height="107.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="jCU-bI-IyB" secondAttribute="height" multiplier="167:57" id="BCC-eF-YzN"/>
                                         </constraints>
@@ -843,14 +955,14 @@ Your score: XX%</string>
             <objects>
                 <viewController id="HCW-wT-gzB" customClass="NewQuizViewController" customModule="Student_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0ld-j1-8gb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GsZ-bf-6Rx" userLabel="TopBar">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Quiz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJt-vf-kR2">
-                                        <rect key="frame" x="125.66666666666669" y="52" width="124" height="40"/>
+                                        <rect key="frame" x="125.5" y="28" width="124" height="64"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="27"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -858,7 +970,7 @@ Your score: XX%</string>
                                         <size key="shadowOffset" width="1" height="2"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kK9-g4-Rfg">
-                                        <rect key="frame" x="30" y="55" width="23" height="35"/>
+                                        <rect key="frame" x="30" y="43" width="23" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="HPg-Mo-cOD"/>
                                             <constraint firstAttribute="width" constant="23" id="yu4-ek-07J"/>
@@ -880,10 +992,10 @@ Your score: XX%</string>
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J7h-eH-Rfj" userLabel="Content" customClass="EndEditingScrollView" customModule="Student_Quiz" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="100" width="375" height="712"/>
+                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P63-yE-lIr">
-                                        <rect key="frame" x="29.999999999999996" y="30" width="48.666666666666657" height="35"/>
+                                        <rect key="frame" x="30" y="30" width="48.5" height="35"/>
                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="24"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1005,14 +1117,14 @@ Your score: XX%</string>
             <objects>
                 <viewController id="04w-qc-SNY" customClass="NewQuestionViewController" customModule="Student_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ukn-kw-3cj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fUY-dM-H5r" userLabel="TopBar">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTu-Uk-1XI">
-                                        <rect key="frame" x="30" y="55" width="23" height="35"/>
+                                        <rect key="frame" x="30" y="43" width="23" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="23" id="Ytr-KX-X2Z"/>
                                             <constraint firstAttribute="height" constant="35" id="snt-Rn-WRS"/>
@@ -1024,7 +1136,7 @@ Your score: XX%</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iG9-Yv-R6t">
-                                        <rect key="frame" x="97.666666666666686" y="52" width="180" height="40"/>
+                                        <rect key="frame" x="97.5" y="28" width="180" height="64"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="27"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1043,10 +1155,10 @@ Your score: XX%</string>
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3lf-v2-toy" customClass="EndEditingScrollView" customModule="Student_Quiz" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="100" width="375" height="712"/>
+                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVc-hB-mLy">
-                                        <rect key="frame" x="30.000000000000007" y="45" width="103.66666666666669" height="35"/>
+                                        <rect key="frame" x="30" y="45" width="103.5" height="35"/>
                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -1063,7 +1175,7 @@ Your score: XX%</string>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YWp-WX-2FT">
-                                        <rect key="frame" x="30.000000000000007" y="175" width="84.666666666666686" height="35"/>
+                                        <rect key="frame" x="30" y="175" width="84.5" height="35"/>
                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -1155,14 +1267,14 @@ Your score: XX%</string>
             <objects>
                 <viewController id="UMf-IN-UMO" customClass="PrivacyViewController" customModule="Student_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yRg-tP-phW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fRY-fR-qbE" userLabel="TopBar">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ab-Ol-MbM">
-                                        <rect key="frame" x="30" y="55" width="23" height="35"/>
+                                        <rect key="frame" x="30" y="43" width="23" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="23" id="YPq-U5-wb2"/>
                                             <constraint firstAttribute="height" constant="35" id="iJB-sD-p3p"/>
@@ -1174,7 +1286,7 @@ Your score: XX%</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJ4-o7-QWO">
-                                        <rect key="frame" x="138.66666666666666" y="52" width="99" height="40"/>
+                                        <rect key="frame" x="138.5" y="28" width="99" height="64"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="27"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1193,7 +1305,7 @@ Your score: XX%</string>
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qkl-ei-sCk">
-                                <rect key="frame" x="0.0" y="100" width="375" height="712"/>
+                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shared" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FMm-XQ-wwO">
                                         <rect key="frame" x="30" y="45" width="80" height="35"/>
@@ -1204,7 +1316,7 @@ Your score: XX%</string>
                                         <size key="shadowOffset" width="1" height="2"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Quiz will be shared only with your collaborators" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nT4-uJ-ouo">
-                                        <rect key="frame" x="30" y="85" width="315" height="56.666666666666657"/>
+                                        <rect key="frame" x="30" y="85" width="315" height="56.5"/>
                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1212,13 +1324,13 @@ Your score: XX%</string>
                                         <size key="shadowOffset" width="1" height="2"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Separator" translatesAutoresizingMaskIntoConstraints="NO" id="eYd-YU-rqb">
-                                        <rect key="frame" x="30" y="156.66666666666669" width="320" height="1"/>
+                                        <rect key="frame" x="30" y="156.5" width="320" height="1"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="xWZ-5u-uly"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Private" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVG-Xx-aWy">
-                                        <rect key="frame" x="30" y="172.66666666666669" width="79" height="35"/>
+                                        <rect key="frame" x="30" y="172.5" width="79" height="35"/>
                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="24"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1226,7 +1338,7 @@ Your score: XX%</string>
                                         <size key="shadowOffset" width="1" height="2"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You will be the only one to have access to your Quiz" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ib2-gU-A0u">
-                                        <rect key="frame" x="30" y="212.66666666666669" width="316" height="56.666666666666686"/>
+                                        <rect key="frame" x="30" y="212.5" width="316" height="56.5"/>
                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1234,7 +1346,7 @@ Your score: XX%</string>
                                         <size key="shadowOffset" width="1" height="2"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67s-9n-SLP">
-                                        <rect key="frame" x="186" y="314.33333333333331" width="164" height="64"/>
+                                        <rect key="frame" x="186" y="314" width="164" height="64"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="67s-9n-SLP" secondAttribute="height" multiplier="41:16" id="ZJr-Bc-263"/>
                                         </constraints>
@@ -1314,14 +1426,14 @@ Your score: XX%</string>
             <objects>
                 <viewController id="QeX-eB-cqH" customClass="CollaboratorsViewController" customModule="Student_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hFd-ze-eIU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fmQ-ex-Mfd" userLabel="TopBar">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcx-wq-Uvj">
-                                        <rect key="frame" x="30" y="55" width="23" height="35"/>
+                                        <rect key="frame" x="30" y="43" width="23" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="23" id="4zV-Ew-NBT"/>
                                             <constraint firstAttribute="height" constant="35" id="Bu4-bh-1dd"/>
@@ -1333,7 +1445,7 @@ Your score: XX%</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Collaborators" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gu-3B-lgW">
-                                        <rect key="frame" x="102.66666666666669" y="52" width="171" height="40"/>
+                                        <rect key="frame" x="102.5" y="28" width="171" height="64"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="27"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1371,7 +1483,7 @@ Your score: XX%</string>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e3t-CC-G0N" customClass="EndEditingTableView" customModule="Student_Quiz" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="150" width="375" height="548"/>
+                                <rect key="frame" x="0.0" y="150" width="375" height="437"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" red="0.21176470589999999" green="0.30980392159999998" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
@@ -1379,7 +1491,7 @@ Your score: XX%</string>
                                         <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mfx-3J-M5C" id="KEs-mr-pnY">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Checkbox" translatesAutoresizingMaskIntoConstraints="NO" id="Vce-lt-Wp4">
@@ -1390,7 +1502,7 @@ Your score: XX%</string>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ofC-6z-u1I">
-                                                    <rect key="frame" x="84" y="10.666666666666666" width="61.666666666666657" height="29.333333333333336"/>
+                                                    <rect key="frame" x="84" y="10.5" width="61.5" height="29.5"/>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -1428,7 +1540,7 @@ Your score: XX%</string>
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F6H-4p-lM8">
-                                <rect key="frame" x="0.0" y="698" width="375" height="114"/>
+                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1pA-za-Ho0">
                                         <rect key="frame" x="191" y="8" width="164" height="64"/>
@@ -1494,6 +1606,7 @@ Your score: XX%</string>
         <image name="Search Bar" width="379" height="54"/>
         <image name="Selection" width="344" height="114"/>
         <image name="Separator" width="320" height="1"/>
+        <image name="Settings" width="38" height="38"/>
         <image name="Share Big Button" width="334" height="114"/>
         <image name="SubmitButton" width="189" height="64"/>
         <image name="TextInput" width="328" height="58"/>
@@ -1505,9 +1618,9 @@ Your score: XX%</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="kMg-V9-TSy"/>
-        <segue reference="Lac-LY-sZL"/>
+        <segue reference="97h-VB-8UF"/>
         <segue reference="rSm-Sc-zDf"/>
-        <segue reference="xAb-lI-VY0"/>
-        <segue reference="n9G-WF-gh4"/>
+        <segue reference="2wC-AQ-1SK"/>
+        <segue reference="j3z-bt-sdT"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -29,6 +29,10 @@ class CreateAccountViewController: UIViewController {
         self.view.endEditing(true)
     }
     
+    @IBAction func resetPasswordPressed(_ sender: Any) {
+        print("Reset Password Pressed")
+    }
+    
     @IBAction func submitPressed(_ sender: UIButton) {
         // -- Handles the press of the submitButton
         
