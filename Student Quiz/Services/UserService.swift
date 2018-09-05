@@ -108,7 +108,41 @@ class UserService {
         }
     }
     
-    static func deleteAccount(uid: String) {
-        print(uid)
+    static func deleteAccount(uid: String, completion: (() -> Void)) {
+        // TODO: Make it work as designed
+        
+        let dispatchGroup = DispatchGroup()
+        
+        dispatchGroup.enter()
+        UserService.getUserProfile(uid: uid) { (userProfile) in
+            if let username = userProfile["username"] {
+                UserService.deleteUsername(username: username)
+                let userRef = Database.database().reference().child("userProfile").child(uid)
+                userRef.removeValue()
+                dispatchGroup.leave()
+            }
+        }
+        
+        dispatchGroup.enter()
+        QuizListService.observeQuizList(uid) { (quizList) in
+            if let quizArray = quizList?.quizList {
+                for quiz in quizArray {
+                    QuizService.deleteQuiz(by: uid, quizId: quiz.quizId)
+                }
+                dispatchGroup.leave()
+            }
+        }
+        
+        dispatchGroup.notify(queue: .main) {
+            let quizListRef = Database.database().reference().child("QuizList/\(uid)")
+            quizListRef.removeValue()
+            Auth.auth().currentUser?.delete(completion: { (error) in
+                if let errorMessage = error?.localizedDescription {
+                    print(errorMessage)
+                } else {
+                    print("Account Deleted")
+                }
+            })
+        }
     }
 }

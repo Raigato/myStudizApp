@@ -14,9 +14,10 @@ class QuizService {
     static func deleteQuiz(by uid: String, quizId: String) {
         QuizListService.getRoleForUser(uid: uid, quizId: quizId) { (role) in
             if let foundRole = role {
+                print(foundRole)
                 if foundRole == .Owner {
-                    let quizRref = Database.database().reference().child("Quiz/\(quizId)")
-                    quizRref.removeValue()
+                    let quizRef = Database.database().reference().child("Quiz/\(quizId)")
+                    quizRef.removeValue()
                     UserService.getAllUsers(completion: { (users) in
                         for user in users {
                             QuizListService.removeQuizForUser(for: user, quiz: quizId)

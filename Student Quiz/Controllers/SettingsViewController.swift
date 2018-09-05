@@ -11,9 +11,13 @@ import Firebase
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var deleteAccountButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // TODO: Implement delete account functionnality
+        deleteAccountButton.isHidden = true
     }
 
     @IBAction func backButtonPressed(_ sender: Any) {
@@ -105,8 +109,20 @@ class SettingsViewController: UIViewController {
     
     @IBAction func deleteAccountButtonPressed(_ sender: Any) {
         if let currentUserId = Auth.auth().currentUser?.uid {
-            UserService.deleteAccount(uid: currentUserId)
-            dismiss(animated: true, completion: nil)
+            let alert = UIAlertController(title: "Account Deletion ❌", message: "Are you sure you want to delete your Studiz Account?", preferredStyle: .alert)
+            let sayYes = UIAlertAction(title: "Yes, I'm sure", style: .default) { (action) in
+                UserService.deleteAccount(uid: currentUserId, completion: {
+                    let alertAfterDelete = UIAlertController(title: "Account successfully deleted ✅", message: "Your account has been deleted. Hope we will see you again soon 😢", preferredStyle: .alert)
+                    let action = UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                        self.dismiss(animated: true, completion: nil)
+                    })
+                    alertAfterDelete.addAction(action)
+                    self.present(alert, animated: true, completion: nil)
+                })
+            }
+            alert.addAction(sayYes)
+            alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
+            present(alert, animated: true, completion: nil)
         }
     }
     

@@ -79,7 +79,9 @@ class CreateAccountViewController: UIViewController {
                 } else {
                     UserService.createUserProfile(uid: result!.user.uid, email: email)
                     Auth.auth().currentUser?.sendEmailVerification(completion: { (error) in
-                        print("Error sending the verification email")
+                        if let errorMessage = error?.localizedDescription {
+                            print("\(errorMessage)")
+                        }
                     })
                     self.dismiss(animated: true, completion: nil)
                 }
