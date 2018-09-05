@@ -327,6 +327,7 @@
                     </view>
                     <connections>
                         <outlet property="deleteAccountButton" destination="vpE-6i-N96" id="laQ-4C-9BI"/>
+                        <outlet property="titleLabel" destination="aww-uZ-Fkx" id="3Hu-lE-Q2I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mk6-wR-UMH" userLabel="First Responder" sceneMemberID="firstResponder"/>

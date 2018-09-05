@@ -11,6 +11,7 @@ import Firebase
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var deleteAccountButton: UIButton!
     
     override func viewDidLoad() {
@@ -18,6 +19,22 @@ class SettingsViewController: UIViewController {
 
         // TODO: Implement delete account functionnality
         deleteAccountButton.isHidden = true
+        
+        setTitleWithUsername()
+    }
+    
+    func setTitleWithUsername() {
+        UserService.getUserProfile(uid: UserService.currentUser()) { (userProfile) in
+            if let username = userProfile["username"] {
+                if username.count < 12 {
+                    self.titleLabel.text = "\(username)'s settings"
+                } else if username.count < 18 {
+                    self.titleLabel.text = "\(username)"
+                } else {
+                    self.titleLabel.text = "Settings"
+                }
+            }
+        }
     }
 
     @IBAction func backButtonPressed(_ sender: Any) {
@@ -72,6 +89,10 @@ class SettingsViewController: UIViewController {
                     alert.title = "No Username entered 😏"
                     alert.message = "It seems that you tried to trick us!\nWould you mind setting a true username?"
                     self.present(alert, animated: true, completion: nil)
+                } else if newUsername.count > 16 {
+                    alert.title = "New Username too long 😏"
+                    alert.message = "Size matters in our database, could you please shrinken your username a bit?"
+                    self.present(alert, animated: true, completion: nil)
                 } else {
                     UserService.usernameAlreadyExists(username: newUsername, completion: { (exists) in
                         if exists {
@@ -91,6 +112,7 @@ class SettingsViewController: UIViewController {
                                 dispatchGroup.notify(queue: .main) {
                                     UserService.updateUserProfile(uid: currentUserId, newUserInfo: ["username": newUsername])
                                     Helpers.displayAlert(title: "Username Updated 👌 ", message: "Your username has been updated to \(newUsername)!", with: self)
+                                    self.setTitleWithUsername()
                                 }
                             }
                         }

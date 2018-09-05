@@ -111,6 +111,10 @@ class HomeScreenViewController: UIViewController {
                             alert.title = "No Username entered 😏"
                             alert.message = "It seems that you tried to trick us!\nWould you mind setting a true username?"
                             self.present(alert, animated: true, completion: nil)
+                        } else if newUsername.count > 16 {
+                            alert.title = "New Username too long 😏"
+                            alert.message = "Size matters in our database, could you please shrinken your username a bit?"
+                            self.present(alert, animated: true, completion: nil)
                         } else {
                             UserService.usernameAlreadyExists(username: newUsername, completion: { (exists) in
                                 if exists {
