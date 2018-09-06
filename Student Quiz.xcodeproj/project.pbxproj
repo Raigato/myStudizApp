@@ -71,7 +71,7 @@
 		894899A721342ADC003B515D /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		8959BF48212D5F270065066D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8979161E212D8CDC008176EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		897B6B13212C310B00807269 /* Student Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Student Quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		897B6B13212C310B00807269 /* Studiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Studiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		897B6B16212C310B00807269 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		897B6B18212C310B00807269 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		897B6B1B212C310B00807269 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -160,7 +160,7 @@
 		897B6B14212C310B00807269 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				897B6B13212C310B00807269 /* Student Quiz.app */,
+				897B6B13212C310B00807269 /* Studiz.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -242,9 +242,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		897B6B12212C310B00807269 /* Student Quiz */ = {
+		897B6B12212C310B00807269 /* Studiz */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 897B6B25212C310C00807269 /* Build configuration list for PBXNativeTarget "Student Quiz" */;
+			buildConfigurationList = 897B6B25212C310C00807269 /* Build configuration list for PBXNativeTarget "Studiz" */;
 			buildPhases = (
 				A3CE41B5A3C97D8A27A98317 /* [CP] Check Pods Manifest.lock */,
 				897B6B0F212C310B00807269 /* Sources */,
@@ -256,9 +256,9 @@
 			);
 			dependencies = (
 			);
-			name = "Student Quiz";
+			name = Studiz;
 			productName = "Student Quiz";
-			productReference = 897B6B13212C310B00807269 /* Student Quiz.app */;
+			productReference = 897B6B13212C310B00807269 /* Studiz.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -289,7 +289,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				897B6B12212C310B00807269 /* Student Quiz */,
+				897B6B12212C310B00807269 /* Studiz */,
 			);
 		};
 /* End PBXProject section */
@@ -545,7 +545,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.roigoujat.StudentQuiz;
+				PRODUCT_BUNDLE_IDENTIFIER = com.roigoujat.Studiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -564,7 +564,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.roigoujat.StudentQuiz;
+				PRODUCT_BUNDLE_IDENTIFIER = com.roigoujat.Studiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -583,7 +583,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		897B6B25212C310C00807269 /* Build configuration list for PBXNativeTarget "Student Quiz" */ = {
+		897B6B25212C310C00807269 /* Build configuration list for PBXNativeTarget "Studiz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				897B6B26212C310C00807269 /* Debug */,
