@@ -78,20 +78,28 @@ class RunQuizViewController: UIViewController {
         progressBar.progress = Float(currentQuestionNo + 1)/Float(questions.count)
     }
     
+    // MARK: Verify helper functions
+    
     func verifyAnswer() {
-        let rightAnswer = formatAnswer(questions[currentQuestionNo].0.answer)
-        if var userAnswer = answerTextField.text {
-            userAnswer = formatAnswer(userAnswer)
-            
-            print(rightAnswer)
-            print(userAnswer)
-            
-            if userAnswer == rightAnswer {
+        let rightAnswer = questions[currentQuestionNo].0.answer
+        if let userAnswer = answerTextField.text {
+            if isRight(userAnswer: userAnswer, rightAnswer: rightAnswer) {
+                ProgressHUD.showSuccess("Correct!")
+                
                 score += 1
                 questions[currentQuestionNo].1 = true
+            } else {
+                ProgressHUD.showError("Wrong!")
             }
         }
     }
+    
+    func isRight(userAnswer: String, rightAnswer: String) -> Bool {
+        let userInput = formatAnswer(userAnswer)
+        let expectedInput = formatAnswer(rightAnswer)
+        return userInput == expectedInput
+    }
+    
     
     func formatAnswer(_ answer: String) -> String {
         return answer.lowercased().folding(options: .diacriticInsensitive, locale: .current).removingWhitespaces().removingPunctuations()
@@ -109,9 +117,6 @@ class RunQuizViewController: UIViewController {
     
     // MARK: Question handling functions
     
-    func getScore() {
-        
-    }
     
     func getQuestions() {
         if currentQuiz.questions.count <= 20 {

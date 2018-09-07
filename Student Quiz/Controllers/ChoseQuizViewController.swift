@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Firebase
 
 class ChoseQuizViewController: UIViewController {
     
@@ -29,16 +28,32 @@ class ChoseQuizViewController: UIViewController {
     }
 
     @IBAction func deleteButtonPressed(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Quiz delete 🗑", message: "Are you sure you want to delete this awesome Quiz?", preferredStyle: .alert)
-        let sayYes = UIAlertAction(title: "Yes", style: .default) { (action) in
-            QuizService.deleteQuiz(by: Auth.auth().currentUser!.uid, quizId: currentQuizId)
-            self.performSegue(withIdentifier: "fromChoseQuizToHome", sender: self)
+        if userRole == .Owner {
+            let alert = UIAlertController(title: "Quiz delete 🗑", message: "Are you sure you want to delete this awesome Quiz?", preferredStyle: .alert)
+            let sayYes = UIAlertAction(title: "Yes", style: .default) { (action) in
+                QuizService.deleteQuiz(by: UserService.currentUser(), quizId: currentQuizId)
+                self.performSegue(withIdentifier: "fromChoseQuizToHome", sender: self)
+            }
+            let sayNo = UIAlertAction(title: "No", style: .default, handler: nil)
+            
+            alert.addAction(sayNo)
+            alert.addAction(sayYes)
+            present(alert, animated: true, completion: nil)
         }
-        let sayNo = UIAlertAction(title: "No", style: .default, handler: nil)
-        
-        alert.addAction(sayNo)
-        alert.addAction(sayYes)
-        present(alert, animated: true, completion: nil)
+        if userRole == .Collaborator {
+            let alert = UIAlertController(title: "Quiz delete 🗑", message: "Are you sure you want to remove yourself from the collaborators of this awesome Quiz?", preferredStyle: .alert)
+            let sayYes = UIAlertAction(title: "Yes", style: .default) { (action) in
+                currentQuiz.deleteCollaborator(uid: UserService.currentUser())
+                currentQuiz.save(in: currentQuizId, completion: { (quizId) in })
+                QuizListService.removeQuizForUser(for: UserService.currentUser(), quiz: currentQuizId)
+                self.performSegue(withIdentifier: "fromChoseQuizToHome", sender: self)
+            }
+            let sayNo = UIAlertAction(title: "No", style: .default, handler: nil)
+            
+            alert.addAction(sayNo)
+            alert.addAction(sayYes)
+            present(alert, animated: true, completion: nil)
+        }
     }
     
     @IBAction func runButtonPressed(_ sender: UIButton) {
@@ -67,16 +82,16 @@ class ChoseQuizViewController: UIViewController {
     }
     
     func selectButtonsToDisplay() {
-        QuizListService.getRoleForUser(uid: Auth.auth().currentUser!.uid, quizId: currentQuizId) { (role) in
+        QuizListService.getRoleForUser(uid: UserService.currentUser(), quizId: currentQuizId) { (role) in
             if let foundRole = role {
                 self.userRole = foundRole
                 
                 // -- Select buttons according to the role
                 if foundRole != .Owner {
-                    self.deleteButton.isHidden = true
                     self.shareButton.isHidden = true
                 }
                 if foundRole != .Owner && foundRole != .Collaborator {
+                    self.deleteButton.isHidden = true
                     self.editButton.isHidden = true
                 }
             }

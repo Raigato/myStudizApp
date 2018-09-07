@@ -26,12 +26,12 @@
         <!--Create Account View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CreateAccountViewController" customModule="Student_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CreateAccountViewController" customModule="Studiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="Create Account">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abA-iT-Gjt" customClass="EndEditingScrollView" customModule="Student_Quiz" customModuleProvider="target">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abA-iT-Gjt" customClass="EndEditingScrollView" customModule="Studiz" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="100" width="375" height="567"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6m4-F8-vu6">
@@ -42,7 +42,7 @@
                                         <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <size key="shadowOffset" width="1" height="2"/>
                                     </label>
-                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="TextInput" translatesAutoresizingMaskIntoConstraints="NO" id="T2O-ma-MVN" customClass="LeftPaddedTextField" customModule="Student_Quiz" customModuleProvider="target">
+                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="TextInput" translatesAutoresizingMaskIntoConstraints="NO" id="T2O-ma-MVN" customClass="LeftPaddedTextField" customModule="Studiz" customModuleProvider="target">
                                         <rect key="frame" x="28" y="80" width="319" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="QR7-ke-oyT"/>
@@ -51,7 +51,7 @@
                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                     </textField>
-                                    <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="TextInput" translatesAutoresizingMaskIntoConstraints="NO" id="VHT-6Q-uZI" customClass="LeftPaddedTextField" customModule="Student_Quiz" customModuleProvider="target">
+                                    <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="TextInput" translatesAutoresizingMaskIntoConstraints="NO" id="VHT-6Q-uZI" customClass="LeftPaddedTextField" customModule="Studiz" customModuleProvider="target">
                                         <rect key="frame" x="28" y="210" width="319" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Isc-9s-2fJ"/>
@@ -170,7 +170,7 @@
         <!--Settings View Controller-->
         <scene sceneID="F8G-mv-iBU">
             <objects>
-                <viewController id="jV8-Xh-bKy" customClass="SettingsViewController" customModule="Student_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jV8-Xh-bKy" customClass="SettingsViewController" customModule="Studiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bjB-h5-Vgo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -337,7 +337,7 @@
         <!--Home Screen View Controller-->
         <scene sceneID="R1T-Qo-cbk">
             <objects>
-                <viewController id="ynM-Mm-tKY" userLabel="Home Screen View Controller" customClass="HomeScreenViewController" customModule="Student_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ynM-Mm-tKY" userLabel="Home Screen View Controller" customClass="HomeScreenViewController" customModule="Studiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u1E-8V-kdS" userLabel="Home Screen">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -393,7 +393,7 @@
                                 <rect key="frame" x="0.0" y="100" width="375" height="567"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QuizCell" rowHeight="80" id="fZq-xN-plH" customClass="QuizTableViewCell" customModule="Student_Quiz" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QuizCell" rowHeight="80" id="fZq-xN-plH" customClass="QuizTableViewCell" customModule="Studiz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fZq-xN-plH" id="kO6-a2-mee">
@@ -460,7 +460,7 @@
         <!--Review View Controller-->
         <scene sceneID="ph4-DS-ltG">
             <objects>
-                <viewController id="xDD-bT-Ntc" customClass="ReviewViewController" customModule="Student_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xDD-bT-Ntc" customClass="ReviewViewController" customModule="Studiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RY0-5W-wDM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -502,7 +502,7 @@
                                 <rect key="frame" x="0.0" y="100" width="375" height="567"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reviewCell" rowHeight="60" id="oGl-g6-cjL" customClass="ReviewTableViewCell" customModule="Student_Quiz" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reviewCell" rowHeight="60" id="oGl-g6-cjL" customClass="ReviewTableViewCell" customModule="Studiz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oGl-g6-cjL" id="ygV-2Y-nO4">
@@ -568,7 +568,7 @@
         <!--End Quiz View Controller-->
         <scene sceneID="zA4-Ru-Xng">
             <objects>
-                <viewController id="CBX-je-QNF" customClass="EndQuizViewController" customModule="Student_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CBX-je-QNF" customClass="EndQuizViewController" customModule="Studiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iUi-4a-McZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -685,7 +685,7 @@ Your score: XX%</string>
                                             <action selector="starButtonPressed:" destination="CBX-je-QNF" eventType="touchUpInside" id="3hG-1Q-Mqn"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" minimumFontSize="17" background="TextInput" translatesAutoresizingMaskIntoConstraints="NO" id="tUe-AN-jAp" customClass="TopLeftPaddedTextField" customModule="Student_Quiz" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" minimumFontSize="17" background="TextInput" translatesAutoresizingMaskIntoConstraints="NO" id="tUe-AN-jAp" customClass="TopLeftPaddedTextField" customModule="Studiz" customModuleProvider="target">
                                         <rect key="frame" x="28" y="289.5" width="319" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="YKI-8v-UtT"/>
@@ -758,7 +758,7 @@ Your score: XX%</string>
         <!--Run Quiz View Controller-->
         <scene sceneID="MKN-FY-aGE">
             <objects>
-                <viewController id="iFP-4D-fJD" customClass="RunQuizViewController" customModule="Student_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iFP-4D-fJD" customClass="RunQuizViewController" customModule="Studiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v0p-UB-u0c">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -834,7 +834,7 @@ Your score: XX%</string>
                                             <action selector="validateButtonPressed:" destination="iFP-4D-fJD" eventType="touchUpInside" id="wsr-iG-6Hf"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your answer..." textAlignment="natural" minimumFontSize="17" background="Answer Field" translatesAutoresizingMaskIntoConstraints="NO" id="7aC-M3-hxm" customClass="LeftPaddedTextField" customModule="Student_Quiz" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your answer..." textAlignment="natural" minimumFontSize="17" background="Answer Field" translatesAutoresizingMaskIntoConstraints="NO" id="7aC-M3-hxm" customClass="LeftPaddedTextField" customModule="Studiz" customModuleProvider="target">
                                         <rect key="frame" x="20" y="208" width="335" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="oJu-jB-9vW"/>
@@ -905,7 +905,7 @@ Your score: XX%</string>
         <!--Chose Quiz View Controller-->
         <scene sceneID="5eN-wA-NjN">
             <objects>
-                <viewController id="g8k-3s-sWu" customClass="ChoseQuizViewController" customModule="Student_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="g8k-3s-sWu" customClass="ChoseQuizViewController" customModule="Studiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AxJ-0e-XDM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1034,7 +1034,7 @@ Your score: XX%</string>
         <!--New Quiz View Controller-->
         <scene sceneID="t2S-RP-YKH">
             <objects>
-                <viewController id="HCW-wT-gzB" customClass="NewQuizViewController" customModule="Student_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="HCW-wT-gzB" customClass="NewQuizViewController" customModule="Studiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0ld-j1-8gb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1072,7 +1072,7 @@ Your score: XX%</string>
                                     <constraint firstItem="NJt-vf-kR2" firstAttribute="centerX" secondItem="GsZ-bf-6Rx" secondAttribute="centerX" id="ngT-rt-WfW"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J7h-eH-Rfj" userLabel="Content" customClass="EndEditingScrollView" customModule="Student_Quiz" customModuleProvider="target">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J7h-eH-Rfj" userLabel="Content" customClass="EndEditingScrollView" customModule="Studiz" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="100" width="375" height="567"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P63-yE-lIr">
@@ -1083,7 +1083,7 @@ Your score: XX%</string>
                                         <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <size key="shadowOffset" width="1" height="2"/>
                                     </label>
-                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="TextInput" translatesAutoresizingMaskIntoConstraints="NO" id="pMP-BQ-dWR" customClass="LeftPaddedTextField" customModule="Student_Quiz" customModuleProvider="target">
+                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="TextInput" translatesAutoresizingMaskIntoConstraints="NO" id="pMP-BQ-dWR" customClass="LeftPaddedTextField" customModule="Studiz" customModuleProvider="target">
                                         <rect key="frame" x="28" y="80" width="319" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Oha-Ic-nef"/>
@@ -1100,7 +1100,7 @@ Your score: XX%</string>
                                         <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <size key="shadowOffset" width="1" height="2"/>
                                     </label>
-                                    <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" minimumFontSize="17" background="TextInput" translatesAutoresizingMaskIntoConstraints="NO" id="oSm-CA-uR2" customClass="TopLeftPaddedTextField" customModule="Student_Quiz" customModuleProvider="target">
+                                    <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" minimumFontSize="17" background="TextInput" translatesAutoresizingMaskIntoConstraints="NO" id="oSm-CA-uR2" customClass="TopLeftPaddedTextField" customModule="Studiz" customModuleProvider="target">
                                         <rect key="frame" x="28" y="195" width="319" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="yS8-kP-bh9"/>
@@ -1196,7 +1196,7 @@ Your score: XX%</string>
         <!--New Question View Controller-->
         <scene sceneID="JFj-tD-m13">
             <objects>
-                <viewController id="04w-qc-SNY" customClass="NewQuestionViewController" customModule="Student_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="04w-qc-SNY" customClass="NewQuestionViewController" customModule="Studiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ukn-kw-3cj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1234,7 +1234,7 @@ Your score: XX%</string>
                                     <constraint firstAttribute="height" constant="100" id="wAc-UJ-rh7"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3lf-v2-toy" customClass="EndEditingScrollView" customModule="Student_Quiz" customModuleProvider="target">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3lf-v2-toy" customClass="EndEditingScrollView" customModule="Studiz" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="100" width="375" height="567"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVc-hB-mLy">
@@ -1245,7 +1245,7 @@ Your score: XX%</string>
                                         <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <size key="shadowOffset" width="1" height="2"/>
                                     </label>
-                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="TextInput" translatesAutoresizingMaskIntoConstraints="NO" id="ah4-Hr-p7n" customClass="LeftPaddedTextField" customModule="Student_Quiz" customModuleProvider="target">
+                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="TextInput" translatesAutoresizingMaskIntoConstraints="NO" id="ah4-Hr-p7n" customClass="LeftPaddedTextField" customModule="Studiz" customModuleProvider="target">
                                         <rect key="frame" x="28" y="95" width="319" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="7FU-93-3Wu"/>
@@ -1262,7 +1262,7 @@ Your score: XX%</string>
                                         <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <size key="shadowOffset" width="1" height="2"/>
                                     </label>
-                                    <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="TextInput" translatesAutoresizingMaskIntoConstraints="NO" id="g9u-IL-tXD" customClass="LeftPaddedTextField" customModule="Student_Quiz" customModuleProvider="target">
+                                    <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="TextInput" translatesAutoresizingMaskIntoConstraints="NO" id="g9u-IL-tXD" customClass="LeftPaddedTextField" customModule="Studiz" customModuleProvider="target">
                                         <rect key="frame" x="28" y="225" width="319" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="MoY-jn-mDH"/>
@@ -1345,7 +1345,7 @@ Your score: XX%</string>
         <!--Privacy View Controller-->
         <scene sceneID="A64-X1-igK">
             <objects>
-                <viewController id="UMf-IN-UMO" customClass="PrivacyViewController" customModule="Student_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="UMf-IN-UMO" customClass="PrivacyViewController" customModule="Studiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yRg-tP-phW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1503,7 +1503,7 @@ Your score: XX%</string>
         <!--Collaborators View Controller-->
         <scene sceneID="fMh-4o-6el">
             <objects>
-                <viewController id="QeX-eB-cqH" customClass="CollaboratorsViewController" customModule="Student_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="QeX-eB-cqH" customClass="CollaboratorsViewController" customModule="Studiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hFd-ze-eIU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1545,7 +1545,7 @@ Your score: XX%</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgm-GA-3dw">
                                 <rect key="frame" x="0.0" y="100" width="375" height="50"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" background="Search Bar" translatesAutoresizingMaskIntoConstraints="NO" id="Wql-MC-2BU" customClass="SearchPaddedTextField" customModule="Student_Quiz" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" background="Search Bar" translatesAutoresizingMaskIntoConstraints="NO" id="Wql-MC-2BU" customClass="SearchPaddedTextField" customModule="Studiz" customModuleProvider="target">
                                         <rect key="frame" x="-5" y="-1" width="385" height="52"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
@@ -1561,12 +1561,12 @@ Your score: XX%</string>
                                     <constraint firstAttribute="bottom" secondItem="Wql-MC-2BU" secondAttribute="bottom" constant="-1" id="mti-ZZ-5OH"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e3t-CC-G0N" customClass="EndEditingTableView" customModule="Student_Quiz" customModuleProvider="target">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e3t-CC-G0N" customClass="EndEditingTableView" customModule="Studiz" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="150" width="375" height="437"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" red="0.21176470589999999" green="0.30980392159999998" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CollaboratorCell" rowHeight="50" id="Mfx-3J-M5C" customClass="CollaboratorTableViewCell" customModule="Student_Quiz" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CollaboratorCell" rowHeight="50" id="Mfx-3J-M5C" customClass="CollaboratorTableViewCell" customModule="Studiz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mfx-3J-M5C" id="KEs-mr-pnY">
@@ -1696,9 +1696,9 @@ Your score: XX%</string>
         <image name="plus" width="32" height="34"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="d9y-gO-2Ew"/>
-        <segue reference="97h-VB-8UF"/>
-        <segue reference="rSm-Sc-zDf"/>
+        <segue reference="CY2-3c-bnw"/>
+        <segue reference="Lac-LY-sZL"/>
+        <segue reference="SHY-nd-iuT"/>
         <segue reference="2wC-AQ-1SK"/>
     </inferredMetricsTieBreakers>
 </document>

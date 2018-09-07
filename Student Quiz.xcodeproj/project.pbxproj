@@ -18,6 +18,8 @@
 		89137C392137DF5D00119136 /* SearchPaddedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89137C382137DF5D00119136 /* SearchPaddedTextField.swift */; };
 		89137C3B2137EAA000119136 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89137C3A2137EAA000119136 /* UserService.swift */; };
 		89148F0A2136D73C00FE3402 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89148F092136D73C00FE3402 /* PrivacyViewController.swift */; };
+		8916B3FA21427ED400FE962C /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8916B3F721427ED300FE962C /* ProgressHUD.bundle */; };
+		8916B3FB21427ED400FE962C /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8916B3F821427ED400FE962C /* ProgressHUD.m */; };
 		891DADA2213469A1003CB827 /* QuizList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891DADA1213469A1003CB827 /* QuizList.swift */; };
 		891DADA42134813E003CB827 /* QuizListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891DADA32134813E003CB827 /* QuizListService.swift */; };
 		891DADA62134814B003CB827 /* QuizService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891DADA52134814B003CB827 /* QuizService.swift */; };
@@ -57,6 +59,10 @@
 		89137C382137DF5D00119136 /* SearchPaddedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPaddedTextField.swift; sourceTree = "<group>"; };
 		89137C3A2137EAA000119136 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		89148F092136D73C00FE3402 /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
+		8916B3F621427ED200FE962C /* Studiz-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Studiz-Bridging-Header.h"; sourceTree = "<group>"; };
+		8916B3F721427ED300FE962C /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
+		8916B3F821427ED400FE962C /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
+		8916B3F921427ED400FE962C /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
 		891DADA1213469A1003CB827 /* QuizList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizList.swift; sourceTree = "<group>"; };
 		891DADA32134813E003CB827 /* QuizListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizListService.swift; sourceTree = "<group>"; };
 		891DADA52134814B003CB827 /* QuizService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizService.swift; sourceTree = "<group>"; };
@@ -213,8 +219,12 @@
 		899FDBFA212C3DB0003637CD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8916B3F721427ED300FE962C /* ProgressHUD.bundle */,
+				8916B3F921427ED400FE962C /* ProgressHUD.h */,
+				8916B3F821427ED400FE962C /* ProgressHUD.m */,
 				8959BF48212D5F270065066D /* Assets.xcassets */,
 				897B6B1F212C310C00807269 /* LaunchScreen.storyboard */,
+				8916B3F621427ED200FE962C /* Studiz-Bridging-Header.h */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -273,6 +283,7 @@
 				TargetAttributes = {
 					897B6B12212C310B00807269 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -299,6 +310,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8916B3FA21427ED400FE962C /* ProgressHUD.bundle in Resources */,
 				897B6B21212C310C00807269 /* LaunchScreen.storyboard in Resources */,
 				899FDBF7212C376A003637CD /* RobotoSlab-Bold.ttf in Resources */,
 				899FDBF6212C3768003637CD /* OpenSans-Bold.ttf in Resources */,
@@ -377,6 +389,7 @@
 				894899A821342ADC003B515D /* Review.swift in Sources */,
 				891DADA42134813E003CB827 /* QuizListService.swift in Sources */,
 				890DB411213C0ACA00C4FFCA /* ReviewTableViewCell.swift in Sources */,
+				8916B3FB21427ED400FE962C /* ProgressHUD.m in Sources */,
 				89430BDE2136882A00B09CA2 /* TopLeftPaddedTextField.swift in Sources */,
 				8911841621398570003D87E3 /* RunQuizViewController.swift in Sources */,
 				897B6B17212C310B00807269 /* AppDelegate.swift in Sources */,
@@ -538,6 +551,7 @@
 			baseConfigurationReference = FD4361FF1FBBC17F27D97966 /* Pods-Student Quiz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DAHD28A89P;
 				INFOPLIST_FILE = "Student Quiz/Info.plist";
@@ -547,6 +561,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.roigoujat.Studiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Student Quiz/Supporting Files/Studiz-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -557,6 +573,7 @@
 			baseConfigurationReference = 22EB447E485D28DF83A0FE53 /* Pods-Student Quiz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DAHD28A89P;
 				INFOPLIST_FILE = "Student Quiz/Info.plist";
@@ -566,6 +583,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.roigoujat.Studiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Student Quiz/Supporting Files/Studiz-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
