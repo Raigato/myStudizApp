@@ -143,26 +143,43 @@ class HomeScreenViewController: UIViewController {
 extension HomeScreenViewController : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if titleArray.count < 1 {
+            return 1
+        }
         return titleArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! QuizTableViewCell
+        
+        if titleArray.count < 1 {
+            cell.backgroundColor = .clear
+            cell.backgroundImage.isHidden = true
+            cell.selectionStyle = .none
+            cell.quizNameLabel.text = "Press + to create a new Quiz"
+            cell.quizNameLabel.font = cell.quizNameLabel.font.withSize(20)
+            cell.quizNameLabel.textAlignment = .center
+        } else {
+            cell.backgroundColor = .clear
+            cell.selectionStyle = .none
+            cell.backgroundImage.isHidden = false
+            cell.quizNameLabel.font = cell.quizNameLabel.font.withSize(30)
+            cell.quizNameLabel.textAlignment = .left
+            
+            cell.quizNameLabel.text = titleArray[indexPath.row]
+        }
 
-        cell.backgroundColor = .clear
-        cell.selectionStyle = .none
-        
-        cell.quizNameLabel.text = titleArray[indexPath.row]
-        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        currentQuizId = quizArray[indexPath.row].quizId
-        QuizService.observeQuiz(currentQuizId) { (quiz) in
-            if let foundQuiz = quiz {
-                currentQuiz = foundQuiz
-                self.performSegue(withIdentifier: "fromHomeToChoseQuiz", sender: self)
+        if titleArray.count > 0 {
+            currentQuizId = quizArray[indexPath.row].quizId
+            QuizService.observeQuiz(currentQuizId) { (quiz) in
+                if let foundQuiz = quiz {
+                    currentQuiz = foundQuiz
+                    self.performSegue(withIdentifier: "fromHomeToChoseQuiz", sender: self)
+                }
             }
         }
     }

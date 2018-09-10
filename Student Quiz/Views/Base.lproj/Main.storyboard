@@ -400,7 +400,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell" translatesAutoresizingMaskIntoConstraints="NO" id="6zi-VP-9PN">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell" translatesAutoresizingMaskIntoConstraints="NO" id="6zi-VP-9PN" userLabel="backgroundImage">
                                                     <rect key="frame" x="6" y="10" width="363" height="69.5"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz XX" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WjQ-VW-vNh">
@@ -424,6 +424,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="backgroundImage" destination="6zi-VP-9PN" id="4RE-La-r5w"/>
                                             <outlet property="quizNameLabel" destination="WjQ-VW-vNh" id="Txw-BA-Y29"/>
                                         </connections>
                                     </tableViewCell>
@@ -1698,7 +1699,7 @@ Your score: XX%</string>
     <inferredMetricsTieBreakers>
         <segue reference="CY2-3c-bnw"/>
         <segue reference="Lac-LY-sZL"/>
-        <segue reference="SHY-nd-iuT"/>
+        <segue reference="rSm-Sc-zDf"/>
         <segue reference="2wC-AQ-1SK"/>
     </inferredMetricsTieBreakers>
 </document>

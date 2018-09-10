@@ -11,5 +11,6 @@ import UIKit
 class QuizTableViewCell: UITableViewCell {
     
     @IBOutlet weak var quizNameLabel: UILabel!
-        
+    @IBOutlet weak var backgroundImage: UIImageView!
+    
 }
