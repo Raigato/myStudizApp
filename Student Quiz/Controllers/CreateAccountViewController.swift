@@ -46,6 +46,7 @@ class CreateAccountViewController: UIViewController {
             alertTextField.placeholder = "Email address..."
             textField = alertTextField
         }
+        alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
         alert.addAction(action)
         self.present(alert, animated: true, completion: nil)
     }
