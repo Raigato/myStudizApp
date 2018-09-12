@@ -11,6 +11,23 @@ import Firebase
 
 class UserService {
     
+    private static func getStringFromDate(from date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
+        let formattedDate = dateFormatter.string(from: date)
+        return formattedDate
+    }
+    
+    private static func getDateFromString(from date: String) -> Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
+        if let formattedDate = dateFormatter.date(from: date) {
+            return formattedDate
+        }
+        
+        return Date(timeIntervalSince1970: 0)
+    }
+    
     static func logOutUser(alertIn viewController: UIViewController) {
         do {
             try Auth.auth().signOut()
@@ -80,7 +97,7 @@ class UserService {
             usernameRef.setValue(uid)
         }
         
-        userRef.updateChildValues(["email": email, "username": username])
+        userRef.updateChildValues(["email": email, "username": username, "createdOn": UserService.getStringFromDate(from: Date())])
     }
     
     static func getUserProfile(uid: String, completion: @escaping ((_ userDict: [String: String]) -> ())) {
