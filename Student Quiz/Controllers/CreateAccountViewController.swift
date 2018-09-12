@@ -31,6 +31,7 @@ class CreateAccountViewController: UIViewController {
     
     @IBAction func resetPasswordPressed(_ sender: Any) {
         var textField = UITextField()
+        
         let alert = UIAlertController(title: "New Password Requested 🤷‍♀️", message: "Please an enter your email to receive a new password", preferredStyle: .alert)
         let action = UIAlertAction(title: "Submit", style: .default) { (action) in
             if let email = textField.text {
@@ -42,12 +43,15 @@ class CreateAccountViewController: UIViewController {
                 }
             }
         }
+        
         alert.addTextField { (alertTextField) in
             alertTextField.placeholder = "Email address..."
             textField = alertTextField
+            textField.keyboardType = .emailAddress
         }
         alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
         alert.addAction(action)
+        
         self.present(alert, animated: true, completion: nil)
     }
     
