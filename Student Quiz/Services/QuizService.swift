@@ -60,14 +60,20 @@ class QuizService {
                     for fetchedReview in fetchedReviews {
                         if let user = fetchedReview["user"] {
                             if let rating = fetchedReview["rating"] {
-                                if let comment = fetchedReview["comment"] {
-                                    quiz?.addReview(by: user, rated: rating, comment: comment)
-                                } else {
-                                    quiz?.addReview(by: user, rated: rating)
+                                if let postingDate = fetchedReview["postingDate"] {
+                                    if let comment = fetchedReview["comment"] {
+                                        quiz?.addReview(by: user, rated: rating, comment: comment, postedOn: Helpers.getDateFromString(from: postingDate))
+                                    } else {
+                                        quiz?.addReview(by: user, rated: rating, postedOn: Helpers.getDateFromString(from: postingDate))
+                                    }
                                 }
                             }
                         }
                     }
+                }
+                
+                if let creationDate = dict["creationDate"] as? String {
+                    quiz?.creationDate = Helpers.getDateFromString(from: creationDate)
                 }
                 
                 completion(quiz)

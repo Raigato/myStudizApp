@@ -41,8 +41,9 @@ class Quiz {
     var privacy: Privacy
     var collaborators: [String]
     var reviews: [Review]
+    var creationDate: Date
     
-    init(createdby creator: String, entitled title: String, description: String, on category: Category, questions: [Question], privacy: Privacy = .Private, collaborators: [String] = [], reviews: [Review] = []) {
+    init(createdby creator: String, entitled title: String, description: String, on category: Category, questions: [Question], privacy: Privacy = .Private, collaborators: [String] = [], reviews: [Review] = [], creationDate: Date = Date()) {
         self.creator = creator
         self.title = title
         self.description = description
@@ -51,6 +52,7 @@ class Quiz {
         self.privacy = privacy
         self.collaborators = collaborators
         self.reviews = reviews
+        self.creationDate = creationDate
     }
     
     // MARK: Get/Set enum methods
@@ -122,8 +124,8 @@ class Quiz {
         }
     }
     
-    func addReview(by user: String, rated rating: String, comment: String = "") {
-        let newReview = Review(by: user, rated: rating, comment: comment)
+    func addReview(by user: String, rated rating: String, comment: String = "", postedOn postingDate: Date = Date()) {
+        let newReview = Review(by: user, rated: rating, comment: comment, postedOn: postingDate)
         self.reviews.append(newReview)
     }
     
@@ -150,6 +152,7 @@ class Quiz {
             reviewList.append(review.createDictionary())
         }
         dict["reviews"] = reviewList
+        dict["creationDate"] = Helpers.getStringFromDate(from: self.creationDate)
         
         return dict
     }
