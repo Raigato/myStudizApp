@@ -86,6 +86,10 @@ class CreateAccountViewController: UIViewController {
                     Auth.auth().currentUser?.sendEmailVerification(completion: { (error) in
                         if let errorMessage = error?.localizedDescription {
                             print("\(errorMessage)")
+                        } else {
+                            let defaults = UserDefaults.standard
+                            let date = Date()
+                            defaults.set(date, forKey: "lastEmailVerificationChecked")
                         }
                     })
                     self.dismiss(animated: true, completion: nil)

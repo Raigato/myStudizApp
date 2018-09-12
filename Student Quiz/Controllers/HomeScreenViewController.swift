@@ -41,10 +41,16 @@ class HomeScreenViewController: UIViewController {
         spinners.setCustomSettings(borderColor: UIColor(red:0.25, green:0.76, blue:0.79, alpha:1), backgroundColor: UIColor(red:0.25, green:0.76, blue:0.79, alpha:0.6), alpha: 1)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        currentUserId = ""
+        quizArray = []
+        titleArray = []
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         if Auth.auth().currentUser?.uid != nil {
             currentUserId = Auth.auth().currentUser!.uid
-            setUsername()
+            checkUserProfile()
             fetchQuizList()
         } else {
             performSegue(withIdentifier: "goToSignUpScreen", sender: self)
@@ -100,7 +106,7 @@ class HomeScreenViewController: UIViewController {
         }
     }
     
-    func setUsername() {
+    func checkUserProfile() {
         UserService.getUserProfile(uid: currentUserId) { (user) in
             if user["username"] == "" {
                 var textField = UITextField()
@@ -134,6 +140,43 @@ class HomeScreenViewController: UIViewController {
                 })
                 alert.addAction(action)
                 self.present(alert, animated: true, completion: nil)
+            } else {
+                Auth.auth().currentUser?.reload(completion: { (err) in
+                    if err != nil {
+                        UserService.logOutUser(alertIn: self)
+                        self.performSegue(withIdentifier: "goToSignUpScreen", sender: self)
+                    } else {
+                        if let emailIsVerified = Auth.auth().currentUser?.isEmailVerified {
+                            if !emailIsVerified {
+                                let defaults = UserDefaults.standard
+                                
+                                if let lastCheck = defaults.object(forKey: "lastEmailVerificationChecked") as? Date {
+                                    let wasntCheckFor = DateInterval(start: lastCheck, end: Date()).duration / (24.0 * 3600.0)
+                                    
+                                    if wasntCheckFor > 1 {
+                                        let alert = UIAlertController(title: "Email not verified yet 👮‍♀️", message: "It seems that you have not yet verified your email address.\nWould you like us to send you a new verification email?", preferredStyle: .alert)
+                                        
+                                        let pressYes = UIAlertAction(title: "Yes", style: .default, handler: { (action) in
+                                            Auth.auth().currentUser?.sendEmailVerification(completion: { (error) in
+                                                if let errorMessage = error?.localizedDescription {
+                                                    print("\(errorMessage)")
+                                                }
+                                            })
+                                        })
+                                        
+                                        alert.addAction(UIAlertAction(title: "No", style: .destructive, handler: nil))
+                                        alert.addAction(pressYes)
+                                        
+                                        self.present(alert, animated: true) {
+                                            let date = Date()
+                                            defaults.set(date, forKey: "lastEmailVerificationChecked")
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                })
             }
         }
     }
