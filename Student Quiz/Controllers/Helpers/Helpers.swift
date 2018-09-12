@@ -34,4 +34,21 @@ class Helpers {
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with: testStr)
     }
+    
+    static func getStringFromDate(from date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
+        let formattedDate = dateFormatter.string(from: date)
+        return formattedDate
+    }
+    
+    static func getDateFromString(from date: String) -> Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
+        if let formattedDate = dateFormatter.date(from: date) {
+            return formattedDate
+        }
+        
+        return Date(timeIntervalSince1970: 0)
+    }
 }
