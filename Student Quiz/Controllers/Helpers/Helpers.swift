@@ -9,6 +9,11 @@
 import UIKit
 
 class Helpers {
+    
+    static func getExtraflatString(_ str: String) -> String {
+        return str.lowercased().folding(options: .diacriticInsensitive, locale: .current).removingWhitespaces().removingPunctuations()
+    }
+    
     static func displayAlert(title: String, message: String, with view: UIViewController) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))

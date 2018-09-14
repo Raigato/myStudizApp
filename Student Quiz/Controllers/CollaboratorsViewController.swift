@@ -152,10 +152,10 @@ extension CollaboratorsViewController : UITextFieldDelegate {
         } else {
             displayedUsers = []
             
-            let newEntry = textField.text! + string
+            let newEntry = Helpers.getExtraflatString(textField.text! + string)
             
             for user in allUsers {
-                if user.1.hasPrefix(newEntry) {
+                if Helpers.getExtraflatString(user.1).hasPrefix(newEntry) {
                     displayedUsers.append(user)
                 }
             }

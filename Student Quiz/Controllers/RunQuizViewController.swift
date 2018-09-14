@@ -102,7 +102,7 @@ class RunQuizViewController: UIViewController {
     
     
     func formatAnswer(_ answer: String) -> String {
-        return answer.lowercased().folding(options: .diacriticInsensitive, locale: .current).removingWhitespaces().removingPunctuations()
+        return Helpers.getExtraflatString(answer)
     }
     
     func calculateScore() -> Int {
