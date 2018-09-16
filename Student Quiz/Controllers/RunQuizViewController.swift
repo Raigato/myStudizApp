@@ -97,7 +97,8 @@ class RunQuizViewController: UIViewController {
     func isRight(userAnswer: String, rightAnswer: String) -> Bool {
         let userInput = formatAnswer(userAnswer)
         let expectedInput = formatAnswer(rightAnswer)
-        return userInput == expectedInput
+        
+        return userInput.distanceJaroWinkler(between: expectedInput) > 0.95
     }
     
     
@@ -156,17 +157,5 @@ extension RunQuizViewController : UITextFieldDelegate {
         
         textField.resignFirstResponder()
         return true
-    }
-}
-
-// MARK: - String extension
-
-extension String {
-    func removingWhitespaces() -> String {
-        return components(separatedBy: .whitespaces).joined()
-    }
-    
-    func removingPunctuations() -> String {
-        return components(separatedBy: .punctuationCharacters).joined()
     }
 }
