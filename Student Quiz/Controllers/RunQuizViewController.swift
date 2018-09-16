@@ -98,15 +98,7 @@ class RunQuizViewController: UIViewController {
         let userInput = formatAnswer(userAnswer)
         let expectedInput = formatAnswer(rightAnswer)
         
-        var distance = 0.0
-        
-        do {
-            distance = userInput.distanceJaroWinkler(between: expectedInput)
-        } catch {
-            distance = 1
-        }
-        
-        return distance > 0.95
+        return userInput.distanceJaroWinkler(between: expectedInput) > 0.95
     }
     
     
