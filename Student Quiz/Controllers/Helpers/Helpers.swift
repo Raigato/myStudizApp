@@ -75,6 +75,14 @@ extension String {
             return 1.0
         }
         
+        if self.count < 4 || target.count < 4 {
+            if self == target {
+                return 1.0
+            } else {
+                return 0.0
+            }
+        }
+        
         let matchingWindowSize = max(self.count, target.count) / 2 - 1
         var selfFlags = Array(repeating: false, count: self.count)
         var targetFlags = Array(repeating: false, count: target.count)
