@@ -167,6 +167,127 @@
             </objects>
             <point key="canvasLocation" x="814" y="-764"/>
         </scene>
+        <!--Feedback View Controller-->
+        <scene sceneID="LCb-yF-X6T">
+            <objects>
+                <viewController id="tAq-kS-nbF" customClass="FeedbackViewController" customModule="Studiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K4Y-V2-73a">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WL2-bJ-5W9" userLabel="TopBar">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leave Feedback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUs-yz-hZ1">
+                                        <rect key="frame" x="85.5" y="28" width="204.5" height="64"/>
+                                        <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="27"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <size key="shadowOffset" width="1" height="2"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="weP-qr-Pku">
+                                        <rect key="frame" x="30" y="43" width="23" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="23" id="8Zs-q4-sk2"/>
+                                            <constraint firstAttribute="height" constant="35" id="m2Y-fB-qhm"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="back"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="jV8-Xh-bKy" eventType="touchUpInside" id="Gjv-rI-z0G"/>
+                                            <action selector="backButtonPressed:" destination="tAq-kS-nbF" eventType="touchUpInside" id="zAE-U2-73N"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.2470588235" green="0.75686274509999996" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="weP-qr-Pku" firstAttribute="centerY" secondItem="lUs-yz-hZ1" secondAttribute="centerY" id="5C1-IX-ck3"/>
+                                    <constraint firstAttribute="height" constant="100" id="7mf-zt-KLe"/>
+                                    <constraint firstItem="weP-qr-Pku" firstAttribute="leading" secondItem="WL2-bJ-5W9" secondAttribute="leading" constant="30" id="QEk-ja-Ii7"/>
+                                    <constraint firstItem="lUs-yz-hZ1" firstAttribute="centerX" secondItem="WL2-bJ-5W9" secondAttribute="centerX" id="gAh-23-kDh"/>
+                                    <constraint firstItem="lUs-yz-hZ1" firstAttribute="top" secondItem="WL2-bJ-5W9" secondAttribute="topMargin" id="hdh-Yk-YbE"/>
+                                    <constraint firstItem="lUs-yz-hZ1" firstAttribute="bottom" secondItem="WL2-bJ-5W9" secondAttribute="bottomMargin" id="mnL-Ph-VXr"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nlq-KY-Cjl">
+                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We'd love to know how we can make Studiz even better - and would really appreciate if you left a review on the App Store." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jd3-mv-hCK">
+                                        <rect key="frame" x="15" y="30" width="345" height="71.5"/>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <size key="shadowOffset" width="1" height="2"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7i-fW-Khq">
+                                        <rect key="frame" x="0.0" y="121.5" width="375" height="40"/>
+                                        <color key="backgroundColor" red="0.2470588235" green="0.75686274509999996" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="P4l-Qq-xaX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="20"/>
+                                        <size key="titleShadowOffset" width="1" height="2"/>
+                                        <state key="normal" title="Write a Review">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="reviewButtonPressed:" destination="tAq-kS-nbF" eventType="touchUpInside" id="6NQ-cC-vun"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHA-94-nWE">
+                                        <rect key="frame" x="0.0" y="181.5" width="375" height="40"/>
+                                        <color key="backgroundColor" red="0.2470588235" green="0.75686274509999996" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="PeG-bD-MOh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="20"/>
+                                        <size key="titleShadowOffset" width="1" height="2"/>
+                                        <state key="normal" title="Contact the Studiz team">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="contactButtonPressed:" destination="tAq-kS-nbF" eventType="touchUpInside" id="P1S-p9-hOZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.21176470589999999" green="0.30980392159999998" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="bHA-94-nWE" secondAttribute="trailing" id="F2l-Xy-3wz"/>
+                                    <constraint firstItem="g7i-fW-Khq" firstAttribute="top" secondItem="jd3-mv-hCK" secondAttribute="bottom" constant="20" id="KMR-IP-4jQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="g7i-fW-Khq" secondAttribute="trailing" id="N28-hH-b3g"/>
+                                    <constraint firstItem="jd3-mv-hCK" firstAttribute="top" secondItem="Nlq-KY-Cjl" secondAttribute="top" constant="30" id="RKl-fI-pQd"/>
+                                    <constraint firstItem="bHA-94-nWE" firstAttribute="leading" secondItem="Nlq-KY-Cjl" secondAttribute="leading" id="Sir-ru-rfW"/>
+                                    <constraint firstItem="bHA-94-nWE" firstAttribute="top" secondItem="g7i-fW-Khq" secondAttribute="bottom" constant="20" id="eD5-ZY-G0h"/>
+                                    <constraint firstItem="g7i-fW-Khq" firstAttribute="leading" secondItem="Nlq-KY-Cjl" secondAttribute="leading" id="i8G-dA-CRr"/>
+                                    <constraint firstAttribute="trailing" secondItem="jd3-mv-hCK" secondAttribute="trailing" constant="15" id="pcq-37-6dN"/>
+                                    <constraint firstItem="jd3-mv-hCK" firstAttribute="leading" secondItem="Nlq-KY-Cjl" secondAttribute="leading" constant="15" id="zoC-sl-QOK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Nlq-KY-Cjl" firstAttribute="leading" secondItem="Tuk-4r-4Ft" secondAttribute="leading" id="7Fi-ax-Qi1"/>
+                            <constraint firstItem="WL2-bJ-5W9" firstAttribute="leading" secondItem="Tuk-4r-4Ft" secondAttribute="leading" id="StM-9j-c7H"/>
+                            <constraint firstItem="Tuk-4r-4Ft" firstAttribute="trailing" secondItem="Nlq-KY-Cjl" secondAttribute="trailing" id="Wgt-JY-HjP"/>
+                            <constraint firstItem="Nlq-KY-Cjl" firstAttribute="top" secondItem="WL2-bJ-5W9" secondAttribute="bottom" id="aTN-Xj-PKP"/>
+                            <constraint firstItem="WL2-bJ-5W9" firstAttribute="top" secondItem="K4Y-V2-73a" secondAttribute="top" id="ccZ-Q4-kyl"/>
+                            <constraint firstItem="WL2-bJ-5W9" firstAttribute="trailing" secondItem="Tuk-4r-4Ft" secondAttribute="trailing" id="dmf-rU-UeX"/>
+                            <constraint firstAttribute="bottom" secondItem="Nlq-KY-Cjl" secondAttribute="bottom" id="paL-1R-Mj6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Tuk-4r-4Ft"/>
+                    </view>
+                    <connections>
+                        <outlet property="reviewButton" destination="g7i-fW-Khq" id="C8d-Zq-9OV"/>
+                        <outlet property="textLabel" destination="jd3-mv-hCK" id="fOG-Ra-TgB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qdb-ec-kPH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-759" y="77"/>
+        </scene>
         <!--Settings View Controller-->
         <scene sceneID="F8G-mv-iBU">
             <objects>
@@ -328,6 +449,7 @@
                     <connections>
                         <outlet property="deleteAccountButton" destination="vpE-6i-N96" id="laQ-4C-9BI"/>
                         <outlet property="titleLabel" destination="aww-uZ-Fkx" id="3Hu-lE-Q2I"/>
+                        <segue destination="tAq-kS-nbF" kind="presentation" identifier="goToFeedback" id="aZ5-Oe-Lz7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mk6-wR-UMH" userLabel="First Responder" sceneMemberID="firstResponder"/>
