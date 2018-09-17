@@ -178,8 +178,7 @@ class SettingsViewController: UIViewController {
         let defaults = UserDefaults.standard
         
         if let lastCheck = defaults.object(forKey: "lastTimeFeedbackWasAsked") as? Date {
-            // TODO: Change it for counting days
-            let wasntCheckFor = DateInterval(start: lastCheck, end: Date()).duration // (24.0 * 3600.0)
+            let wasntCheckFor = DateInterval(start: lastCheck, end: Date()).duration / (24.0 * 3600.0)
             if wasntCheckFor < 2 {
                 shouldShowFeedback = false
             }
