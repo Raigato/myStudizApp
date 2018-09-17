@@ -10,6 +10,8 @@ import UIKit
 import Firebase
 
 class SettingsViewController: UIViewController {
+    
+    lazy var feedback: Feedback = .Happy
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var deleteAccountButton: UIButton!
@@ -22,6 +24,12 @@ class SettingsViewController: UIViewController {
         
         setTitleWithUsername()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        showFeedbackPrompt()
+    }
+    
+    // MARK: - Set username as title
     
     func setTitleWithUsername() {
         UserService.getUserProfile(uid: UserService.currentUser()) { (userProfile) in
@@ -41,12 +49,16 @@ class SettingsViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    // MARK: - Change Password
+    
     @IBAction func changePasswordButtonPressed(_ sender: UIButton) {
         if let email = Auth.auth().currentUser?.email {
             UserService.passwordReset(withEmail: email, alertIn: self)
             Helpers.displayAlert(title: "New Password Sent 📬", message: "We have sent you an email at \(email) so you can reinitialize your password", with: self)
         }
     }
+    
+    // MARK: - Change email
     
     @IBAction func changeEmailButtonPressed(_ sender: UIButton) {
         var textField = UITextField()
@@ -79,6 +91,8 @@ class SettingsViewController: UIViewController {
         alert.addAction(action)
         self.present(alert, animated: true, completion: nil)
     }
+    
+    // MARK: - Change username
     
     @IBAction func changeUsernameButtonPressed(_ sender: UIButton) {
         var textField = UITextField()
@@ -129,6 +143,8 @@ class SettingsViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    // MARK: - Delete account
+    
     @IBAction func deleteAccountButtonPressed(_ sender: Any) {
         if let currentUserId = Auth.auth().currentUser?.uid {
             let alert = UIAlertController(title: "Account Deletion ❌", message: "Are you sure you want to delete your Studiz Account?", preferredStyle: .alert)
@@ -148,9 +164,52 @@ class SettingsViewController: UIViewController {
         }
     }
     
+    // MARK: - Logout
+    
     @IBAction func logoutButtonPressed(_ sender: UIButton) {
         UserService.logOutUser(alertIn: self)
         dismiss(animated: true, completion: nil)
+    }
+    
+    // MARK: - Feedback Prompt
+    
+    func shouldShowFeedback() -> Bool{
+        return true
+    }
+    
+    func showFeedbackPrompt() {
+        if shouldShowFeedback() {
+            let alert = UIAlertController(title: "", message: "How do you feel about Studiz?", preferredStyle: .actionSheet)
+            let happy = UIAlertAction(title: "Happy 😁", style: .default) { (action) in
+                self.goToFeedbackHandler(feedback: .Happy)
+            }
+            let confused = UIAlertAction(title: "Confused 🤨", style: .default) { (action) in
+                self.goToFeedbackHandler(feedback: .Confused)
+            }
+            let unhappy = UIAlertAction(title: "Unhappy 🙁", style: .default) { (action) in
+                self.goToFeedbackHandler(feedback: .Unhappy)
+            }
+            
+            alert.addAction(happy)
+            alert.addAction(confused)
+            alert.addAction(unhappy)
+            
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            
+            present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func goToFeedbackHandler(feedback selectedFeedback: Feedback) {
+        feedback = selectedFeedback
+        performSegue(withIdentifier: "goToFeedback", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToFeedback" {
+            let feedbackView = segue.destination as! FeedbackViewController
+            feedbackView.feedback = feedback
+        }
     }
     
 }
