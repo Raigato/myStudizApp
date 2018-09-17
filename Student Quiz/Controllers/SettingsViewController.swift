@@ -11,6 +11,7 @@ import Firebase
 
 class SettingsViewController: UIViewController {
     
+    lazy var shouldShowFeedback: Bool = true
     lazy var feedback: Feedback = .Happy
 
     @IBOutlet weak var titleLabel: UILabel!
@@ -173,12 +174,28 @@ class SettingsViewController: UIViewController {
     
     // MARK: - Feedback Prompt
     
-    func shouldShowFeedback() -> Bool{
-        return true
+    func willShowFeedback() -> Bool {
+        let defaults = UserDefaults.standard
+        
+        if let lastCheck = defaults.object(forKey: "lastTimeFeedbackWasAsked") as? Date {
+            // TODO: Change it for counting days
+            let wasntCheckFor = DateInterval(start: lastCheck, end: Date()).duration // (24.0 * 3600.0)
+            if wasntCheckFor < 2 {
+                shouldShowFeedback = false
+            }
+        }
+        
+        if let alreadyReviewed = defaults.object(forKey: "hasReviewed") as? Bool {
+            if alreadyReviewed {
+                shouldShowFeedback = false
+            }
+        }
+        
+        return shouldShowFeedback
     }
     
     func showFeedbackPrompt() {
-        if shouldShowFeedback() {
+        if willShowFeedback() {
             let alert = UIAlertController(title: "", message: "How do you feel about Studiz?", preferredStyle: .actionSheet)
             let happy = UIAlertAction(title: "Happy 😁", style: .default) { (action) in
                 self.goToFeedbackHandler(feedback: .Happy)
@@ -202,6 +219,13 @@ class SettingsViewController: UIViewController {
     
     func goToFeedbackHandler(feedback selectedFeedback: Feedback) {
         feedback = selectedFeedback
+        
+        let defaults = UserDefaults.standard
+        let date = Date()
+        defaults.set(date, forKey: "lastTimeFeedbackWasAsked")
+        
+        shouldShowFeedback = false
+        
         performSegue(withIdentifier: "goToFeedback", sender: self)
     }
     
