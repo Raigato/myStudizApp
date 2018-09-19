@@ -191,10 +191,12 @@ class Quiz {
             if error != nil {
                 print(error!)
             } else {
-                self.saveInList(quizId: reference.key)
-                currentQuizId = reference.key
-                print("Quiz \(reference.key) saved successfully!")
-                completion(reference.key)
+                if let key = reference.key {
+                    self.saveInList(quizId: key)
+                    currentQuizId = key
+                    print("Quiz \(key) saved successfully!")
+                    completion(key)
+                }
             }
         }
     }
