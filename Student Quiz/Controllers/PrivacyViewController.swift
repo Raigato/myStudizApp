@@ -100,17 +100,19 @@ class PrivacyViewController: UIViewController {
         selectorImage.frame.size.height = privateTitle.frame.height + privateText.frame.height + (2 * alpha) + beta - 5
     }
     
+    // MARK: Update UI
+    
     func updateUI(to privacy: Privacy) {
         switch privacy {
-        case .Public:
-            // TODO: Add Public privacy
-            print("Not yet implemented")
-        case .Shared:
-            moveItToShared()
-            moveButtonToPrivate()
-        case .Private:
-            moveItToPrivate()
-            moveButtonToShared()
+            case .Public:
+                // TODO: Add Public privacy
+                print("Not yet implemented")
+            case .Shared:
+                moveItToShared()
+                moveButtonToPrivate()
+            case .Private:
+                moveItToPrivate()
+                moveButtonToShared()
         }
     }
     
