@@ -210,18 +210,24 @@ class SettingsViewController: UIViewController {
             alert.addAction(confused)
             alert.addAction(unhappy)
             
-            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+                self.saveDateOfLastFeedbackAsking()
+            })
             
             present(alert, animated: true, completion: nil)
         }
     }
     
-    func goToFeedbackHandler(feedback selectedFeedback: Feedback) {
-        feedback = selectedFeedback
-        
+    func saveDateOfLastFeedbackAsking() {
         let defaults = UserDefaults.standard
         let date = Date()
         defaults.set(date, forKey: "lastTimeFeedbackWasAsked")
+    }
+    
+    func goToFeedbackHandler(feedback selectedFeedback: Feedback) {
+        feedback = selectedFeedback
+        
+        saveDateOfLastFeedbackAsking()
         
         shouldShowFeedback = false
         
