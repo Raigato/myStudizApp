@@ -36,6 +36,7 @@
 		8954CB8E214C213B00708F2F /* GoogleService-Info-prod.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8954CB8D214C213B00708F2F /* GoogleService-Info-prod.plist */; };
 		8959BF49212D5F270065066D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8959BF48212D5F270065066D /* Assets.xcassets */; };
 		89680D202153ED9E00515468 /* CommunityHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89680D1F2153ED9E00515468 /* CommunityHomeViewController.swift */; };
+		89680D222153F35400515468 /* CommunityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89680D212153F35400515468 /* CommunityListViewController.swift */; };
 		8979161F212D8CDC008176EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8979161E212D8CDC008176EF /* GoogleService-Info.plist */; };
 		897B6B17212C310B00807269 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897B6B16212C310B00807269 /* AppDelegate.swift */; };
 		897B6B19212C310B00807269 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897B6B18212C310B00807269 /* CreateAccountViewController.swift */; };
@@ -81,6 +82,7 @@
 		8954CB8D214C213B00708F2F /* GoogleService-Info-prod.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-prod.plist"; sourceTree = "<group>"; };
 		8959BF48212D5F270065066D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89680D1F2153ED9E00515468 /* CommunityHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityHomeViewController.swift; sourceTree = "<group>"; };
+		89680D212153F35400515468 /* CommunityListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityListViewController.swift; sourceTree = "<group>"; };
 		8979161E212D8CDC008176EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		897B6B13212C310B00807269 /* Studiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Studiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		897B6B16212C310B00807269 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				890DB40E213C089A00C4FFCA /* ReviewViewController.swift */,
 				8940D0FD2150112D00CD8CD0 /* FeedbackViewController.swift */,
 				89680D1F2153ED9E00515468 /* CommunityHomeViewController.swift */,
+				89680D212153F35400515468 /* CommunityListViewController.swift */,
 				89430BDF213688D700B09CA2 /* Helpers */,
 			);
 			path = Controllers;
@@ -403,6 +406,7 @@
 				89137C392137DF5D00119136 /* SearchPaddedTextField.swift in Sources */,
 				89430BDC2136881700B09CA2 /* LeftPaddedTextField.swift in Sources */,
 				894899A42134254B003B515D /* Quiz.swift in Sources */,
+				89680D222153F35400515468 /* CommunityListViewController.swift in Sources */,
 				891235A9213555A4009D8212 /* NewQuizViewController.swift in Sources */,
 				894899A821342ADC003B515D /* Review.swift in Sources */,
 				891DADA42134813E003CB827 /* QuizListService.swift in Sources */,

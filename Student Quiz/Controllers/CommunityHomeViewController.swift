@@ -16,15 +16,26 @@ class CommunityHomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
-    */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToTopQuiz" {
+            let communityList = segue.destination as! CommunityListViewController
+            
+            communityList.displayedTitle = "Top"
+            
+            //TODO: Generate Quiz List
+        }
+        
+        if segue.identifier == "goToTrendingQuiz" {
+            let communityList = segue.destination as! CommunityListViewController
+            
+            communityList.displayedTitle = "Trending"
+            
+            //TODO: Generate Quiz List
+        }
+    }
 
 }
