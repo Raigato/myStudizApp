@@ -17,6 +17,9 @@ class PrivacyViewController: UIViewController {
 
     @IBOutlet weak var selectorImage: UIImageView!
     
+    @IBOutlet weak var publicTitle: UILabel!
+    @IBOutlet weak var publicText: UILabel!
+    
     @IBOutlet weak var sharedTitle: UILabel!
     @IBOutlet weak var sharedText: UILabel!
     
@@ -25,7 +28,6 @@ class PrivacyViewController: UIViewController {
     
     @IBOutlet weak var separator: UIImageView!
     
-    @IBOutlet weak var switchButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     
     override func viewDidLoad() {
@@ -35,7 +37,7 @@ class PrivacyViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         currentChoice = currentQuiz.privacy
-        updateUI(to: currentChoice)
+        updateUI()
     }
     
     @IBAction func backButtonPressed(_ sender: UIButton) {
@@ -46,7 +48,7 @@ class PrivacyViewController: UIViewController {
         currentQuiz.privacy = currentChoice
         currentQuiz.save(in: currentQuizId) { (quizId) in }
         
-        if currentChoice == .Shared {
+        if currentChoice == .Shared || currentChoice == .Public {
             performSegue(withIdentifier: "goToCollaborators", sender: self)
         }
         
@@ -59,31 +61,30 @@ class PrivacyViewController: UIViewController {
         }
     }
     
-    @IBAction func switchButtonPressed(_ sender: UIButton) {
-        if sender.tag == 2 {
-            currentChoice = .Shared
-            switchButton.tag = 1
-        } else if sender.tag == 1 {
-            currentChoice = .Private
-            switchButton.tag = 2
-        }
-        updateUI(to: currentChoice)
+    // MARK: Buttons handling
+    
+    @IBAction func publicButtonPressed(_ sender: UIButton) {
+        currentChoice = .Public
+        updateUI()
+    }
+    
+    @IBAction func sharedButtonClicked(_ sender: UIButton) {
+        currentChoice = .Shared
+        updateUI()
+    }
+    
+    @IBAction func privateButtonClicked(_ sender: Any) {
+        currentChoice = .Private
+        updateUI()
     }
     
     // MARK: Selector position functions
     
-    func moveButtonToShared() {
-        switchButton.frame.origin.x = sharedTitle.frame.origin.x - alpha
-        switchButton.frame.origin.y = sharedTitle.frame.origin.y - alpha + 5
-        switchButton.frame.size.width = separator.frame.width + (2 * alpha)
-        switchButton.frame.size.height = sharedTitle.frame.height + sharedText.frame.height + (2 * alpha) + beta - 5
-    }
-    
-    func moveButtonToPrivate() {
-        switchButton.frame.origin.x = privateTitle.frame.origin.x - alpha
-        switchButton.frame.origin.y = privateTitle.frame.origin.y - alpha + 5
-        switchButton.frame.size.width = separator.frame.width + (2 * alpha)
-        switchButton.frame.size.height = privateTitle.frame.height + privateText.frame.height + (2 * alpha) + beta - 5
+    func moveItToPublic() {
+        selectorImage.frame.origin.x = publicTitle.frame.origin.x - alpha
+        selectorImage.frame.origin.y = publicTitle.frame.origin.y - alpha + 10
+        selectorImage.frame.size.width = separator.frame.width + (2 * alpha)
+        selectorImage.frame.size.height = publicTitle.frame.height + publicText.frame.height + (2 * alpha) + beta - 5
     }
     
     func moveItToShared() {
@@ -102,17 +103,14 @@ class PrivacyViewController: UIViewController {
     
     // MARK: Update UI
     
-    func updateUI(to privacy: Privacy) {
-        switch privacy {
+    func updateUI() {
+        switch currentChoice {
             case .Public:
-                // TODO: Add Public privacy
-                print("Not yet implemented")
+                moveItToPublic()
             case .Shared:
                 moveItToShared()
-                moveButtonToPrivate()
             case .Private:
                 moveItToPrivate()
-                moveButtonToShared()
         }
     }
     

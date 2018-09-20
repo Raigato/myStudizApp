@@ -177,7 +177,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leave Feedback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUs-yz-hZ1">
-                                        <rect key="frame" x="85.5" y="28" width="204.5" height="64"/>
+                                        <rect key="frame" x="85" y="28" width="205" height="64"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="27"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -521,10 +521,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell" translatesAutoresizingMaskIntoConstraints="NO" id="6zi-VP-9PN" userLabel="backgroundImage">
-                                                    <rect key="frame" x="6" y="10" width="308" height="69.5"/>
+                                                    <rect key="frame" x="6" y="10" width="363" height="69.5"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz XX" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WjQ-VW-vNh">
-                                                    <rect key="frame" x="25" y="10" width="280" height="69.5"/>
+                                                    <rect key="frame" x="25" y="10" width="335" height="69.5"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="30"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -631,13 +631,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awC-JI-2LH">
-                                                    <rect key="frame" x="15" y="5" width="305" height="24.5"/>
+                                                    <rect key="frame" x="15" y="5" width="360" height="24.5"/>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Answer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DjS-Vc-e9P">
-                                                    <rect key="frame" x="15" y="30.5" width="290" height="24"/>
+                                                    <rect key="frame" x="15" y="30.5" width="345" height="24"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -698,7 +698,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w4T-Me-nXF">
-                                        <rect key="frame" x="139" y="28" width="97.5" height="64"/>
+                                        <rect key="frame" x="139" y="28" width="97" height="64"/>
                                         <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="27"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1556,7 +1556,7 @@ Your score: XX%</string>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Selection" translatesAutoresizingMaskIntoConstraints="NO" id="baZ-cq-7I7">
-                                        <rect key="frame" x="15" y="273" width="350" height="126.5"/>
+                                        <rect key="frame" x="15" y="269" width="350" height="126.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Separator" translatesAutoresizingMaskIntoConstraints="NO" id="79n-ro-jVD">
@@ -1581,11 +1581,22 @@ Your score: XX%</string>
                                         <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <size key="shadowOffset" width="1" height="2"/>
                                     </label>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HTj-H1-xZR">
-                                        <rect key="frame" x="29" y="152" width="316" height="99"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HTj-H1-xZR" userLabel="Shared Button">
+                                        <rect key="frame" x="30" y="137.5" width="320" height="126.5"/>
                                         <connections>
-                                            <action selector="switchButtonPressed:" destination="UMf-IN-UMO" eventType="touchUpInside" id="X3a-Sq-XiQ"/>
+                                            <action selector="sharedButtonClicked:" destination="UMf-IN-UMO" eventType="touchUpInside" id="7AS-kQ-3FO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="COP-eZ-dm4" userLabel="Public Button">
+                                        <rect key="frame" x="30" y="15" width="320" height="121.5"/>
+                                        <connections>
+                                            <action selector="publicButtonPressed:" destination="UMf-IN-UMO" eventType="touchUpInside" id="ldc-Ub-BfT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arF-HI-vou" userLabel="Private Button">
+                                        <rect key="frame" x="30" y="265" width="320" height="111.5"/>
+                                        <connections>
+                                            <action selector="privateButtonClicked:" destination="UMf-IN-UMO" eventType="touchUpInside" id="qf2-rF-fuh"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1597,29 +1608,41 @@ Your score: XX%</string>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fYp-Q6-lkx" secondAttribute="trailing" constant="20" symbolic="YES" id="6Mo-6m-dwR"/>
                                     <constraint firstItem="fYp-Q6-lkx" firstAttribute="top" secondItem="Qkl-ei-sCk" secondAttribute="top" constant="15" id="75L-c4-fby"/>
                                     <constraint firstItem="67s-9n-SLP" firstAttribute="trailing" secondItem="eYd-YU-rqb" secondAttribute="trailing" id="7p8-Rm-Nbt"/>
+                                    <constraint firstItem="arF-HI-vou" firstAttribute="leading" secondItem="Qkl-ei-sCk" secondAttribute="leading" constant="30" id="B5i-rd-vkp"/>
                                     <constraint firstItem="Ib2-gU-A0u" firstAttribute="leading" secondItem="lVG-Xx-aWy" secondAttribute="leading" id="Ec4-HH-fr0"/>
                                     <constraint firstItem="8wH-rg-yg0" firstAttribute="top" secondItem="fYp-Q6-lkx" secondAttribute="bottom" constant="15" id="HP9-mK-0RZ"/>
+                                    <constraint firstItem="COP-eZ-dm4" firstAttribute="leading" secondItem="Qkl-ei-sCk" secondAttribute="leading" constant="30" id="Ib0-Yl-EGb"/>
                                     <constraint firstItem="lVG-Xx-aWy" firstAttribute="top" secondItem="eYd-YU-rqb" secondAttribute="bottom" constant="15" id="JGM-pY-Co8"/>
+                                    <constraint firstItem="arF-HI-vou" firstAttribute="top" secondItem="eYd-YU-rqb" secondAttribute="bottom" id="JgF-y4-gYU"/>
                                     <constraint firstItem="67s-9n-SLP" firstAttribute="top" secondItem="Ib2-gU-A0u" secondAttribute="bottom" constant="45" id="LNx-9K-Kod"/>
                                     <constraint firstItem="Ib2-gU-A0u" firstAttribute="top" secondItem="lVG-Xx-aWy" secondAttribute="bottom" constant="5" id="LyU-pe-gdE"/>
                                     <constraint firstItem="fYp-Q6-lkx" firstAttribute="leading" secondItem="Qkl-ei-sCk" secondAttribute="leading" constant="30" id="MEX-zr-KRm"/>
                                     <constraint firstItem="eYd-YU-rqb" firstAttribute="top" secondItem="nT4-uJ-ouo" secondAttribute="bottom" constant="15" id="MbX-cX-ay6"/>
+                                    <constraint firstItem="COP-eZ-dm4" firstAttribute="top" secondItem="fYp-Q6-lkx" secondAttribute="top" id="NUT-QH-GHZ"/>
+                                    <constraint firstItem="HTj-H1-xZR" firstAttribute="top" secondItem="79n-ro-jVD" secondAttribute="bottom" id="QF0-8d-Ovu"/>
                                     <constraint firstItem="79n-ro-jVD" firstAttribute="top" secondItem="8wH-rg-yg0" secondAttribute="bottom" constant="15" id="QKP-u7-d5R"/>
                                     <constraint firstItem="fYp-Q6-lkx" firstAttribute="leading" secondItem="Qkl-ei-sCk" secondAttribute="leading" constant="30" id="RM6-xp-51c"/>
+                                    <constraint firstAttribute="trailing" secondItem="HTj-H1-xZR" secondAttribute="trailing" constant="30" id="SZr-sz-PuJ"/>
+                                    <constraint firstItem="arF-HI-vou" firstAttribute="bottom" secondItem="Ib2-gU-A0u" secondAttribute="bottom" id="VCL-VP-3YA"/>
                                     <constraint firstAttribute="bottom" secondItem="FMm-XQ-wwO" secondAttribute="bottom" constant="502" id="VKX-Em-Y4c"/>
                                     <constraint firstItem="8wH-rg-yg0" firstAttribute="leading" secondItem="Qkl-ei-sCk" secondAttribute="leading" constant="30" id="Vh3-ZK-1dT"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="FMm-XQ-wwO" secondAttribute="trailing" id="WoT-Uh-h8x"/>
+                                    <constraint firstItem="HTj-H1-xZR" firstAttribute="leading" secondItem="Qkl-ei-sCk" secondAttribute="leading" constant="30" id="a13-pV-Da5"/>
                                     <constraint firstItem="lVG-Xx-aWy" firstAttribute="leading" secondItem="Qkl-ei-sCk" secondAttribute="leading" constant="30" id="awb-Zc-UJq"/>
                                     <constraint firstAttribute="trailing" secondItem="eYd-YU-rqb" secondAttribute="trailing" constant="30" id="bXl-xb-bpM"/>
+                                    <constraint firstItem="79n-ro-jVD" firstAttribute="top" secondItem="COP-eZ-dm4" secondAttribute="bottom" id="f2s-Ed-SKJ"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lVG-Xx-aWy" secondAttribute="trailing" id="fbX-BF-HLO"/>
                                     <constraint firstItem="eYd-YU-rqb" firstAttribute="leading" secondItem="Qkl-ei-sCk" secondAttribute="leading" constant="30" id="gCe-Dj-bMr"/>
                                     <constraint firstItem="79n-ro-jVD" firstAttribute="leading" secondItem="Qkl-ei-sCk" secondAttribute="leading" constant="30" id="gW5-yZ-DYr"/>
                                     <constraint firstItem="nT4-uJ-ouo" firstAttribute="centerX" secondItem="Qkl-ei-sCk" secondAttribute="centerX" id="l2E-5o-JB2"/>
+                                    <constraint firstAttribute="trailing" secondItem="arF-HI-vou" secondAttribute="trailing" constant="30" id="nz4-bW-qxH"/>
+                                    <constraint firstAttribute="trailing" secondItem="COP-eZ-dm4" secondAttribute="trailing" constant="30" id="o8G-12-fXh"/>
                                     <constraint firstItem="8wH-rg-yg0" firstAttribute="centerX" secondItem="Qkl-ei-sCk" secondAttribute="centerX" id="os5-uW-oau"/>
                                     <constraint firstItem="FMm-XQ-wwO" firstAttribute="top" secondItem="79n-ro-jVD" secondAttribute="bottom" constant="15" id="p0I-hB-TOU"/>
                                     <constraint firstItem="FMm-XQ-wwO" firstAttribute="leading" secondItem="Qkl-ei-sCk" secondAttribute="leading" constant="30" id="pQI-En-lRB"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ib2-gU-A0u" secondAttribute="trailing" constant="30" id="pZf-q7-DhH"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nT4-uJ-ouo" secondAttribute="trailing" id="qBI-ug-EtX"/>
+                                    <constraint firstItem="eYd-YU-rqb" firstAttribute="top" secondItem="HTj-H1-xZR" secondAttribute="bottom" id="sUj-Mu-KdQ"/>
                                     <constraint firstItem="Ib2-gU-A0u" firstAttribute="centerX" secondItem="Qkl-ei-sCk" secondAttribute="centerX" id="vAo-sv-tzU"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8wH-rg-yg0" secondAttribute="trailing" id="xUJ-sv-YEb"/>
                                 </constraints>
@@ -1641,11 +1664,12 @@ Your score: XX%</string>
                         <outlet property="nextButton" destination="67s-9n-SLP" id="Ful-rQ-s2d"/>
                         <outlet property="privateText" destination="Ib2-gU-A0u" id="jER-Cs-23E"/>
                         <outlet property="privateTitle" destination="lVG-Xx-aWy" id="gbK-oA-Gk0"/>
+                        <outlet property="publicText" destination="8wH-rg-yg0" id="HkS-uc-8ds"/>
+                        <outlet property="publicTitle" destination="fYp-Q6-lkx" id="uHG-fg-h8K"/>
                         <outlet property="selectorImage" destination="baZ-cq-7I7" id="VJD-Rh-6mc"/>
                         <outlet property="separator" destination="eYd-YU-rqb" id="I93-b2-fqv"/>
                         <outlet property="sharedText" destination="nT4-uJ-ouo" id="wf8-jz-JrX"/>
                         <outlet property="sharedTitle" destination="FMm-XQ-wwO" id="UOc-4V-lgT"/>
-                        <outlet property="switchButton" destination="HTj-H1-xZR" id="dly-BV-oSp"/>
                         <segue destination="QeX-eB-cqH" kind="show" identifier="goToCollaborators" id="gW0-L2-Gjw"/>
                         <segue destination="g8k-3s-sWu" kind="show" identifier="goToChoseQuizFromPrivate" id="6bd-Aq-MNa"/>
                     </connections>
@@ -1850,9 +1874,9 @@ Your score: XX%</string>
         <image name="plus" width="32" height="34"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="d9y-gO-2Ew"/>
+        <segue reference="kMg-V9-TSy"/>
         <segue reference="97h-VB-8UF"/>
         <segue reference="rSm-Sc-zDf"/>
-        <segue reference="6bd-Aq-MNa"/>
+        <segue reference="xAg-Hg-ZJ8"/>
     </inferredMetricsTieBreakers>
 </document>
