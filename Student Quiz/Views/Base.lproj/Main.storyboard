@@ -163,7 +163,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="814" y="-764"/>
+            <point key="canvasLocation" x="-58" y="-650"/>
         </scene>
         <!--Feedback View Controller-->
         <scene sceneID="LCb-yF-X6T">
@@ -510,7 +510,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5lM-Cp-hfl" userLabel="QuizList">
-                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
+                                <rect key="frame" x="0.0" y="190" width="375" height="477"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QuizCell" rowHeight="80" id="fZq-xN-plH" customClass="QuizTableViewCell" customModule="Studiz" customModuleProvider="target">
@@ -554,17 +554,36 @@
                                     <outlet property="delegate" destination="ynM-Mm-tKY" id="QIh-sO-26t"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="bottom" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Brk-P1-IVY">
+                                <rect key="frame" x="0.0" y="100" width="375" height="90"/>
+                                <color key="backgroundColor" red="0.21176470589999999" green="0.30980392159999998" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="BeE-fF-qD1"/>
+                                </constraints>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Community Button" translatesAutoresizingMaskIntoConstraints="NO" id="rp8-PM-YI3">
+                                <rect key="frame" x="0.0" y="108" width="375" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rp8-PM-YI3" secondAttribute="height" multiplier="369:74" id="XGW-vZ-9ux"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="7b5-ib-4uU" firstAttribute="centerX" secondItem="u1E-8V-kdS" secondAttribute="centerX" id="2zi-tW-AhN"/>
+                            <constraint firstItem="2yO-Ew-qd6" firstAttribute="trailing" secondItem="rp8-PM-YI3" secondAttribute="trailing" id="4DD-Ip-U5D"/>
                             <constraint firstItem="7b5-ib-4uU" firstAttribute="trailing" secondItem="2yO-Ew-qd6" secondAttribute="trailing" id="5iQ-m2-Fqn"/>
-                            <constraint firstItem="5lM-Cp-hfl" firstAttribute="leading" secondItem="2yO-Ew-qd6" secondAttribute="leading" id="O4v-Ml-mM5"/>
-                            <constraint firstItem="5lM-Cp-hfl" firstAttribute="top" secondItem="7b5-ib-4uU" secondAttribute="bottom" id="UUR-vk-ax9"/>
+                            <constraint firstItem="rp8-PM-YI3" firstAttribute="leading" secondItem="2yO-Ew-qd6" secondAttribute="leading" id="7lr-7q-pih"/>
+                            <constraint firstAttribute="bottom" secondItem="5lM-Cp-hfl" secondAttribute="bottom" id="G29-7W-fMq"/>
+                            <constraint firstItem="Brk-P1-IVY" firstAttribute="trailing" secondItem="2yO-Ew-qd6" secondAttribute="trailing" id="PMW-Pu-LNx"/>
+                            <constraint firstItem="5lM-Cp-hfl" firstAttribute="leading" secondItem="2yO-Ew-qd6" secondAttribute="leading" id="Vlb-kW-VsV"/>
+                            <constraint firstItem="Brk-P1-IVY" firstAttribute="leading" secondItem="2yO-Ew-qd6" secondAttribute="leading" id="Y61-Ti-QS1"/>
+                            <constraint firstItem="5lM-Cp-hfl" firstAttribute="top" secondItem="Brk-P1-IVY" secondAttribute="bottom" id="acY-3e-6M9"/>
                             <constraint firstItem="7b5-ib-4uU" firstAttribute="leading" secondItem="2yO-Ew-qd6" secondAttribute="leading" id="bhs-3l-CHf"/>
-                            <constraint firstAttribute="bottom" secondItem="5lM-Cp-hfl" secondAttribute="bottom" id="hXu-Zi-yKX"/>
-                            <constraint firstItem="5lM-Cp-hfl" firstAttribute="trailing" secondItem="2yO-Ew-qd6" secondAttribute="trailing" id="sst-Og-G5C"/>
+                            <constraint firstItem="Brk-P1-IVY" firstAttribute="top" secondItem="7b5-ib-4uU" secondAttribute="bottom" id="g8T-dL-QR7"/>
+                            <constraint firstItem="5lM-Cp-hfl" firstAttribute="trailing" secondItem="2yO-Ew-qd6" secondAttribute="trailing" id="kYt-wx-aPJ"/>
                             <constraint firstItem="7b5-ib-4uU" firstAttribute="top" secondItem="u1E-8V-kdS" secondAttribute="top" id="vjV-op-ATd"/>
+                            <constraint firstItem="rp8-PM-YI3" firstAttribute="top" secondItem="7b5-ib-4uU" secondAttribute="bottom" constant="8" symbolic="YES" id="yVI-3u-lqp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2yO-Ew-qd6"/>
                     </view>
@@ -576,7 +595,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lyh-lQ-6VB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="813.60000000000002" y="76.911544227886068"/>
+            <point key="canvasLocation" x="813.60000000000002" y="76.847290640394093"/>
         </scene>
         <!--Review View Controller-->
         <scene sceneID="ph4-DS-ltG">
@@ -1851,6 +1870,7 @@ Your score: XX%</string>
         <image name="Answer Field" width="334" height="64"/>
         <image name="Checkbox" width="34" height="34"/>
         <image name="Checkmark" width="37" height="27"/>
+        <image name="Community Button" width="369" height="74"/>
         <image name="Dropdown" width="320" height="50"/>
         <image name="Edit Button" width="334" height="114"/>
         <image name="Final Button" width="164" height="64"/>
@@ -1877,6 +1897,6 @@ Your score: XX%</string>
         <segue reference="kMg-V9-TSy"/>
         <segue reference="97h-VB-8UF"/>
         <segue reference="rSm-Sc-zDf"/>
-        <segue reference="xAg-Hg-ZJ8"/>
+        <segue reference="2wC-AQ-1SK"/>
     </inferredMetricsTieBreakers>
 </document>
