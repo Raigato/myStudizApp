@@ -10,6 +10,7 @@
 		009284ADA8EF63671377C7B5 /* Pods_Studiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91B9BCA0EEA036A628AEB01C /* Pods_Studiz.framework */; };
 		890DB40F213C089A00C4FFCA /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890DB40E213C089A00C4FFCA /* ReviewViewController.swift */; };
 		890DB411213C0ACA00C4FFCA /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890DB410213C0ACA00C4FFCA /* ReviewTableViewCell.swift */; };
+		890E46232155003E00F98116 /* CommunityQuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890E46222155003E00F98116 /* CommunityQuizTableViewCell.swift */; };
 		89116DA6213960C400727C5E /* ChoseQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89116DA5213960C400727C5E /* ChoseQuizViewController.swift */; };
 		8911841621398570003D87E3 /* RunQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8911841521398570003D87E3 /* RunQuizViewController.swift */; };
 		891235A9213555A4009D8212 /* NewQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891235A8213555A4009D8212 /* NewQuizViewController.swift */; };
@@ -54,6 +55,7 @@
 		1C102D79CA63903A2857016E /* Pods-Studiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Studiz.debug.xcconfig"; path = "Target Support Files/Pods-Studiz/Pods-Studiz.debug.xcconfig"; sourceTree = "<group>"; };
 		890DB40E213C089A00C4FFCA /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		890DB410213C0ACA00C4FFCA /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
+		890E46222155003E00F98116 /* CommunityQuizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityQuizTableViewCell.swift; sourceTree = "<group>"; };
 		89116DA5213960C400727C5E /* ChoseQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoseQuizViewController.swift; sourceTree = "<group>"; };
 		8911841521398570003D87E3 /* RunQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunQuizViewController.swift; sourceTree = "<group>"; };
 		891235A8213555A4009D8212 /* NewQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewQuizViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				894899A0213412D2003B515D /* QuizTableViewCell.swift */,
 				89137C362137DBFB00119136 /* CollaboratorTableViewCell.swift */,
 				890DB410213C0ACA00C4FFCA /* ReviewTableViewCell.swift */,
+				890E46222155003E00F98116 /* CommunityQuizTableViewCell.swift */,
 			);
 			path = "Custom Cell";
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				894899A1213412D2003B515D /* QuizTableViewCell.swift in Sources */,
 				8940D0FE2150112D00CD8CD0 /* FeedbackViewController.swift in Sources */,
 				89116DA6213960C400727C5E /* ChoseQuizViewController.swift in Sources */,
+				890E46232155003E00F98116 /* CommunityQuizTableViewCell.swift in Sources */,
 				89137C372137DBFB00119136 /* CollaboratorTableViewCell.swift in Sources */,
 				891DADA2213469A1003CB827 /* QuizList.swift in Sources */,
 				89148F0A2136D73C00FE3402 /* PrivacyViewController.swift in Sources */,

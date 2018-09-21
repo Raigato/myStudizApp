@@ -10,7 +10,11 @@ import UIKit
 
 class CommunityListViewController: UIViewController {
     
+    private let cellId = "communityQuizCell"
+    
     var displayedTitle: String = "View Title"
+    
+    let quizArray: [[String: String]] = [["name": "Test1", "category": "Maths", "author": "Sophia", "stars": "4.7", "questions": "25"]]
 
     @IBOutlet weak var viewTitle: UILabel!
     
@@ -27,4 +31,18 @@ class CommunityListViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
 
+}
+
+//MARK: TableView extension
+
+extension CommunityListViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return quizArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! CommunityQuizTableViewCell
+        
+        return cell
+    }
 }
