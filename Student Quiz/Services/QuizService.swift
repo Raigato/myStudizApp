@@ -28,6 +28,70 @@ class QuizService {
         }
     }
     
+    static func getCommunityQuiz(completion: @escaping ((_ quizArray: [Quiz?]) -> ())) {
+        let quizRef = Database.database().reference().child("Quiz")
+        
+        quizRef.observeSingleEvent(of: .value) { (snapshot) in
+            var quizArray: [Quiz?] = []
+            
+            for fetchedQuiz in snapshot.children.allObjects as! [DataSnapshot] {
+                let quiz: Quiz?
+                
+                if let dict = fetchedQuiz.value as? [String: Any] {
+                    
+                    if let privacyStr = dict["privacy"] as? String {
+                        if privacyStr == "Public" {
+                            let creator = dict["creator"] as? String
+                            let title = dict["title"] as? String
+                            let description = dict["description"] as? String
+                            let category = QuizService.convertCategory(dict["category"] as? String)
+                            let privacy = QuizService.convertPrivacy(privacyStr)
+                            
+                            quiz = Quiz(createdby: creator!, entitled: title!, description: description!, on: category, questions: [], privacy: privacy, collaborators: [], reviews: [])
+                            
+                            if let fetchedQuestions = dict["questions"] as? [[String: String]] {
+                                for fetchedQuestion in fetchedQuestions {
+                                    quiz?.addQuestion(question: fetchedQuestion["question"]!, answer: fetchedQuestion["answer"]!)
+                                }
+                            }
+                            
+                            if let fetchedCollaborators = dict["collaborators"] as? [String] {
+                                for fetchedCollaborator in fetchedCollaborators {
+                                    quiz?.addCollaborator(uid: fetchedCollaborator)
+                                }
+                            }
+                            
+                            if let fetchedReviews = dict["reviews"] as? [[String: String]] {
+                                for fetchedReview in fetchedReviews {
+                                    if let user = fetchedReview["user"] {
+                                        if let rating = fetchedReview["rating"] {
+                                            if let postingDate = fetchedReview["postingDate"] {
+                                                if let comment = fetchedReview["comment"] {
+                                                    quiz?.addReview(by: user, rated: rating, comment: comment, postedOn: Helpers.getDateFromString(from: postingDate))
+                                                } else {
+                                                    quiz?.addReview(by: user, rated: rating, postedOn: Helpers.getDateFromString(from: postingDate))
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            
+                            if let creationDate = dict["creationDate"] as? String {
+                                quiz?.creationDate = Helpers.getDateFromString(from: creationDate)
+                            }
+                            
+                            quizArray.append(quiz)
+                        }
+                    }
+                }
+            }
+            
+            completion(quizArray)
+            
+        }
+    }
+    
     static func observeQuiz(_ quizId: String, completion: @escaping ((_ quiz: Quiz?) -> ())) {
         let quizRef = Database.database().reference().child("Quiz/\(quizId)")
         

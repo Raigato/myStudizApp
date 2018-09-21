@@ -27,6 +27,11 @@ class CommunityHomeViewController: UIViewController {
             communityList.displayedTitle = "Top"
             
             //TODO: Generate Quiz List
+            QuizService.getCommunityQuiz { (quizArray) in
+                for quiz in quizArray {
+                    print(quiz?.createDictionary())
+                }
+            }
         }
         
         if segue.identifier == "goToTrendingQuiz" {

@@ -8,8 +8,7 @@
 
 import UIKit
 
-//TODO: For test only
-struct cellData {
+struct quizCellData {
     let name: String
     let category: String
     let author: String
@@ -23,8 +22,9 @@ class CommunityListViewController: UIViewController {
     
     var displayedTitle: String = "View Title"
     
-    let quizArray: [cellData] = [cellData.init(name: "Test1", category: "Maths", author: "Amanda", rating: "4.7", questions: "38"),
-                                 cellData.init(name: "Test2", category: "Literature", author: "John", rating: "3.8", questions: "52")]
+    let quizArray: [quizCellData] = [quizCellData.init(name: "Test1", category: "Maths", author: "Amanda", rating: "4.7", questions: "38"),
+                                     quizCellData.init(name: "Test2", category: "Literature", author: "John", rating: "3.8", questions: "52"),
+                                     quizCellData.init(name: "Test3", category: "Science", author: "Sophia", rating: "4.4", questions: "2")]
 
     @IBOutlet weak var viewTitle: UILabel!
     @IBOutlet weak var tableView: UITableView!
