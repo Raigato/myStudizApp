@@ -19,4 +19,5 @@ class CommunityQuizTableViewCell: UITableViewCell {
     func setAuthor(_ author: String) {
         authorLabel.text = "by \(author)"
     }
+    
 }
