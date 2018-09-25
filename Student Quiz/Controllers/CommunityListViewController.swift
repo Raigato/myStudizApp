@@ -9,11 +9,11 @@
 import UIKit
 
 struct quizCellData {
-    let name: String
+    let title: String
     let category: String
     let author: String
-    let rating: String
-    let questions: String
+    let rating: Double
+    let questions: Int
 }
 
 class CommunityListViewController: UIViewController {
@@ -22,9 +22,7 @@ class CommunityListViewController: UIViewController {
     
     var displayedTitle: String = "View Title"
     
-    let quizArray: [quizCellData] = [quizCellData.init(name: "Test1", category: "Maths", author: "Amanda", rating: "4.7", questions: "38"),
-                                     quizCellData.init(name: "Test2", category: "Literature", author: "John", rating: "3.8", questions: "52"),
-                                     quizCellData.init(name: "Test3", category: "Science", author: "Sophia", rating: "4.4", questions: "2")]
+    var quizArray: [quizCellData] = []
 
     @IBOutlet weak var viewTitle: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -39,6 +37,10 @@ class CommunityListViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         viewTitle.text = displayedTitle
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        tableView.reloadData()
     }
     
     @IBAction func backButtonPressed(_ sender: UIButton) {
@@ -59,11 +61,17 @@ extension CommunityListViewController: UITableViewDataSource, UITableViewDelegat
         
         cell.backgroundColor = .clear
         cell.selectionStyle = .none
-        cell.quizNameLabel.text = quizArray[indexPath.row].name
+        cell.quizNameLabel.text = quizArray[indexPath.row].title
         cell.categoryLabel.text = quizArray[indexPath.row].category
-        cell.setAuthor(quizArray[indexPath.row].author)
-        cell.ratingLabel.text = quizArray[indexPath.row].rating
-        cell.questionsCountLabel.text = quizArray[indexPath.row].questions
+        
+        UserService.getUserProfile(uid: quizArray[indexPath.row].author) { (userInfo) in
+            if let username = userInfo["username"] {
+                cell.setAuthor(username)
+            }
+        }
+        
+        cell.ratingLabel.text = String(quizArray[indexPath.row].rating)
+        cell.questionsCountLabel.text = String(quizArray[indexPath.row].questions)
         
         return cell
     }
