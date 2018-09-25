@@ -26,7 +26,7 @@ class CommunityHomeViewController: UIViewController {
             
             communityList.displayedTitle = "Top"
             
-            getCommunityData { (quizList) in
+            getCommunityDataForTop { (quizList) in
                 communityList.quizArray = quizList.sorted { $0.rating > $1.rating }
             }
         }
@@ -36,11 +36,13 @@ class CommunityHomeViewController: UIViewController {
             
             communityList.displayedTitle = "Trending"
             
-            //TODO: Generate Quiz List
+            getCommunityDataForTrending { (quizList) in
+                communityList.quizArray = quizList.sorted { $0.rating > $1.rating }
+            }
         }
     }
     
-    func getCommunityData(completion: @escaping (([quizCellData]) -> ())) {
+    func getCommunityDataForTop(completion: @escaping (([quizCellData]) -> ())) {
         QuizService.getCommunityQuiz { (quizArray) in
             var quizList: [quizCellData] = []
             
@@ -53,9 +55,23 @@ class CommunityHomeViewController: UIViewController {
             completion(quizList)
         }
     }
+    
+    func getCommunityDataForTrending(completion: @escaping (([quizCellData]) -> ())) {
+        QuizService.getCommunityQuiz { (quizArray) in
+            var quizList: [quizCellData] = []
+            
+            for fetchedQuiz in quizArray {
+                if let quiz = fetchedQuiz {
+                    quizList.append(self.createCommunityData(from: quiz, consideringDate: true))
+                }
+            }
+            
+            completion(quizList)
+        }
+    }
 
-    func createCommunityData(from quiz: Quiz) -> quizCellData {
-        func averageRating(reviews: [Review]) -> Double {
+    func createCommunityData(from quiz: Quiz, consideringDate: Bool = false) -> quizCellData {
+        func averageRating(reviews: [Review], consideringDate: Bool = false) -> Double {
             if reviews.count == 0 {
                 return 2.5
             }
@@ -64,14 +80,30 @@ class CommunityHomeViewController: UIViewController {
             
             for review in reviews {
                 if let rating = Double(review.rating) {
-                    sum += rating
+                    var trueRating = rating
+                    if consideringDate {
+                        let inteval = DateInterval(start: review.postingDate, end: Date()).duration / (24.0 * 3600.0)
+                        trueRating -= inteval * 0.1
+                        if trueRating < 0 {
+                            trueRating = 0
+                        }
+                    }
+                    sum += trueRating
                 }
             }
             
-            return sum / Double(reviews.count)
+            return round(10 * (sum / Double(reviews.count))) / 10
         }
         
-        let quizData = quizCellData.init(title: quiz.title, category: quiz.getCategory(), author: quiz.creator, rating: averageRating(reviews: quiz.reviews), questions: quiz.questions.count)
+        var rating = 0.0
+        
+        if consideringDate {
+            rating = averageRating(reviews: quiz.reviews, consideringDate: true)
+        } else {
+            rating = averageRating(reviews: quiz.reviews)
+        }
+        
+        let quizData = quizCellData.init(title: quiz.title, category: quiz.getCategory(), author: quiz.creator, rating: rating, questions: quiz.questions.count)
         
         return quizData
     }
