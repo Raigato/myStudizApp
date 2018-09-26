@@ -10,6 +10,7 @@ import UIKit
 import Spinners
 
 struct quizCellData {
+    let id: String
     let title: String
     let category: String
     let author: String

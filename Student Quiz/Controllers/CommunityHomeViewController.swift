@@ -70,7 +70,7 @@ class CommunityHomeViewController: UIViewController {
         }
     }
 
-    func createCommunityData(from quiz: Quiz, consideringDate: Bool = false) -> quizCellData {
+    func createCommunityData(from quiz: (Quiz, String), consideringDate: Bool = false) -> quizCellData {
         func averageRating(reviews: [Review], consideringDate: Bool = false) -> Double {
             if reviews.count == 0 {
                 return 2.5
@@ -98,19 +98,19 @@ class CommunityHomeViewController: UIViewController {
         var rating = 0.0
         var displayedRating = 0.0
         
-        displayedRating = averageRating(reviews: quiz.reviews)
+        displayedRating = averageRating(reviews: quiz.0.reviews)
         
         if consideringDate {
-            rating = averageRating(reviews: quiz.reviews, consideringDate: true)
+            rating = averageRating(reviews: quiz.0.reviews, consideringDate: true)
         } else {
             rating = displayedRating
         }
         
-        if quiz.reviews.count == 0 {
+        if quiz.0.reviews.count == 0 {
             displayedRating = 0.0
         }
         
-        let quizData = quizCellData.init(title: quiz.title, category: quiz.getCategory(), author: quiz.creator, rating: rating, displayedRating: displayedRating, questions: quiz.questions.count)
+        let quizData = quizCellData.init(id: quiz.1, title: quiz.0.title, category: quiz.0.getCategory(), author: quiz.0.creator, rating: rating, displayedRating: displayedRating, questions: quiz.0.questions.count)
         
         return quizData
     }

@@ -28,14 +28,14 @@ class QuizService {
         }
     }
     
-    static func getCommunityQuiz(completion: @escaping ((_ quizArray: [Quiz?]) -> ())) {
+    static func getCommunityQuiz(completion: @escaping ((_ quizArray: [(Quiz, String)?]) -> ())) {
         let quizRef = Database.database().reference().child("Quiz")
         
         quizRef.observeSingleEvent(of: .value) { (snapshot) in
-            var quizArray: [Quiz?] = []
+            var quizArray: [(Quiz, String)?] = []
             
             for fetchedQuiz in snapshot.children.allObjects as! [DataSnapshot] {
-                let quiz: Quiz?
+                let quiz: Quiz
                 
                 if let dict = fetchedQuiz.value as? [String: Any] {
                     
@@ -51,13 +51,13 @@ class QuizService {
                             
                             if let fetchedQuestions = dict["questions"] as? [[String: String]] {
                                 for fetchedQuestion in fetchedQuestions {
-                                    quiz?.addQuestion(question: fetchedQuestion["question"]!, answer: fetchedQuestion["answer"]!)
+                                    quiz.addQuestion(question: fetchedQuestion["question"]!, answer: fetchedQuestion["answer"]!)
                                 }
                             }
                             
                             if let fetchedCollaborators = dict["collaborators"] as? [String] {
                                 for fetchedCollaborator in fetchedCollaborators {
-                                    quiz?.addCollaborator(uid: fetchedCollaborator)
+                                    quiz.addCollaborator(uid: fetchedCollaborator)
                                 }
                             }
                             
@@ -67,9 +67,9 @@ class QuizService {
                                         if let rating = fetchedReview["rating"] {
                                             if let postingDate = fetchedReview["postingDate"] {
                                                 if let comment = fetchedReview["comment"] {
-                                                    quiz?.addReview(by: user, rated: rating, comment: comment, postedOn: Helpers.getDateFromString(from: postingDate))
+                                                    quiz.addReview(by: user, rated: rating, comment: comment, postedOn: Helpers.getDateFromString(from: postingDate))
                                                 } else {
-                                                    quiz?.addReview(by: user, rated: rating, postedOn: Helpers.getDateFromString(from: postingDate))
+                                                    quiz.addReview(by: user, rated: rating, postedOn: Helpers.getDateFromString(from: postingDate))
                                                 }
                                             }
                                         }
@@ -78,10 +78,10 @@ class QuizService {
                             }
                             
                             if let creationDate = dict["creationDate"] as? String {
-                                quiz?.creationDate = Helpers.getDateFromString(from: creationDate)
+                                quiz.creationDate = Helpers.getDateFromString(from: creationDate)
                             }
                             
-                            quizArray.append(quiz)
+                            quizArray.append((quiz, fetchedQuiz.key))
                         }
                     }
                 }
