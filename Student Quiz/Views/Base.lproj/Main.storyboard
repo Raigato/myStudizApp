@@ -666,6 +666,22 @@
                                         <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <size key="shadowOffset" width="1" height="2"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hR-Tf-mS2">
+                                        <rect key="frame" x="324" y="20" width="21" height="25.5"/>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <size key="shadowOffset" width="1" height="2"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7E-4i-dIS">
+                                        <rect key="frame" x="314.5" y="20" width="9.5" height="25.5"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="17"/>
+                                        <color key="textColor" red="0.98823529409999999" green="0.31764705879999999" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <size key="shadowOffset" width="1" height="2"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.21176470589999999" green="0.30980392159999998" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -677,22 +693,27 @@
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fhh-x7-FRo" secondAttribute="trailing" constant="20" symbolic="YES" id="84r-l8-BGO"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hq4-bc-yfL" secondAttribute="trailing" constant="20" symbolic="YES" id="8t8-zR-Lfa"/>
                                     <constraint firstItem="Lvf-cL-a9o" firstAttribute="leading" secondItem="uqH-a2-Y0f" secondAttribute="leading" constant="30" id="9qk-6P-PWg"/>
+                                    <constraint firstItem="3hR-Tf-mS2" firstAttribute="centerY" secondItem="Tip-YX-J4G" secondAttribute="centerY" id="9v2-8O-8xE"/>
                                     <constraint firstItem="Tip-YX-J4G" firstAttribute="top" secondItem="uqH-a2-Y0f" secondAttribute="top" constant="20" id="A2k-ed-8bS"/>
                                     <constraint firstAttribute="trailing" secondItem="lPZ-tM-0lV" secondAttribute="trailing" constant="10" id="Gx8-VW-ZZx"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xNU-7c-0zu" secondAttribute="trailing" constant="20" symbolic="YES" id="HlN-c6-ubE"/>
                                     <constraint firstItem="xNU-7c-0zu" firstAttribute="leading" secondItem="uqH-a2-Y0f" secondAttribute="leading" constant="30" id="Jdf-Pz-Jtr"/>
+                                    <constraint firstAttribute="trailing" secondItem="3hR-Tf-mS2" secondAttribute="trailing" constant="30" id="OBu-je-2sY"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0sa-fc-k91" secondAttribute="trailing" constant="20" symbolic="YES" id="PuT-hx-5OZ"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gjf-or-cja" secondAttribute="trailing" constant="20" symbolic="YES" id="QNy-Yf-i7h"/>
                                     <constraint firstItem="0sa-fc-k91" firstAttribute="top" secondItem="gjf-or-cja" secondAttribute="bottom" constant="10" id="Sc9-d4-6zQ"/>
                                     <constraint firstItem="fhh-x7-FRo" firstAttribute="top" secondItem="Lvf-cL-a9o" secondAttribute="bottom" constant="10" id="USW-Gu-5df"/>
                                     <constraint firstItem="1ho-GJ-oeG" firstAttribute="leading" secondItem="uqH-a2-Y0f" secondAttribute="leading" constant="30" id="VA5-ae-2bR"/>
                                     <constraint firstItem="gjf-or-cja" firstAttribute="leading" secondItem="uqH-a2-Y0f" secondAttribute="leading" constant="30" id="Wa4-Kj-RI7"/>
+                                    <constraint firstItem="W7E-4i-dIS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Tip-YX-J4G" secondAttribute="trailing" constant="8" symbolic="YES" id="YzL-JI-mtJ"/>
                                     <constraint firstAttribute="trailing" secondItem="pJd-uA-soq" secondAttribute="trailing" constant="30" id="ZlB-xN-iHe"/>
                                     <constraint firstItem="pJd-uA-soq" firstAttribute="top" secondItem="lPZ-tM-0lV" secondAttribute="bottom" constant="15" id="bUn-nN-GyL"/>
                                     <constraint firstItem="fhh-x7-FRo" firstAttribute="leading" secondItem="uqH-a2-Y0f" secondAttribute="leading" constant="30" id="dic-lF-aiU"/>
+                                    <constraint firstItem="W7E-4i-dIS" firstAttribute="centerY" secondItem="3hR-Tf-mS2" secondAttribute="centerY" id="eKb-4i-fT3"/>
                                     <constraint firstItem="Tip-YX-J4G" firstAttribute="leading" secondItem="uqH-a2-Y0f" secondAttribute="leading" constant="30" id="g2X-Jj-YMy"/>
                                     <constraint firstItem="Lvf-cL-a9o" firstAttribute="top" secondItem="xNU-7c-0zu" secondAttribute="bottom" constant="10" id="h6v-MD-XJf"/>
                                     <constraint firstItem="1ho-GJ-oeG" firstAttribute="top" secondItem="Tip-YX-J4G" secondAttribute="bottom" id="hR1-is-ZwX"/>
+                                    <constraint firstItem="3hR-Tf-mS2" firstAttribute="leading" secondItem="W7E-4i-dIS" secondAttribute="trailing" id="hbe-RM-fgr"/>
                                     <constraint firstItem="hq4-bc-yfL" firstAttribute="leading" secondItem="uqH-a2-Y0f" secondAttribute="leading" constant="30" id="hog-Xu-QrG"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="I3s-u6-cjG" secondAttribute="trailing" constant="20" symbolic="YES" id="qCn-7e-e2f"/>
                                     <constraint firstItem="I3s-u6-cjG" firstAttribute="leading" secondItem="uqH-a2-Y0f" secondAttribute="leading" constant="30" id="rcc-Hk-27h"/>
@@ -724,6 +745,7 @@
                         <outlet property="categoryLabel" destination="Tip-YX-J4G" id="8Bd-GX-wbs"/>
                         <outlet property="descriptionLabel" destination="xNU-7c-0zu" id="TTC-1Q-LHP"/>
                         <outlet property="favoriteButton" destination="rtS-aX-i2v" id="arP-za-vzl"/>
+                        <outlet property="questionCountLabel" destination="3hR-Tf-mS2" id="eEC-5Y-2BP"/>
                         <outlet property="quizTitleLabel" destination="1ho-GJ-oeG" id="5B4-30-45r"/>
                         <outlet property="sampleQuestionLabel1" destination="zW9-VG-zCi" id="ziC-Zj-lLR"/>
                         <outlet property="sampleQuestionLabel2" destination="gjf-or-cja" id="Mq8-Zj-7E1"/>

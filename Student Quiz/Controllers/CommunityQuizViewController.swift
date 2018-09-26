@@ -13,6 +13,7 @@ class CommunityQuizViewController: UIViewController {
     var userRole: Role = .None
 
     @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var questionCountLabel: UILabel!
     @IBOutlet weak var quizTitleLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -59,6 +60,7 @@ class CommunityQuizViewController: UIViewController {
         sampleQuestionLabel3.isHidden = true
         
         categoryLabel.text = currentQuiz.getCategory()
+        questionCountLabel.text = String(currentQuiz.questions.count)
         quizTitleLabel.text = currentQuiz.title
         UserService.getUserProfile(uid: currentQuiz.creator) { (userInfo) in
             if let username = userInfo["username"] {
