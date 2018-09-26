@@ -497,6 +497,7 @@
                         <viewLayoutGuide key="safeArea" id="NZW-eB-8Rh"/>
                     </view>
                     <connections>
+                        <outlet property="searchBarTextField" destination="z8w-Nc-va6" id="riG-25-5JI"/>
                         <outlet property="tableView" destination="H2W-r5-f2H" id="mhY-uM-MPE"/>
                         <outlet property="viewTitle" destination="qES-EK-7C1" id="Z0f-bT-ANJ"/>
                     </connections>
@@ -861,10 +862,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell" translatesAutoresizingMaskIntoConstraints="NO" id="6zi-VP-9PN" userLabel="backgroundImage">
-                                                    <rect key="frame" x="6" y="10" width="308" height="69.5"/>
+                                                    <rect key="frame" x="6" y="10" width="363" height="69.5"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz XX" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WjQ-VW-vNh">
-                                                    <rect key="frame" x="25" y="10" width="280" height="69.5"/>
+                                                    <rect key="frame" x="25" y="10" width="335" height="69.5"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="30"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -993,13 +994,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awC-JI-2LH">
-                                                    <rect key="frame" x="15" y="5" width="305" height="25"/>
+                                                    <rect key="frame" x="15" y="5" width="360" height="25"/>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Answer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DjS-Vc-e9P">
-                                                    <rect key="frame" x="15" y="31" width="290" height="23.5"/>
+                                                    <rect key="frame" x="15" y="31" width="345" height="23.5"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -2231,7 +2232,7 @@ Your score: XX%</string>
         <image name="Settings" width="38" height="38"/>
         <image name="Share Big Button" width="334" height="114"/>
         <image name="SubmitButton" width="189" height="64"/>
-        <image name="TextInput" width="328" height="58"/>
+        <image name="TextInput" width="656" height="116"/>
         <image name="Trash" width="47" height="52"/>
         <image name="Validate Button" width="164" height="64"/>
         <image name="back" width="23" height="35"/>

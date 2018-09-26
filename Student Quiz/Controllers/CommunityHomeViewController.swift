@@ -96,14 +96,21 @@ class CommunityHomeViewController: UIViewController {
         }
         
         var rating = 0.0
+        var displayedRating = 0.0
+        
+        displayedRating = averageRating(reviews: quiz.reviews)
         
         if consideringDate {
             rating = averageRating(reviews: quiz.reviews, consideringDate: true)
         } else {
-            rating = averageRating(reviews: quiz.reviews)
+            rating = displayedRating
         }
         
-        let quizData = quizCellData.init(title: quiz.title, category: quiz.getCategory(), author: quiz.creator, rating: rating, questions: quiz.questions.count)
+        if quiz.reviews.count == 0 {
+            displayedRating = 0.0
+        }
+        
+        let quizData = quizCellData.init(title: quiz.title, category: quiz.getCategory(), author: quiz.creator, rating: rating, displayedRating: displayedRating, questions: quiz.questions.count)
         
         return quizData
     }
