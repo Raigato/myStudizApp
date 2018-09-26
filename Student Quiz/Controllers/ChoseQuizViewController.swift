@@ -28,6 +28,8 @@ class ChoseQuizViewController: UIViewController {
     }
 
     @IBAction func deleteButtonPressed(_ sender: UIButton) {
+        //TODO: Handle Favorite
+        
         if userRole == .Owner {
             let alert = UIAlertController(title: "Quiz delete 🗑", message: "Are you sure you want to delete this awesome Quiz?", preferredStyle: .alert)
             let sayYes = UIAlertAction(title: "Yes", style: .default) { (action) in
@@ -85,6 +87,8 @@ class ChoseQuizViewController: UIViewController {
         QuizListService.getRoleForUser(uid: UserService.currentUser(), quizId: currentQuizId) { (role) in
             if let foundRole = role {
                 self.userRole = foundRole
+                
+                //TODO: Handle Favorite
                 
                 // -- Select buttons according to the role
                 if foundRole != .Owner {

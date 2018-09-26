@@ -723,6 +723,7 @@
                         <outlet property="authorLabel" destination="I3s-u6-cjG" id="ttZ-ol-qtI"/>
                         <outlet property="categoryLabel" destination="Tip-YX-J4G" id="8Bd-GX-wbs"/>
                         <outlet property="descriptionLabel" destination="xNU-7c-0zu" id="TTC-1Q-LHP"/>
+                        <outlet property="favoriteButton" destination="rtS-aX-i2v" id="arP-za-vzl"/>
                         <outlet property="quizTitleLabel" destination="1ho-GJ-oeG" id="5B4-30-45r"/>
                         <outlet property="sampleQuestionLabel1" destination="zW9-VG-zCi" id="ziC-Zj-lLR"/>
                         <outlet property="sampleQuestionLabel2" destination="gjf-or-cja" id="Mq8-Zj-7E1"/>

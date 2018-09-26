@@ -9,6 +9,8 @@
 import UIKit
 
 class CommunityQuizViewController: UIViewController {
+    
+    var userRole: Role = .None
 
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var quizTitleLabel: UILabel!
@@ -17,6 +19,8 @@ class CommunityQuizViewController: UIViewController {
     @IBOutlet weak var sampleQuestionLabel1: UILabel!
     @IBOutlet weak var sampleQuestionLabel2: UILabel!
     @IBOutlet weak var sampleQuestionLabel3: UILabel!
+    
+    @IBOutlet weak var favoriteButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +36,13 @@ class CommunityQuizViewController: UIViewController {
     }
     
     @IBAction func favoriteButtonPressed(_ sender: UIButton) {
+        if userRole == .Favorite {
+            removeFromFavorite()
+        }
         
+        if userRole == .None {
+            addToFavorite()
+        }
     }
     
     @IBAction func playButtonPressed(_ sender: UIButton) {
@@ -41,6 +51,8 @@ class CommunityQuizViewController: UIViewController {
     //MARK: UI functions
     
     func updateUI() {
+        updateFavoriteButton()
+        
         sampleQuestionLabel1.isHidden = true
         sampleQuestionLabel2.isHidden = true
         sampleQuestionLabel3.isHidden = true
@@ -88,5 +100,33 @@ class CommunityQuizViewController: UIViewController {
         }
         
         return sampleQuestions
+    }
+    
+    func updateFavoriteButton() {
+        QuizListService.getRoleForUser(uid: UserService.currentUser(), quizId: currentQuizId) { (role) in
+            if let fetchedRole = role {
+                self.userRole = fetchedRole
+            }
+            
+            if role == .Owner || role == .Collaborator {
+                self.favoriteButton.isHidden = true
+            } else if role == .Favorite {
+                self.favoriteButton.isHidden = false
+                self.favoriteButton.setBackgroundImage(UIImage(named: "Active Star"), for: .normal)
+            } else {
+                self.favoriteButton.isHidden = false
+                self.favoriteButton.setBackgroundImage(UIImage(named: "Inactive Star"), for: .normal)
+            }
+        }
+    }
+    
+    //MARK: Favorite handling functions
+    
+    func addToFavorite() {
+        
+    }
+    
+    func removeFromFavorite() {
+        
     }
 }
