@@ -27,9 +27,7 @@ class ChoseQuizViewController: UIViewController {
         setTitle()
     }
 
-    @IBAction func deleteButtonPressed(_ sender: UIButton) {
-        //TODO: Handle Favorite
-        
+    @IBAction func deleteButtonPressed(_ sender: UIButton) {     
         if userRole == .Owner {
             let alert = UIAlertController(title: "Quiz delete 🗑", message: "Are you sure you want to delete this awesome Quiz?", preferredStyle: .alert)
             let sayYes = UIAlertAction(title: "Yes", style: .default) { (action) in
@@ -47,6 +45,19 @@ class ChoseQuizViewController: UIViewController {
             let sayYes = UIAlertAction(title: "Yes", style: .default) { (action) in
                 currentQuiz.deleteCollaborator(uid: UserService.currentUser())
                 currentQuiz.save(in: currentQuizId, completion: { (quizId) in })
+                QuizListService.removeQuizForUser(for: UserService.currentUser(), quiz: currentQuizId)
+                self.performSegue(withIdentifier: "fromChoseQuizToHome", sender: self)
+            }
+            let sayNo = UIAlertAction(title: "No", style: .default, handler: nil)
+            
+            alert.addAction(sayNo)
+            alert.addAction(sayYes)
+            present(alert, animated: true, completion: nil)
+        }
+        
+        if userRole == .Favorite {
+            let alert = UIAlertController(title: "Delete from favorites ⭐", message: "Are you sure you want to remove this awesome Quiz from your favorites?", preferredStyle: .alert)
+            let sayYes = UIAlertAction(title: "Yes", style: .default) { (action) in
                 QuizListService.removeQuizForUser(for: UserService.currentUser(), quiz: currentQuizId)
                 self.performSegue(withIdentifier: "fromChoseQuizToHome", sender: self)
             }
@@ -88,15 +99,17 @@ class ChoseQuizViewController: UIViewController {
             if let foundRole = role {
                 self.userRole = foundRole
                 
-                //TODO: Handle Favorite
-                
                 // -- Select buttons according to the role
                 if foundRole != .Owner {
                     self.shareButton.isHidden = true
                 }
+                
                 if foundRole != .Owner && foundRole != .Collaborator {
-                    self.deleteButton.isHidden = true
                     self.editButton.isHidden = true
+                }
+                
+                if foundRole != .Owner && foundRole != .Collaborator && foundRole != .Favorite {
+                    self.deleteButton.isHidden = true
                 }
             }
         }
