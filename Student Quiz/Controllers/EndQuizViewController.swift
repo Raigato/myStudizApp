@@ -12,8 +12,8 @@ class EndQuizViewController: UIViewController {
     
     var score: Int = 0
     var summary: [(Question, Bool)] = []
-    var rating: Int = 0
-    var comment: String = ""
+    lazy var rating: Int = 0
+    lazy var comment: String = ""
     
     @IBOutlet weak var rateThisQuizLabel: UILabel!
     @IBOutlet var starButtons: [UIButton]!
@@ -31,11 +31,14 @@ class EndQuizViewController: UIViewController {
         
         // Reviews are only available on public Quizzes
         if currentQuiz.privacy != .Public {
-            rateThisQuizLabel.isHidden = true
-            for button in starButtons {
-                button.isHidden = true
+            hideReviewInput()
+        }
+        
+        // Check role for review display
+        QuizListService.getRoleForUser(uid: UserService.currentUser(), quizId: currentQuizId) { (role) in
+            if role == .Owner || role == .Collaborator {
+                self.hideReviewInput()
             }
-            commentTextField.isHidden = true
         }
     }
     
@@ -59,7 +62,6 @@ class EndQuizViewController: UIViewController {
     // MARK: Finish Button Handling
     @IBAction func finishButtonPressed(_ sender: UIButton) {
         if rating > 0 {
-            // TODO: Verify if is Owner or Collaborator
             if let enteredComment = commentTextField.text {
                 comment = enteredComment
             }
@@ -86,6 +88,16 @@ class EndQuizViewController: UIViewController {
                 button.setBackgroundImage(UIImage(named: "Inactive Star"), for: .normal)
             }
         }
+    }
+    
+    // MARK: Review handling functions
+    
+    func hideReviewInput() {
+        rateThisQuizLabel.isHidden = true
+        for button in starButtons {
+            button.isHidden = true
+        }
+        commentTextField.isHidden = true
     }
 }
 

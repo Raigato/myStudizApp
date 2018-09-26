@@ -1351,7 +1351,7 @@ Your score: XX%</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7io-pX-f7Y" userLabel="Finish">
-                                        <rect key="frame" x="201" y="503" width="164" height="64"/>
+                                        <rect key="frame" x="201" y="493" width="164" height="64"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="7io-pX-f7Y" secondAttribute="height" multiplier="41:16" id="80l-ph-X77"/>
                                         </constraints>
@@ -1469,7 +1469,7 @@ Your score: XX%</string>
                             <constraint firstItem="LpL-4t-buW" firstAttribute="top" secondItem="slB-5d-BfY" secondAttribute="bottom" id="a8s-yU-ddf"/>
                             <constraint firstItem="LpL-4t-buW" firstAttribute="leading" secondItem="o6B-Jg-sb2" secondAttribute="leading" id="egB-jb-nUx"/>
                             <constraint firstItem="slB-5d-BfY" firstAttribute="top" secondItem="iUi-4a-McZ" secondAttribute="top" id="iN9-84-MUj"/>
-                            <constraint firstItem="7io-pX-f7Y" firstAttribute="bottom" secondItem="o6B-Jg-sb2" secondAttribute="bottom" id="uFY-kS-7vY"/>
+                            <constraint firstItem="7io-pX-f7Y" firstAttribute="bottom" secondItem="o6B-Jg-sb2" secondAttribute="bottom" constant="-10" id="uFY-kS-7vY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="o6B-Jg-sb2"/>
                     </view>
@@ -2493,7 +2493,7 @@ Your score: XX%</string>
         <segue reference="CY2-3c-bnw"/>
         <segue reference="Lac-LY-sZL"/>
         <segue reference="rSm-Sc-zDf"/>
-        <segue reference="jEd-8W-geX"/>
+        <segue reference="xAb-lI-VY0"/>
         <segue reference="gAu-Be-CI4"/>
     </inferredMetricsTieBreakers>
 </document>
