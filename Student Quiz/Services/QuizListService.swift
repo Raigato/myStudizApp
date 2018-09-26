@@ -44,6 +44,17 @@ class QuizListService {
         }
     }
     
+    static func addQuizToFavorites(for uid: String, quiz quizId: String) {
+        QuizListService.getRoleForUser(uid: uid, quizId: quizId) { (role) in
+            if role == .None {
+                QuizListService.observeQuizList(uid, completion: { (quizList) in
+                    quizList?.addQuiz(quizId: quizId, role: .Favorite)
+                    quizList?.save(for: uid)
+                })
+            }
+        }
+    }
+    
     static func removeQuizForUser(for uid: String, quiz quizId: String) {
         QuizListService.observeQuizList(uid) { (quizList) in
             if let list = quizList?.quizList {

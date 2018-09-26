@@ -38,20 +38,21 @@ class CommunityQuizViewController: UIViewController {
     @IBAction func favoriteButtonPressed(_ sender: UIButton) {
         if userRole == .Favorite {
             removeFromFavorite()
-        }
-        
-        if userRole == .None {
+        } else if userRole == .None {
             addToFavorite()
         }
+        
+        updateFavoriteButton()
     }
     
     @IBAction func playButtonPressed(_ sender: UIButton) {
+        
     }
     
     //MARK: UI functions
     
     func updateUI() {
-        updateFavoriteButton()
+        setUserRole()
         
         sampleQuestionLabel1.isHidden = true
         sampleQuestionLabel2.isHidden = true
@@ -103,19 +104,22 @@ class CommunityQuizViewController: UIViewController {
     }
     
     func updateFavoriteButton() {
+        if userRole == .Owner || userRole == .Collaborator {
+            self.favoriteButton.isHidden = true
+        } else if userRole == .Favorite {
+            self.favoriteButton.setBackgroundImage(UIImage(named: "Active Star"), for: .normal)
+            self.favoriteButton.isHidden = false
+        } else {
+            self.favoriteButton.setBackgroundImage(UIImage(named: "Inactive Star"), for: .normal)
+            self.favoriteButton.isHidden = false
+        }
+    }
+    
+    func setUserRole() {
         QuizListService.getRoleForUser(uid: UserService.currentUser(), quizId: currentQuizId) { (role) in
             if let fetchedRole = role {
                 self.userRole = fetchedRole
-            }
-            
-            if role == .Owner || role == .Collaborator {
-                self.favoriteButton.isHidden = true
-            } else if role == .Favorite {
-                self.favoriteButton.isHidden = false
-                self.favoriteButton.setBackgroundImage(UIImage(named: "Active Star"), for: .normal)
-            } else {
-                self.favoriteButton.isHidden = false
-                self.favoriteButton.setBackgroundImage(UIImage(named: "Inactive Star"), for: .normal)
+                self.updateFavoriteButton()
             }
         }
     }
@@ -123,10 +127,12 @@ class CommunityQuizViewController: UIViewController {
     //MARK: Favorite handling functions
     
     func addToFavorite() {
-        
+        QuizListService.addQuizToFavorites(for: UserService.currentUser(), quiz: currentQuizId)
+        userRole = .Favorite
     }
     
     func removeFromFavorite() {
-        
+        QuizListService.removeQuizForUser(for: UserService.currentUser(), quiz: currentQuizId)
+        userRole = .None
     }
 }
