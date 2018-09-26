@@ -133,4 +133,14 @@ extension CommunityListViewController : UITextFieldDelegate {
         }
         return true
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        currentQuizId = quizArray[indexPath.row].id
+        QuizService.observeQuiz(currentQuizId) { (quiz) in
+            if let foundQuiz = quiz {
+                currentQuiz = foundQuiz
+                self.performSegue(withIdentifier: "goToCommunityQuiz", sender: self)
+            }
+        }
+    }
 }
