@@ -48,7 +48,7 @@ class CommunityHomeViewController: UIViewController {
             
             for fetchedQuiz in quizArray {
                 if let quiz = fetchedQuiz {
-                    quizList.append(self.createCommunityData(from: quiz))
+                    quizList.append(Helpers.createCommunityData(from: quiz))
                 }
             }
             
@@ -62,57 +62,12 @@ class CommunityHomeViewController: UIViewController {
             
             for fetchedQuiz in quizArray {
                 if let quiz = fetchedQuiz {
-                    quizList.append(self.createCommunityData(from: quiz, consideringDate: true))
+                    quizList.append(Helpers.createCommunityData(from: quiz, consideringDate: true))
                 }
             }
             
             completion(quizList)
         }
-    }
-
-    func createCommunityData(from quiz: (Quiz, String), consideringDate: Bool = false) -> quizCellData {
-        func averageRating(reviews: [Review], consideringDate: Bool = false) -> Double {
-            if reviews.count == 0 {
-                return 2.5
-            }
-            
-            var sum: Double = 0.0
-            
-            for review in reviews {
-                if let rating = Double(review.rating) {
-                    var trueRating = rating
-                    if consideringDate {
-                        let inteval = DateInterval(start: review.postingDate, end: Date()).duration / (24.0 * 3600.0)
-                        trueRating -= inteval * 0.1
-                        if trueRating < 0 {
-                            trueRating = 0
-                        }
-                    }
-                    sum += trueRating
-                }
-            }
-            
-            return round(10 * (sum / Double(reviews.count))) / 10
-        }
-        
-        var rating = 0.0
-        var displayedRating = 0.0
-        
-        displayedRating = averageRating(reviews: quiz.0.reviews)
-        
-        if consideringDate {
-            rating = averageRating(reviews: quiz.0.reviews, consideringDate: true)
-        } else {
-            rating = displayedRating
-        }
-        
-        if quiz.0.reviews.count == 0 {
-            displayedRating = 0.0
-        }
-        
-        let quizData = quizCellData.init(id: quiz.1, title: quiz.0.title, category: quiz.0.getCategory(), author: quiz.0.creator, rating: rating, displayedRating: displayedRating, questions: quiz.0.questions.count)
-        
-        return quizData
     }
     
 }

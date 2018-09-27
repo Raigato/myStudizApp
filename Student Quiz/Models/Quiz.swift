@@ -10,7 +10,7 @@ import Firebase
 
 // MARK: Required enums
 
-enum Category {
+enum Category: CaseIterable {
     case Languages
     case Maths
     case History

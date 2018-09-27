@@ -49,6 +49,8 @@
 		899FDBF7212C376A003637CD /* RobotoSlab-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 899FDBF2212C371D003637CD /* RobotoSlab-Bold.ttf */; };
 		899FDBF8212C376D003637CD /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 899FDBF5212C373E003637CD /* OpenSans-Regular.ttf */; };
 		89A15CCE2132CE7D0061494E /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A15CCD2132CE7D0061494E /* HomeScreenViewController.swift */; };
+		89F3E2C9215D0BCB001BD3AC /* CommunityCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F3E2C8215D0BCB001BD3AC /* CommunityCategoriesViewController.swift */; };
+		89F3E2CB215D0D4A001BD3AC /* CommunityCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F3E2CA215D0D4A001BD3AC /* CommunityCategoryTableViewCell.swift */; };
 		89F6892E215BA89500946CE6 /* CommunityQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F6892D215BA89500946CE6 /* CommunityQuizViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +101,8 @@
 		899FDBF4212C3739003637CD /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		899FDBF5212C373E003637CD /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		89A15CCD2132CE7D0061494E /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
+		89F3E2C8215D0BCB001BD3AC /* CommunityCategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityCategoriesViewController.swift; sourceTree = "<group>"; };
+		89F3E2CA215D0D4A001BD3AC /* CommunityCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityCategoryTableViewCell.swift; sourceTree = "<group>"; };
 		89F6892D215BA89500946CE6 /* CommunityQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityQuizViewController.swift; sourceTree = "<group>"; };
 		91B9BCA0EEA036A628AEB01C /* Pods_Studiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Studiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B625027D59F9000417A1BE56 /* Pods-Studiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Studiz.release.xcconfig"; path = "Target Support Files/Pods-Studiz/Pods-Studiz.release.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +149,7 @@
 				89137C362137DBFB00119136 /* CollaboratorTableViewCell.swift */,
 				890DB410213C0ACA00C4FFCA /* ReviewTableViewCell.swift */,
 				890E46222155003E00F98116 /* CommunityQuizTableViewCell.swift */,
+				89F3E2CA215D0D4A001BD3AC /* CommunityCategoryTableViewCell.swift */,
 			);
 			path = "Custom Cell";
 			sourceTree = "<group>";
@@ -212,6 +217,7 @@
 				89680D1F2153ED9E00515468 /* CommunityHomeViewController.swift */,
 				89680D212153F35400515468 /* CommunityListViewController.swift */,
 				89F6892D215BA89500946CE6 /* CommunityQuizViewController.swift */,
+				89F3E2C8215D0BCB001BD3AC /* CommunityCategoriesViewController.swift */,
 				89430BDF213688D700B09CA2 /* Helpers */,
 			);
 			path = Controllers;
@@ -408,6 +414,7 @@
 			files = (
 				891DADA62134814B003CB827 /* QuizService.swift in Sources */,
 				89430BE1213693D600B09CA2 /* Helpers.swift in Sources */,
+				89F3E2C9215D0BCB001BD3AC /* CommunityCategoriesViewController.swift in Sources */,
 				897B6B19212C310B00807269 /* CreateAccountViewController.swift in Sources */,
 				89137C392137DF5D00119136 /* SearchPaddedTextField.swift in Sources */,
 				89430BDC2136881700B09CA2 /* LeftPaddedTextField.swift in Sources */,
@@ -426,6 +433,7 @@
 				89801B20213AAFD300781471 /* EndQuizViewController.swift in Sources */,
 				89430BE52136A1BE00B09CA2 /* EndEditingScrollView.swift in Sources */,
 				894899A621342A8C003B515D /* Question.swift in Sources */,
+				89F3E2CB215D0D4A001BD3AC /* CommunityCategoryTableViewCell.swift in Sources */,
 				89137C3B2137EAA000119136 /* UserService.swift in Sources */,
 				890DB40F213C089A00C4FFCA /* ReviewViewController.swift in Sources */,
 				894899A1213412D2003B515D /* QuizTableViewCell.swift in Sources */,
