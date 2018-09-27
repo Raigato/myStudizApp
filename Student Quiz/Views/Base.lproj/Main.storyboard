@@ -1259,19 +1259,17 @@
                                     <segue destination="b3q-6p-L8T" kind="show" id="pLQ-Pu-4Qn"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Community Button" translatesAutoresizingMaskIntoConstraints="NO" id="rp8-PM-YI3">
-                                <rect key="frame" x="0.0" y="105" width="375" height="75"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="rp8-PM-YI3" secondAttribute="height" multiplier="369:74" id="XGW-vZ-9ux"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Community Button" translatesAutoresizingMaskIntoConstraints="NO" id="rp8-PM-YI3">
+                                <rect key="frame" x="2" y="115" width="371" height="65"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="7b5-ib-4uU" firstAttribute="centerX" secondItem="u1E-8V-kdS" secondAttribute="centerX" id="2zi-tW-AhN"/>
-                            <constraint firstItem="2yO-Ew-qd6" firstAttribute="trailing" secondItem="rp8-PM-YI3" secondAttribute="trailing" id="4DD-Ip-U5D"/>
+                            <constraint firstItem="2yO-Ew-qd6" firstAttribute="trailing" secondItem="rp8-PM-YI3" secondAttribute="trailing" constant="2" id="4DD-Ip-U5D"/>
+                            <constraint firstItem="rp8-PM-YI3" firstAttribute="top" secondItem="7b5-ib-4uU" secondAttribute="bottom" constant="15" id="4M5-vq-TfH"/>
                             <constraint firstItem="7b5-ib-4uU" firstAttribute="trailing" secondItem="2yO-Ew-qd6" secondAttribute="trailing" id="5iQ-m2-Fqn"/>
-                            <constraint firstItem="rp8-PM-YI3" firstAttribute="leading" secondItem="2yO-Ew-qd6" secondAttribute="leading" id="7lr-7q-pih"/>
+                            <constraint firstItem="rp8-PM-YI3" firstAttribute="leading" secondItem="2yO-Ew-qd6" secondAttribute="leading" constant="2" id="7lr-7q-pih"/>
                             <constraint firstAttribute="bottom" secondItem="5lM-Cp-hfl" secondAttribute="bottom" id="G29-7W-fMq"/>
                             <constraint firstItem="Brk-P1-IVY" firstAttribute="trailing" secondItem="2yO-Ew-qd6" secondAttribute="trailing" id="PMW-Pu-LNx"/>
                             <constraint firstItem="5lM-Cp-hfl" firstAttribute="leading" secondItem="2yO-Ew-qd6" secondAttribute="leading" id="Vlb-kW-VsV"/>
