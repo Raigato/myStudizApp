@@ -49,6 +49,17 @@
 		899FDBF7212C376A003637CD /* RobotoSlab-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 899FDBF2212C371D003637CD /* RobotoSlab-Bold.ttf */; };
 		899FDBF8212C376D003637CD /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 899FDBF5212C373E003637CD /* OpenSans-Regular.ttf */; };
 		89A15CCE2132CE7D0061494E /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A15CCD2132CE7D0061494E /* HomeScreenViewController.swift */; };
+		89ABA6C2215D34BA00027AF8 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89ABA6C1215D34BA00027AF8 /* CoreTelephony.framework */; };
+		89ABA6C4215D34C600027AF8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89ABA6C3215D34C600027AF8 /* SystemConfiguration.framework */; };
+		89ABA6C6215D34CE00027AF8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89ABA6C5215D34CE00027AF8 /* CoreGraphics.framework */; };
+		89ABA6C8215D34DC00027AF8 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89ABA6C7215D34DC00027AF8 /* StoreKit.framework */; };
+		89ABA6CA215D34E300027AF8 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89ABA6C9215D34E300027AF8 /* AdSupport.framework */; };
+		89ABA6CC215D34F000027AF8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89ABA6CB215D34F000027AF8 /* QuartzCore.framework */; };
+		89ABA6CE215D350800027AF8 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89ABA6CD215D350800027AF8 /* CoreMedia.framework */; };
+		89ABA6D0215D351000027AF8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89ABA6CF215D351000027AF8 /* AVFoundation.framework */; };
+		89ABA6D2215D351900027AF8 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89ABA6D1215D351900027AF8 /* WebKit.framework */; };
+		89ABA6D4215D352400027AF8 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 89ABA6D3215D352400027AF8 /* libz.tbd */; };
+		89ABA6D8215D37C900027AF8 /* AdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ABA6D7215D37C900027AF8 /* AdViewController.swift */; };
 		89F3E2C9215D0BCB001BD3AC /* CommunityCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F3E2C8215D0BCB001BD3AC /* CommunityCategoriesViewController.swift */; };
 		89F3E2CB215D0D4A001BD3AC /* CommunityCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F3E2CA215D0D4A001BD3AC /* CommunityCategoryTableViewCell.swift */; };
 		89F6892E215BA89500946CE6 /* CommunityQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F6892D215BA89500946CE6 /* CommunityQuizViewController.swift */; };
@@ -101,6 +112,17 @@
 		899FDBF4212C3739003637CD /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		899FDBF5212C373E003637CD /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		89A15CCD2132CE7D0061494E /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
+		89ABA6C1215D34BA00027AF8 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		89ABA6C3215D34C600027AF8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		89ABA6C5215D34CE00027AF8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		89ABA6C7215D34DC00027AF8 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		89ABA6C9215D34E300027AF8 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		89ABA6CB215D34F000027AF8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		89ABA6CD215D350800027AF8 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		89ABA6CF215D351000027AF8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		89ABA6D1215D351900027AF8 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		89ABA6D3215D352400027AF8 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		89ABA6D7215D37C900027AF8 /* AdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdViewController.swift; sourceTree = "<group>"; };
 		89F3E2C8215D0BCB001BD3AC /* CommunityCategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityCategoriesViewController.swift; sourceTree = "<group>"; };
 		89F3E2CA215D0D4A001BD3AC /* CommunityCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityCategoryTableViewCell.swift; sourceTree = "<group>"; };
 		89F6892D215BA89500946CE6 /* CommunityQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityQuizViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +135,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89ABA6D4215D352400027AF8 /* libz.tbd in Frameworks */,
+				89ABA6D2215D351900027AF8 /* WebKit.framework in Frameworks */,
+				89ABA6D0215D351000027AF8 /* AVFoundation.framework in Frameworks */,
+				89ABA6CE215D350800027AF8 /* CoreMedia.framework in Frameworks */,
+				89ABA6CC215D34F000027AF8 /* QuartzCore.framework in Frameworks */,
+				89ABA6CA215D34E300027AF8 /* AdSupport.framework in Frameworks */,
+				89ABA6C8215D34DC00027AF8 /* StoreKit.framework in Frameworks */,
+				89ABA6C6215D34CE00027AF8 /* CoreGraphics.framework in Frameworks */,
+				89ABA6C4215D34C600027AF8 /* SystemConfiguration.framework in Frameworks */,
+				89ABA6C2215D34BA00027AF8 /* CoreTelephony.framework in Frameworks */,
 				009284ADA8EF63671377C7B5 /* Pods_Studiz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,6 +250,7 @@
 				89680D212153F35400515468 /* CommunityListViewController.swift */,
 				89F6892D215BA89500946CE6 /* CommunityQuizViewController.swift */,
 				89F3E2C8215D0BCB001BD3AC /* CommunityCategoriesViewController.swift */,
+				89ABA6D7215D37C900027AF8 /* AdViewController.swift */,
 				89430BDF213688D700B09CA2 /* Helpers */,
 			);
 			path = Controllers;
@@ -259,6 +292,16 @@
 		909CDEFF12FE781238064204 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				89ABA6D3215D352400027AF8 /* libz.tbd */,
+				89ABA6D1215D351900027AF8 /* WebKit.framework */,
+				89ABA6CF215D351000027AF8 /* AVFoundation.framework */,
+				89ABA6CD215D350800027AF8 /* CoreMedia.framework */,
+				89ABA6CB215D34F000027AF8 /* QuartzCore.framework */,
+				89ABA6C9215D34E300027AF8 /* AdSupport.framework */,
+				89ABA6C7215D34DC00027AF8 /* StoreKit.framework */,
+				89ABA6C5215D34CE00027AF8 /* CoreGraphics.framework */,
+				89ABA6C3215D34C600027AF8 /* SystemConfiguration.framework */,
+				89ABA6C1215D34BA00027AF8 /* CoreTelephony.framework */,
 				91B9BCA0EEA036A628AEB01C /* Pods_Studiz.framework */,
 			);
 			name = Frameworks;
@@ -285,6 +328,7 @@
 				897B6B10212C310B00807269 /* Frameworks */,
 				897B6B11212C310B00807269 /* Resources */,
 				26DBC15CFB4569CF73D11026 /* [CP] Embed Pods Frameworks */,
+				48899D85C1404782931CBAB3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -383,6 +427,28 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Studiz/Pods-Studiz-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		48899D85C1404782931CBAB3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Studiz/Pods-Studiz-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/StartAppSDK/StartAppSDK.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/StartAppSDK.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Studiz/Pods-Studiz-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		DB4A3E7F811E3896E8DC3C0C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -445,6 +511,7 @@
 				89148F0A2136D73C00FE3402 /* PrivacyViewController.swift in Sources */,
 				89430BE321369D7E00B09CA2 /* NewQuestionViewController.swift in Sources */,
 				89A15CCE2132CE7D0061494E /* HomeScreenViewController.swift in Sources */,
+				89ABA6D8215D37C900027AF8 /* AdViewController.swift in Sources */,
 				899D0154213E95CB00F53F88 /* SettingsViewController.swift in Sources */,
 				89680D202153ED9E00515468 /* CommunityHomeViewController.swift in Sources */,
 			);

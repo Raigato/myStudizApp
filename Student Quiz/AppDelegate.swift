@@ -20,6 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         IQKeyboardManager.shared.enable = true
         
+        // StartApp config
+        let sdk: STAStartAppSDK = STAStartAppSDK.sharedInstance()
+        sdk.appID = "208494412"
+        
         return true
     }
 
