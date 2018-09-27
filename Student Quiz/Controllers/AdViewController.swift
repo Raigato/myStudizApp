@@ -31,6 +31,8 @@ class AdViewController: UIViewController {
 extension AdViewController: STADelegateProtocol {
     
     func didClose(_ ad: STAAbstractAd!) {
-        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc  = storyboard.instantiateViewController(withIdentifier: "ChoseQuiz") as! ChoseQuizViewController
+        present(vc, animated: false, completion: nil)
     }
 }

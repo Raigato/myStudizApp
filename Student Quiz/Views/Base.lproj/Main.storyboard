@@ -1613,6 +1613,9 @@ Your score: XX%</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DSS-OR-pcX"/>
                     </view>
+                    <connections>
+                        <segue destination="g8k-3s-sWu" kind="show" identifier="goBackToChoseQuiz" id="lhA-6C-8Pk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T5H-VL-63H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1768,7 +1771,7 @@ Your score: XX%</string>
         <!--Chose Quiz View Controller-->
         <scene sceneID="5eN-wA-NjN">
             <objects>
-                <viewController id="g8k-3s-sWu" customClass="ChoseQuizViewController" customModule="Studiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChoseQuiz" id="g8k-3s-sWu" customClass="ChoseQuizViewController" customModule="Studiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AxJ-0e-XDM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2619,10 +2622,11 @@ Your score: XX%</string>
         <image name="plus" width="32" height="34"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="9Ni-dY-Rei"/>
         <segue reference="CY2-3c-bnw"/>
         <segue reference="Lac-LY-sZL"/>
         <segue reference="SHY-nd-iuT"/>
-        <segue reference="2wC-AQ-1SK"/>
+        <segue reference="lhA-6C-8Pk"/>
         <segue reference="fL4-j7-Mug"/>
     </inferredMetricsTieBreakers>
 </document>
