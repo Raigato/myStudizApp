@@ -108,6 +108,10 @@ extension CommunityListViewController : UITextFieldDelegate {
         return false
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
+    }
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let textFieldSize = textField.text?.count else { fatalError("Unable to get the size of the textField") }
         if textFieldSize <= 1 && string == "" {

@@ -454,15 +454,15 @@
                                 <rect key="frame" x="0.0" y="155" width="375" height="512"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="communityQuizCell" rowHeight="120" id="Js6-Mm-WND" customClass="CommunityQuizTableViewCell" customModule="Studiz" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="120"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="communityQuizCell" rowHeight="140" id="Js6-Mm-WND" customClass="CommunityQuizTableViewCell" customModule="Studiz" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="140"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Js6-Mm-WND" id="qy0-pQ-1Gn">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="139.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QuizListCell" translatesAutoresizingMaskIntoConstraints="NO" id="YKU-ib-Nbx">
-                                                    <rect key="frame" x="10" y="0.0" width="355" height="119.5"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QuizListCell" translatesAutoresizingMaskIntoConstraints="NO" id="YKU-ib-Nbx">
+                                                    <rect key="frame" x="10" y="7" width="355" height="125.5"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZl-OB-O6i">
                                                     <rect key="frame" x="25" y="11" width="140" height="37.5"/>
@@ -513,7 +513,7 @@
                                                     <size key="shadowOffset" width="1" height="2"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Active Star" translatesAutoresizingMaskIntoConstraints="NO" id="kB1-Qe-RSQ">
-                                                    <rect key="frame" x="54.5" y="83" width="22.5" height="20"/>
+                                                    <rect key="frame" x="54.5" y="83" width="22" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="Sid-zc-QFG"/>
                                                         <constraint firstAttribute="width" secondItem="kB1-Qe-RSQ" secondAttribute="height" multiplier="10:9" id="lic-n1-Gvy"/>
@@ -528,9 +528,9 @@
                                                 <constraint firstItem="U1I-DZ-EwW" firstAttribute="leading" secondItem="qy0-pQ-1Gn" secondAttribute="leadingMargin" constant="10" id="1uz-9r-WGC"/>
                                                 <constraint firstItem="Kbi-14-ghD" firstAttribute="leading" secondItem="qy0-pQ-1Gn" secondAttribute="leadingMargin" constant="10" id="1wg-2C-LMY"/>
                                                 <constraint firstItem="kB1-Qe-RSQ" firstAttribute="leading" secondItem="Kbi-14-ghD" secondAttribute="trailing" id="36y-Op-BnX"/>
-                                                <constraint firstItem="YKU-ib-Nbx" firstAttribute="centerY" secondItem="qy0-pQ-1Gn" secondAttribute="centerY" id="3L8-Hg-cGm"/>
                                                 <constraint firstItem="Kbi-14-ghD" firstAttribute="top" secondItem="U1I-DZ-EwW" secondAttribute="bottom" id="4BK-cA-fBJ"/>
                                                 <constraint firstItem="YKU-ib-Nbx" firstAttribute="centerX" secondItem="qy0-pQ-1Gn" secondAttribute="centerX" id="4JB-fB-4fD"/>
+                                                <constraint firstAttribute="bottom" secondItem="YKU-ib-Nbx" secondAttribute="bottom" constant="7" id="7IP-0f-51Q"/>
                                                 <constraint firstItem="1n4-3e-doo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Kbi-14-ghD" secondAttribute="trailing" constant="8" symbolic="YES" id="8vi-Qo-S9l"/>
                                                 <constraint firstItem="kB1-Qe-RSQ" firstAttribute="centerY" secondItem="Kbi-14-ghD" secondAttribute="centerY" id="AHU-bL-zE3"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="1n4-3e-doo" secondAttribute="trailing" constant="10" id="Bdn-qW-X3X"/>
@@ -540,7 +540,7 @@
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JZl-OB-O6i" secondAttribute="trailing" constant="20" symbolic="YES" id="TEy-EN-N8t"/>
                                                 <constraint firstItem="U1I-DZ-EwW" firstAttribute="top" secondItem="JZl-OB-O6i" secondAttribute="bottom" id="XCW-sv-j7c"/>
                                                 <constraint firstItem="o8L-Y2-7qr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Kbi-14-ghD" secondAttribute="trailing" constant="8" symbolic="YES" id="Xik-cb-bxA"/>
-                                                <constraint firstItem="YKU-ib-Nbx" firstAttribute="top" secondItem="qy0-pQ-1Gn" secondAttribute="top" id="c3v-ah-tAM"/>
+                                                <constraint firstItem="YKU-ib-Nbx" firstAttribute="top" secondItem="qy0-pQ-1Gn" secondAttribute="top" constant="7" id="c3v-ah-tAM"/>
                                                 <constraint firstItem="JZl-OB-O6i" firstAttribute="leading" secondItem="qy0-pQ-1Gn" secondAttribute="leadingMargin" constant="10" id="eg9-om-2ge"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="SLI-ZL-QV5" secondAttribute="trailing" constant="10" id="evi-OW-Vc7"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="U1I-DZ-EwW" secondAttribute="trailing" constant="20" symbolic="YES" id="g8J-CX-QX4"/>
@@ -549,7 +549,6 @@
                                                 <constraint firstItem="1n4-3e-doo" firstAttribute="leading" secondItem="o8L-Y2-7qr" secondAttribute="trailing" id="qcd-JX-YQS"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Kbi-14-ghD" secondAttribute="trailing" constant="20" symbolic="YES" id="r3u-Wr-n4p"/>
                                                 <constraint firstItem="JZl-OB-O6i" firstAttribute="top" secondItem="qy0-pQ-1Gn" secondAttribute="topMargin" id="rgz-ni-NhD"/>
-                                                <constraint firstAttribute="bottom" secondItem="YKU-ib-Nbx" secondAttribute="bottom" id="wl2-K2-sbj"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -2598,7 +2597,7 @@ Your score: XX%</string>
         <segue reference="CY2-3c-bnw"/>
         <segue reference="Lac-LY-sZL"/>
         <segue reference="rSm-Sc-zDf"/>
-        <segue reference="jEd-8W-geX"/>
+        <segue reference="2wC-AQ-1SK"/>
         <segue reference="fL4-j7-Mug"/>
     </inferredMetricsTieBreakers>
 </document>
