@@ -7,34 +7,34 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>175237399994-51vojummc1p9i2djre7ih86v354pgqd6.apps.googleusercontent.com</string>
+	<string>992055998124-cp49f3n6s4d16nflap7agbb7321lsbu7.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.175237399994-51vojummc1p9i2djre7ih86v354pgqd6</string>
+	<string>com.googleusercontent.apps.992055998124-cp49f3n6s4d16nflap7agbb7321lsbu7</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBZPlD7MhACXnXYUXK13b0kFesQA4HZ3nI</string>
+	<string>AIzaSyCJiD0PicvK6myPhRdABZ4woX7Zogpgf78</string>
 	<key>GCM_SENDER_ID</key>
-	<string>175237399994</string>
+	<string>992055998124</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.roigoujat.StudentQuiz</string>
+	<string>com.roigoujat.Studiz</string>
 	<key>PROJECT_ID</key>
-	<string>student-quizz</string>
+	<string>studiz-b4ba7</string>
 	<key>STORAGE_BUCKET</key>
-	<string>student-quizz.appspot.com</string>
+	<string>studiz-b4ba7.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_APPINVITE_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_GCM_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:175237399994:ios:1075e019a8ae4a09</string>
+	<string>1:992055998124:ios:62c16ec777f69be0</string>
 	<key>DATABASE_URL</key>
-	<string>https://student-quizz.firebaseio.com</string>
+	<string>https://studiz-b4ba7.firebaseio.com</string>
 </dict>
 </plist>
